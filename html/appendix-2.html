@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-06-04T18:28:08-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Hints and Solutions to Selected Exercises</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="extra.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2014.png"></a><div class="title-container">
+<h1 class="heading"><a href="sample-book.html"><span class="title">Abstract Algebra</span><span class="subtitle">MATHBOOK XML SAMPLE ONLY</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="appendix-1.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="backmatter.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="appendix-gfdl.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="appendix-1.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="backmatter.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="appendix-gfdl.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1">Author Biography</a></li>
+<li><a href="biography-2.html" data-scroll="biography-2">About Robert A. Beezer</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Contributors to the 4\(^\mathrm{th}\) Edition</a></li>
+</ul>
+<h2 class="link"><a href="sets.html" data-scroll="sets"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
+<ul>
+<li><a href="section-note-on-proofs.html" data-scroll="section-note-on-proofs">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-equivalence-relations.html" data-scroll="section-sets-and-equivalence-relations">Sets and Equivalence Relations</a></li>
+<li><a href="exercises-sets.html" data-scroll="exercises-sets">Exercises</a></li>
+<li><a href="references-1.html" data-scroll="references-1">References and Suggested Readings</a></li>
+<li><a href="sets-sage.html" data-scroll="sets-sage">Sage</a></li>
+<li><a href="sets-sage-exercises.html" data-scroll="sets-sage-exercises">Sage Exercises</a></li>
+</ul>
+<h2 class="link"><a href="integers.html" data-scroll="integers"><span class="codenumber">2</span><span class="title">The Integers</span></a></h2>
+<ul>
+<li><a href="section-math-induction.html" data-scroll="section-math-induction">Mathematical Induction</a></li>
+<li><a href="section-division-algorithm.html" data-scroll="section-division-algorithm">The Division Algorithm</a></li>
+<li><a href="exercises-integers.html" data-scroll="exercises-integers">Exercises</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Programming Exercises</a></li>
+<li><a href="references-2.html" data-scroll="references-2">References and Suggested Readings</a></li>
+<li><a href="integers-sage.html" data-scroll="integers-sage">Sage</a></li>
+<li><a href="integers-sage-exercises.html" data-scroll="integers-sage-exercises">Sage Exercises</a></li>
+</ul>
+<h2 class="link"><a href="groups.html" data-scroll="groups"><span class="codenumber">3</span><span class="title">Groups</span></a></h2>
+<ul>
+<li><a href="section-mod-n-sym.html" data-scroll="section-mod-n-sym">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="section-groups-define">Definitions and Examples</a></li>
+<li><a href="section-subgroups.html" data-scroll="section-subgroups">Subgroups</a></li>
+<li><a href="exercises-groups.html" data-scroll="exercises-groups">Exercises</a></li>
+<li><a href="exercises-7.html" data-scroll="exercises-7">Additional Exercises: Detecting Errors</a></li>
+<li><a href="references-3.html" data-scroll="references-3">References and Suggested Readings</a></li>
+<li><a href="groups-sage.html" data-scroll="groups-sage">Sage</a></li>
+<li><a href="groups-sage-exercises.html" data-scroll="groups-sage-exercises">Sage Exercises</a></li>
+</ul>
+<h2 class="link"><a href="cyclic.html" data-scroll="cyclic"><span class="codenumber">4</span><span class="title">Cyclic Groups</span></a></h2>
+<ul>
+<li><a href="exercises-cyclic.html" data-scroll="exercises-cyclic">Exercises</a></li>
+<li><a href="exercises-10.html" data-scroll="exercises-10">Programming Exercises</a></li>
+<li><a href="references-4.html" data-scroll="references-4">References and Suggested Readings</a></li>
+<li><a href="cyclic-sage-exercises.html" data-scroll="cyclic-sage-exercises">Sage Exercises</a></li>
+</ul>
+<h2 class="link active"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
+<li><a href="appendix-2.html" data-scroll="appendix-2" class="active">Hints and Solutions to Selected Exercises</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="index-part-1.html" data-scroll="index-part-1">Index</a></li>
+<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="appendix" id="appendix-2"><header title="Appendix B Hints and Solutions to Selected Exercises"><h1 class="heading hide-type" alt="Appendix B Hints and Solutions to Selected Exercises">
+<span class="type">Appendix</span><span class="codenumber">B</span><span class="title">Hints and Solutions to Selected Exercises</span>
+</h1></header><section class="exercises"><h1 class="heading">
+<span class="type">Exercises</span><span class="codenumber">1.3</span><span class="title">Exercises</span>
+</h1>
+<article class="exercise-like" id="exercise-1"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">1</span>
+</h5>
+<p id="p-130">Suppose that
+\begin{align*}
+A &amp; = \{ x : x \in \mathbb N \text{ and } x \text{ is even} \},\\
+B &amp; = \{x : x \in \mathbb N \text{ and } x \text{ is prime}\},\\
+C &amp; = \{ x : x \in \mathbb N \text{ and } x \text{ is a multiple of 5}\}.
+\end{align*}
+</p>
+<p id="p-131">Describe each of the following sets.</p>
+<ol id="ol-4" class="cols2" style="list-style-type: lower-alpha;">
+<li id="li-38" style="width:49%; float:left;"><p id="p-132">\(A \cap B\)</p></li>
+<li id="li-39" style="width:49%; float:left;"><p id="p-133">\(B \cap C\)</p></li>
+<li id="li-40" style="width:49%; float:left;"><p id="p-134">\(A \cup B\)</p></li>
+<li id="li-41" style="width:49%; float:left;"><p id="p-135">\(A \cap (B \cup C)\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-1" id="hint-1"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-136">(a) \(A \cap B = \{ 2 \}\text{;}\) (b) \(B \cap C = \{ 5 \}\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-2"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">2</span>
+</h5>
+<p id="p-137">If \(A = \{ a, b, c \}\text{,}\) \(B = \{ 1, 2, 3 \}\text{,}\) \(C = \{ x \}\text{,}\) and \(D = \emptyset\text{,}\) list all of the elements in each of the following sets.</p>
+<ol id="ol-5" class="cols2" style="list-style-type: lower-alpha;">
+<li id="li-42" style="width:49%; float:left;"><p id="p-138">\(A \times B\)</p></li>
+<li id="li-43" style="width:49%; float:left;"><p id="p-139">\(B \times A\)</p></li>
+<li id="li-44" style="width:49%; float:left;"><p id="p-140">\(A \times B \times C\)</p></li>
+<li id="li-45" style="width:49%; float:left;"><p id="p-141">\(A \times D\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-2" id="hint-2"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-142">(a) \(A \times B = \{ (a,1), (a,2), (a,3), (b,1), (b,2), (b,3), (c,1), (c,2), (c,3) \}\text{;}\) (d) \(A \times D = \emptyset\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-6"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">6</span>
+</h5>
+<p id="p-146">Prove \(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-3" id="hint-3"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-3" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-147">If \(x \in A \cup (B \cap C)\text{,}\) then either \(x \in A\) or \(x \in B \cap C\text{.}\)  Thus,   \(x \in A \cup B\) and \(A \cup C\text{.}\)  Hence, \(x \in (A \cup B) \cap (A \cup C)\text{.}\) Therefore, \(A \cup (B \cap C) \subset (A \cup B) \cap (A \cup C)\text{.}\)  Conversely, if \(x \in (A \cup B) \cap (A \cup C)\text{,}\) then \(x \in A \cup B\) and \(A \cup C\text{.}\) Thus, \(x \in A\) or \(x\) is in both \(B\) and \(C\text{.}\) So \(x \in A \cup (B \cap C)\) and therefore \((A \cup B) \cap (A \cup C) \subset A \cup (B \cap C)\text{.}\) Hence, \(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-10"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">10</span>
+</h5>
+<p id="p-151">Prove  \(A \cup B = (A \cap B) \cup (A \setminus B) \cup (B \setminus A)\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-4" id="hint-4"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-152">\((A \cap B) \cup (A \setminus B) \cup (B \setminus A) = (A \cap B) \cup (A \cap B') \cup (B \cap A') = [A \cap (B \cup B')] \cup (B \cap A') = A \cup (B \cap A') = (A \cup B) \cap (A \cup A') = A \cup B\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-14"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">14</span>
+</h5>
+<p id="p-156">Prove  \(A \setminus (B \cup C) = (A \setminus B) \cap (A \setminus C)\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-5" id="hint-5"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-5" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-157">\(A \setminus (B \cup C) = A \cap (B \cup C)' = (A \cap A) \cap (B' \cap C') = (A \cap B') \cap (A \cap C') = (A \setminus B) \cap (A \setminus C)\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-17"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">17</span>
+</h5>
+<p id="p-160">Which of the following relations \(f: {\mathbb Q} \rightarrow {\mathbb Q}\) define a mapping? In each case, supply a reason why \(f\) is or is not a mapping.</p>
+<ol id="ol-6" class="cols2" style="list-style-type: lower-alpha;">
+<li id="li-46" style="width:49%; float:left;"><p id="p-161">\(\displaystyle f(p/q) = \frac{p+ 1}{p - 2}\)</p></li>
+<li id="li-47" style="width:49%; float:left;"><p id="p-162">\(\displaystyle f(p/q) = \frac{3p}{3q}\)</p></li>
+<li id="li-48" style="width:49%; float:left;"><p id="p-163">\(\displaystyle f(p/q) = \frac{p+q}{q^2}\)</p></li>
+<li id="li-49" style="width:49%; float:left;"><p id="p-164">\(\displaystyle f(p/q) = \frac{3 p^2}{7 q^2} - \frac{p}{q}\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-6" id="hint-6"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-6" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-165">(a) Not a map since \(f(2/3)\) is undefined; (b) this is a map; (c) not a map, since \(f(1/2) = 3/4\) but \(f(2/4)=3/8\text{;}\) (d) this is a map.</p></span></span></span></article><article class="exercise-like" id="exercise-18"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">18</span>
+</h5>
+<p id="p-166">Determine which of the following functions are one-to-one and which are onto.  If the function is not onto, determine its range.</p>
+<ol id="ol-7" style="list-style-type: lower-alpha;">
+<li id="li-50"><p id="p-167">\(f: {\mathbb R} \rightarrow {\mathbb R}\) defined by \(f(x) = e^x\)</p></li>
+<li id="li-51"><p id="p-168">\(f: {\mathbb Z} \rightarrow {\mathbb Z}\) defined by \(f(n) = n^2 + 3\)</p></li>
+<li id="li-52"><p id="p-169">\(f: {\mathbb R} \rightarrow {\mathbb R}\) defined by \(f(x) = \sin x\)</p></li>
+<li id="li-53"><p id="p-170">\(f: {\mathbb Z} \rightarrow {\mathbb Z}\) defined by \(f(x) = x^2\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-7" id="hint-7"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-7" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-171">(a) \(f\) is one-to-one but not onto. \(f({\mathbb R} ) = \{ x \in {\mathbb R} : x \gt 0 \}\text{.}\)  (c) \(f\) is neither one-to-one nor onto.  \(f(\mathbb R) = \{ x : -1 \leq x \leq 1 \}\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-20"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">20</span>
+</h5>
+<ol id="ol-8" style="list-style-type: lower-alpha;">
+<li id="li-54"><p id="p-173">Define a function \(f: {\mathbb N} \rightarrow {\mathbb N}\) that is one-to-one but not onto.</p></li>
+<li id="li-55"><p id="p-174">Define a function \(f: {\mathbb N} \rightarrow {\mathbb N}\) that is onto but not one-to-one.</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-8" id="hint-8"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-8" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-175">(a) \(f(n) = n + 1\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-22"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">22</span>
+</h5>
+<p id="p-177">Let \(f : A \rightarrow B\) and \(g : B \rightarrow C\) be maps.</p>
+<ol id="ol-9" style="list-style-type: lower-alpha;">
+<li id="li-56"><p id="p-178">If \(f\) and \(g\) are both one-to-one functions, show that \(g \circ f\) is one-to-one.</p></li>
+<li id="li-57"><p id="p-179">If \(g \circ f\) is onto, show that \(g\) is onto.</p></li>
+<li id="li-58"><p id="p-180">If \(g \circ f\) is one-to-one, show that \(f\) is one-to-one.</p></li>
+<li id="li-59"><p id="p-181">If \(g \circ f\) is one-to-one and \(f\) is onto, show that \(g\) is one-to-one.</p></li>
+<li id="li-60"><p id="p-182">If \(g \circ f\) is onto and \(g\) is one-to-one, show that \(f\) is onto.</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-9" id="hint-9"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-9" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-183">(a) Let \(x, y \in A\text{.}\) Then \(g(f(x)) = (g \circ f)(x) = (g \circ f)(y) = g(f(y))\text{.}\)  Thus, \(f(x) = f(y)\) and \(x = y\text{,}\)  so \(g \circ f\) is one-to-one. (b) Let \(c \in C\text{,}\) then \(c = (g \circ f)(x) = g(f(x))\) for some \(x \in A\text{.}\) Since \(f(x) \in B\text{,}\) \(g\) is onto.</p></span></span></span></article><article class="exercise-like" id="exercise-23"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">23</span>
+</h5>
+<p id="p-184">Define a function on the real numbers by
+\begin{equation*}
+f(x) = \frac{x + 1}{x - 1}.
+\end{equation*}
+What are the domain and range of \(f\text{?}\) What is the inverse of \(f\text{?}\)  Compute \(f \circ f^{-1}\) and \(f^{-1} \circ f\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-10" id="hint-10"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-10" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-185">\(f^{-1}(x) = (x+1)/(x-1)\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-24"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">24</span>
+</h5>
+<p id="p-186">Let \(f: X \rightarrow Y\) be a map with \(A_1, A_2 \subset X\) and \(B_1, B_2 \subset Y\text{.}\)</p>
+<ol id="ol-10" style="list-style-type: lower-alpha;">
+<li id="li-61"><p id="p-187">Prove \(f( A_1 \cup A_2 ) = f( A_1) \cup f( A_2 )\text{.}\)</p></li>
+<li id="li-62"><p id="p-188">Prove \(f( A_1 \cap A_2 ) \subset f( A_1) \cap f( A_2 )\text{.}\)  Give an example in which equality fails.</p></li>
+<li id="li-63"><p id="p-189">Prove \(f^{-1}( B_1 \cup B_2 ) = f^{-1}( B_1) \cup f^{-1}(B_2 )\text{,}\) where
+\begin{equation*}
+f^{-1}(B) = \{ x \in X : f(x) \in B \}.
+\end{equation*}
+</p></li>
+<li id="li-64"><p id="p-190">Prove \(f^{-1}( B_1 \cap B_2 ) = f^{-1}( B_1) \cap f^{-1}( B_2 )\text{.}\)</p></li>
+<li id="li-65"><p id="p-191">Prove \(f^{-1}( Y \setminus B_1 ) = X \setminus f^{-1}( B_1)\text{.}\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-11" id="hint-11"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-11" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-192">(a) Let \(y \in f(A_1 \cup A_2)\text{.}\)  Then there exists an \(x \in A_1 \cup A_2\) such that \(f(x) = y\text{.}\)  Hence, \(y \in f(A_1)\) or \(f(A_2) \text{.}\)  Therefore, \(y \in f(A_1) \cup f(A_2)\text{.}\) Consequently, \(f(A_1 \cup A_2) \subset f(A_1) \cup f(A_2)\text{.}\) Conversely, if \(y \in f(A_1) \cup f(A_2)\text{,}\) then \(y \in f(A_1)\) or \(f(A_2)\text{.}\)  Hence, there exists an \(x \in A_1\) or there exists an \(x \in A_2\) such that \(f(x) = y\text{.}\)  Thus, there exists an \(x \in A_1 \cup A_2\) such that \(f(x) = y\text{.}\)  Therefore, \(f(A_1) \cup f(A_2) \subset f(A_1 \cup A_2)\text{,}\) and \(f(A_1 \cup A_2) = f(A_1) \cup f(A_2)\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-25"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">25</span>
+</h5>
+<p id="p-193">Determine whether or not the following relations are equivalence relations on the given set.  If the relation is an equivalence relation, describe the partition given by it.  If the relation is not an equivalence relation, state why it fails to be one.</p>
+<ol id="ol-11" class="cols2" style="list-style-type: lower-alpha;">
+<li id="li-66" style="width:49%; float:left;"><p id="p-194">\(x \sim y\) in \({\mathbb R}\) if \(x \geq y\)</p></li>
+<li id="li-67" style="width:49%; float:left;"><p id="p-195">\(m \sim n\) in \({\mathbb Z}\) if \(mn &gt; 0\)</p></li>
+<li id="li-68" style="width:49%; float:left;"><p id="p-196">\(x \sim y\) in \({\mathbb R}\) if \(|x - y| \leq 4\)</p></li>
+<li id="li-69" style="width:49%; float:left;"><p id="p-197">\(m \sim n\) in \({\mathbb Z}\) if \(m \equiv n \pmod{6}\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-12" id="hint-12"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-12" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-198">(a) NThe relation fails to be symmetric. (b) The relation is not reflexive, since 0 is not equivalent to itself. (c) The relation is not transitive.</p></span></span></span></article><article class="exercise-like" id="exercise-28"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">28</span>
+</h5>
+<p id="p-201">Find the error in the following argument by providing a counterexample. “The reflexive property is redundant in the axioms for an equivalence relation.  If \(x \sim y\text{,}\) then \(y \sim x\) by the symmetric property.  Using the transitive property, we can deduce that \(x \sim x\text{.}\)”</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-13" id="hint-13"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-13" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-202">Let \(X = {\mathbb N} \cup \{ \sqrt{2}\, \}\) and define \(x \sim y\) if \(x + y \in {\mathbb N}\text{.}\)</p></span></span></span></article></section><section class="exercises"><h1 class="heading">
+<span class="type">Exercises</span><span class="codenumber">2.3</span><span class="title">Exercises</span>
+</h1>
+<article class="exercise-like" id="exercise-31"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">1</span>
+</h5>
+<p id="p-296">Prove that
+\begin{equation*}
+1^2 + 2^2 + \cdots + n^2 = \frac{n(n + 1)(2n + 1)}{6}
+\end{equation*}
+for \(n \in {\mathbb N}\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-14" id="hint-14"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-14" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-297">The base case, \(S(1): [1(1 + 1)(2(1) + 1)]/6 = 1 = 1^2\) is true. Assume that \(S(k): 1^2 + 2^2 + \cdots + k^2 = [k(k + 1)(2k + 1)]/6\) is true. Then
+\begin{align*}
+1^2 + 2^2 + \cdots + k^2 + (k + 1)^2 &amp; = [k(k + 1)(2k + 1)]/6 + (k + 1)^2\\
+&amp; = [(k + 1)((k + 1) + 1)(2(k + 1) + 1)]/6,
+\end{align*}
+and so \(S(k + 1)\) is true. Thus, \(S(n)\) is true for all positive integers \(n\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-33"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">3</span>
+</h5>
+<p id="p-299">Prove that \(n! \gt 2^n\) for \(n \geq 4\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-15" id="hint-15"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-15" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-300">The base case, \(S(4): 4! = 24 \gt 16 =2^4\) is true. Assume \(S(k): k! \gt 2^k\) is true. Then \((k + 1)! = k! (k + 1) \gt 2^k \cdot 2 = 2^{k + 1}\text{,}\) so \(S(k + 1)\) is true. Thus, \(S(n)\) is true for all positive integers \(n\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-38"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">8</span>
+</h5>
+<p id="p-305">Prove the Leibniz rule for \(f^{(n)} (x)\text{,}\) where \(f^{(n)}\) is the \(n\)th derivative of \(f\text{;}\) that is, show that
+\begin{equation*}
+(fg)^{(n)}(x) = \sum_{k = 0}^{n} \binom{n}{k} f^{(k)}(x) g^{(n - k)}(x).
+\end{equation*}
+</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-16" id="hint-16"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-16" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-306">Follow the proof in Example <a knowl="./knowl/example-integers-binomial-theorem.html" knowl-id="xref-example-integers-binomial-theorem" alt="Example 2.1.4 The binomial theorem" title="Example 2.1.4 The binomial theorem">2.1.4</a>.</p></span></span></span></article><article class="exercise-like" id="exercise-41"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">11</span>
+</h5>
+<p id="p-309">If \(x\) is a nonnegative real number, then show that \((1 + x)^n - 1 \geq nx\) for \(n = 0, 1, 2, \ldots\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-17" id="hint-17"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-17" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-310">The base case, \(S(0): (1 + x)^0 - 1 = 0 \geq 0 = 0 \cdot x\) is true. Assume \(S(k): (1 + x)^k -1 \geq kx\) is true. Then
+\begin{align*}
+(1 + x)^{k + 1} - 1 &amp; = (1 + x)(1 + x)^k -1\\
+&amp; = (1 + x)^k + x(1 + x)^k - 1\\
+&amp; \geq kx + x(1 + x)^k\\
+&amp; \geq kx + x\\
+&amp; = (k + 1)x,
+\end{align*}
+so \(S(k + 1)\) is true. Therefore, \(S(n)\) is true for all positive integers \(n\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-47"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">17</span><span class="title">Fibonacci Numbers</span>
+</h5>
+<p id="p-322">The Fibonacci numbers are
+\begin{equation*}
+1, 1, 2, 3, 5, 8, 13, 21, \ldots.
+\end{equation*}
+We can define them inductively by \(f_1 = 1\text{,}\) \(f_2 = 1\text{,}\) and \(f_{n + 2} = f_{n + 1} + f_n\) for \(n \in {\mathbb N}\text{.}\)</p>
+<ol id="ol-13" style="list-style-type: lower-alpha;">
+<li id="li-78"><p id="p-323">Prove that \(f_n \lt 2^n\text{.}\)</p></li>
+<li id="li-79"><p id="p-324">Prove that \(f_{n + 1} f_{n - 1} = f^2_n + (-1)^n\text{,}\) \(n \geq 2\text{.}\)</p></li>
+<li id="li-80"><p id="p-325">Prove that \(f_n = [(1 + \sqrt{5}\, )^n - (1 - \sqrt{5}\, )^n]/ 2^n \sqrt{5}\text{.}\)</p></li>
+<li id="li-81"><p id="p-326">Show that \(\lim_{n \rightarrow \infty} f_n / f_{n + 1} = (\sqrt{5} - 1)/2\text{.}\)</p></li>
+<li id="li-82"><p id="p-327">Prove that \(f_n\) and \(f_{n + 1}\) are relatively prime.</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-18" id="hint-18"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-18" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-328">For (a) and (b) use mathematical induction. (c) Show that \(f_1 = 1\text{,}\) \(f_2 = 1\text{,}\) and \(f_{n + 2} = f_{n + 1} + f_n\text{.}\) (d)  Use part (c). (e) Use part (b) and Exercise <a knowl="./knowl/exercise-integers-gcd-1.html" knowl-id="xref-exercise-integers-gcd-1" alt="Exercise 2.3.16 " title="Exercise 2.3.16 ">2.3.16</a>.</p></span></span></span></article><article class="exercise-like" id="exercise-49"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">19</span>
+</h5>
+<p id="p-330">Let \(x, y \in {\mathbb N}\) be relatively prime.  If \(xy\) is a perfect square, prove that \(x\) and \(y\) must both be perfect squares.</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-19" id="hint-19"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-19" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-331">Use the Fundamental Theorem of Arithmetic.</p></span></span></span></article><article class="exercise-like" id="exercise-53"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">23</span>
+</h5>
+<p id="p-336">Define the <em class="terminology">least common multiple</em> of two nonzero integers \(a\) and \(b\text{,}\) denoted by \(\lcm(a,b)\text{,}\) to be the nonnegative integer \(m\) such that both \(a\) and \(b\) divide \(m\text{,}\) and if \(a\) and \(b\)  divide any other integer \(n\text{,}\) then \(m\) also divides \(n\text{.}\)  Prove that any two integers \(a\) and \(b\) have a unique least common multiple.</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-20" id="hint-20"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-20" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-337">Let \(S = \{s \in {\mathbb N} : a \mid s\text{,}\) \(b \mid s \}\text{.}\) Then \(S \neq \emptyset\text{,}\) since \(|ab| \in S\text{.}\) By the Principle of Well-Ordering, \(S\) contains a least element \(m\text{.}\) To show uniqueness, suppose that \(a \mid n\) and \(b \mid n\) for some \(n \in {\mathbb N}\text{.}\) By the division algorithm, there exist unique integers \(q\) and \(r\) such that \(n = mq + r\text{,}\) where \(0 \leq r \lt m\text{.}\) Since \(a\) and \(b\) divide both \(m\text{,}\) and \(n\text{,}\) it must be the case that  \(a\) and \(b\) both divide \(r\text{.}\)  Thus, \(r = 0\) by the minimality of \(m\text{.}\) Therefore, \(m \mid n\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-57"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">27</span>
+</h5>
+<p id="p-341">Let \(a, b, c \in {\mathbb Z}\text{.}\)  Prove that if \(\gcd(a,b) = 1\) and \(a  \mid bc\text{,}\) then \(a  \mid  c\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-21" id="hint-21"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-21" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-342">Since \(\gcd(a,b) = 1\text{,}\) there exist integers \(r\) and \(s\) such that \(ar + bs = 1\text{.}\)   Thus, \(acr + bcs = c\text{.}\) Since \(a\) divides both \(bc\) and itself, \(a\) must divide \(c\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-59"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">29</span>
+</h5>
+<p id="p-344">Prove that there are an infinite number of primes of the form \(6n + 5\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-22" id="hint-22"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-22" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-345">Every prime must be of the form 2, 3, \(6n + 1\text{,}\) or \(6n + 5\text{.}\)   Suppose there are only finitely many primes of the form \(6k + 5\text{.}\)</p></span></span></span></article></section><section class="exercises"><h1 class="heading">
+<span class="type">Exercises</span><span class="codenumber">3.4</span><span class="title">Exercises</span>
+</h1>
+<article class="exercise-like" id="exercise-71"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">1</span>
+</h5>
+<p id="p-469">Find all \(x \in {\mathbb Z}\) satisfying each of the following equations.</p>
+<ol id="ol-18" class="cols2" style="list-style-type: lower-alpha;">
+<li id="li-101" style="width:49%; float:left;"><p id="p-470">\(3x \equiv 2 \pmod{7}\)</p></li>
+<li id="li-102" style="width:49%; float:left;"><p id="p-471">\(5x + 1 \equiv 13 \pmod{23}\)</p></li>
+<li id="li-103" style="width:49%; float:left;"><p id="p-472">\(5x + 1 \equiv 13 \pmod{26}\)</p></li>
+<li id="li-104" style="width:49%; float:left;"><p id="p-473">\(9x \equiv 3 \pmod{5}\)</p></li>
+<li id="li-105" style="width:49%; float:left;"><p id="p-474">\(5x \equiv 1 \pmod{6}\)</p></li>
+<li id="li-106" style="width:49%; float:left;"><p id="p-475">\(3x \equiv 1 \pmod{6}\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-23" id="hint-23"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-23" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-476">(a) \(3 + 7 \mathbb Z = \{ \ldots, -4, 3, 10, \ldots \}\text{;}\)  (c) \(18 + 26 \mathbb Z\text{;}\)  (e) \(5 + 6 \mathbb Z\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-72"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">2</span>
+</h5>
+<p id="p-477">Which of the following multiplication tables defined on the set \(G = \{ a, b, c, d \}\) form a group? Support your answer in each case.</p>
+<ol id="ol-19" class="cols2" style="list-style-type: lower-alpha;">
+<li id="li-107" style="width:49%; float:left;"><p id="p-478">
+\begin{equation*}
+\begin{array}{c|cccc}
+\circ &amp; a &amp; b &amp; c &amp; d \\
+\hline
+a &amp; a &amp; c &amp; d &amp; a \\
+b &amp; b &amp; b &amp; c &amp; d \\
+c &amp; c &amp; d &amp; a &amp; b \\
+d &amp; d &amp; a &amp; b &amp; c
+\end{array}
+\end{equation*}
+</p></li>
+<li id="li-108" style="width:49%; float:left;"><p id="p-479">
+\begin{equation*}
+\begin{array}{c|cccc}
+\circ &amp; a &amp; b &amp; c &amp; d \\
+\hline
+a &amp; a &amp; b &amp; c &amp; d \\
+b &amp; b &amp; a &amp; d &amp; c \\
+c &amp; c &amp; d &amp; a &amp; b \\
+d &amp; d &amp; c &amp; b &amp; a
+\end{array}
+\end{equation*}
+</p></li>
+<li id="li-109" style="width:49%; float:left;"><p id="p-480">
+\begin{equation*}
+\begin{array}{c|cccc}
+\circ &amp; a &amp; b &amp; c &amp; d \\
+\hline
+a &amp; a &amp; b &amp; c &amp; d \\
+b &amp; b &amp; c &amp; d &amp; a \\
+c &amp; c &amp; d &amp; a &amp; b \\
+d &amp; d &amp; a &amp; b &amp; c
+\end{array}
+\end{equation*}
+</p></li>
+<li id="li-110" style="width:49%; float:left;"><p id="p-481">
+\begin{equation*}
+\begin{array}{c|cccc}
+\circ &amp; a &amp; b &amp; c &amp; d \\
+\hline
+a &amp; a &amp; b &amp; c &amp; d \\
+b &amp; b &amp; a &amp; c &amp; d \\
+c &amp; c &amp; b &amp; a &amp; d \\
+d &amp; d &amp; d &amp; b &amp; c
+\end{array}
+\end{equation*}
+</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-24" id="hint-24"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-24" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-482">(a) Not a group; (c) a group.</p></span></span></span></article><article class="exercise-like" id="exercise-76"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">6</span>
+</h5>
+<p id="p-486">Give a multiplication table for the group \(U(12)\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-25" id="hint-25"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-25" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-487">
+\begin{equation*}
+\begin{array}{c|cccc}
+\cdot &amp; 1  &amp; 5  &amp; 7  &amp; 11 \\
+\hline
+1 &amp; 1 &amp; 5 &amp; 7 &amp; 11 \\ 5 &amp; 5 &amp; 1 &amp; 11 &amp; 7 \\
+7 &amp; 7 &amp; 11 &amp; 1 &amp; 5 \\ 11 &amp; 11 &amp; 7 &amp; 5 &amp; 1
+\end{array}
+\end{equation*}
+</p></span></span></span></article><article class="exercise-like" id="exercise-78"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">8</span>
+</h5>
+<p id="p-489">Give an example of two elements \(A\) and \(B\) in \(GL_2({\mathbb R})\) with \(AB \neq BA\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-26" id="hint-26"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-26" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-490">Pick two matrices. Almost any pair will work.</p></span></span></span></article><article class="exercise-like" id="exercise-85"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">15</span>
+</h5>
+<p id="p-497">Prove or disprove that every group containing six elements is abelian.</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-27" id="hint-27"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-27" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-498">There is a nonabelian group containing six elements.</p></span></span></span></article><article class="exercise-like" id="exercise-86"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">16</span>
+</h5>
+<p id="p-499">Give a specific example of some group \(G\) and elements \(g, h \in G\) where \((gh)^n \neq g^nh^n\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-28" id="hint-28"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-28" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-500">Look at the symmetry group of an equilateral triangle or a square.</p></span></span></span></article><article class="exercise-like" id="exercise-87"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">17</span>
+</h5>
+<p id="p-501">Give an example of three different groups with eight elements. Why are the groups different?</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-29" id="hint-29"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-29" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-502">The are five different groups of order 8.</p></span></span></span></article><article class="exercise-like" id="exercise-88"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">18</span>
+</h5>
+<p id="p-503">Show that there are \(n!\) permutations of a set containing \(n\) items.</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-30" id="hint-30"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-30" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-504">Let
+\begin{equation*}
+\sigma =
+\begin{pmatrix}
+1 &amp; 2 &amp; \cdots &amp; n \\ a_1 &amp; a_2 &amp; \cdots &amp; a_n
+\end{pmatrix}
+\end{equation*}
+be in \(S_n\text{.}\) All of the \(a_i\)s must be distinct. There are \(n\) ways to choose \(a_1\text{,}\) \(n-1\) ways to choose \(a_2\text{,}\) \(\ldots\text{,}\) 2 ways to choose \(a_{n - 1}\text{,}\) and only one way to choose \(a_n\text{.}\) Therefore, we can form \(\sigma\) in \(n(n - 1) \cdots 2 \cdot 1 = n!\) ways.</p></span></span></span></article><article class="exercise-like" id="exercise-95"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">25</span>
+</h5>
+<p id="p-511">Let \(a\) and \(b\) be elements in a group \(G\text{.}\)  Prove that \(ab^na^{-1} = (aba^{-1})^n\) for \(n \in \mathbb Z\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-31" id="hint-31"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-31" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-512">
+\begin{align*}
+(aba^{-1})^n &amp; = (aba^{-1})(aba^{-1}) \cdots (aba^{-1})\\
+&amp; = ab(aa^{-1})b(aa^{-1})b \cdots b(aa^{-1})ba^{-1}\\
+&amp; = ab^na^{-1}.
+\end{align*}
+</p></span></span></span></article><article class="exercise-like" id="exercise-101"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">31</span>
+</h5>
+<p id="p-518">Show that if \(a^2 = e\) for all elements \(a\) in a group \(G\text{,}\) then \(G\) must be abelian.</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-32" id="hint-32"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-32" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-519">Since \(abab = (ab)^2 = e = a^2 b^2 = aabb\text{,}\) we know that \(ba = ab\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-105"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">35</span>
+</h5>
+<p id="p-523">Find all the subgroups of the symmetry group of an equilateral triangle.</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-33" id="hint-33"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-33" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-524">\(H_1 = \{ id \}\text{,}\) \(H_2 = \{ id, \rho_1, \rho_2 \}\text{,}\) \(H_3 = \{ id, \mu_1 \}\text{,}\) \(H_4 = \{ id, \mu_2 \}\text{,}\) \(H_5 = \{ id, \mu_3 \}\text{,}\) \(S_3\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-111"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">41</span>
+</h5>
+<p id="p-530">Prove that
+\begin{equation*}
+G = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \text{ and } a \text{ and } b \text{ are not both zero} \}
+\end{equation*}
+is a subgroup of \({\mathbb R}^{\ast}\) under the group operation of multiplication.</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-34" id="hint-34"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-34" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-531">The identity of \(G\) is \(1 = 1 + 0 \sqrt{2}\text{.}\) Since \((a + b \sqrt{2}\, )(c + d \sqrt{2}\, ) = (ac + 2bd) + (ad + bc)\sqrt{2}\text{,}\) \(G\) is closed under multiplication.  Finally,  \((a + b \sqrt{2}\, )^{-1} = a/(a^2 - 2b^2) - b\sqrt{2}/(a^2 - 2 b^2)\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-116"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">46</span>
+</h5>
+<p id="p-536">Prove or disprove:  If \(H\) and \(K\) are subgroups of a group \(G\text{,}\) then \(H \cup K\) is a subgroup of \(G\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-35" id="hint-35"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-35" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-537">Look at \(S_3\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-119"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">49</span>
+</h5>
+<p id="p-540">Let \(a\) and \(b\) be elements of a group \(G\text{.}\) If \(a^4b = ba\) and \(a^3 = e\text{,}\) prove that \(ab = ba\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-36" id="hint-36"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-36" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-541">Since \(a^4b = ba\text{,}\) it must be the case that \(b = a^6 b = a^2 b a\text{,}\) and we can conclude that \(ab = a^3 b a = ba\text{.}\)</p></span></span></span></article></section><section class="exercises"><h1 class="heading">
+<span class="type">Exercises</span><span class="codenumber">4.1</span><span class="title">Exercises</span>
+</h1>
+<article class="exercise-like" id="exercise-135"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">1</span>
+</h5>
+<p id="p-645">Prove or disprove each of the following statements.</p>
+<ol id="ol-22" style="list-style-type: lower-alpha;">
+<li id="li-121"><p id="p-646">All of the generators of \({\mathbb Z}_{60}\) are prime.</p></li>
+<li id="li-122"><p id="p-647">\(U(8)\) is cyclic.</p></li>
+<li id="li-123"><p id="p-648">\({\mathbb Q}\) is cyclic.</p></li>
+<li id="li-124"><p id="p-649">If every proper subgroup of a group \(G\) is cyclic, then \(G\) is a cyclic group.</p></li>
+<li id="li-125"><p id="p-650">A group with a finite number of subgroups is finite.</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-37" id="hint-37"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-37" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-651">(a) False; (c) false; (e) true.</p></span></span></span></article><article class="exercise-like" id="exercise-136"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">2</span>
+</h5>
+<p id="p-652">Find the order of each of the following elements.</p>
+<ol id="ol-23" class="cols2" style="list-style-type: lower-alpha;">
+<li id="li-126" style="width:49%; float:left;"><p id="p-653">\(5 \in {\mathbb Z}_{12}\)</p></li>
+<li id="li-127" style="width:49%; float:left;"><p id="p-654">\(\sqrt{3} \in {\mathbb R}\)</p></li>
+<li id="li-128" style="width:49%; float:left;"><p id="p-655">\(\sqrt{3} \in {\mathbb R}^\ast\)</p></li>
+<li id="li-129" style="width:49%; float:left;"><p id="p-656">\(-i \in {\mathbb C}^\ast\)</p></li>
+<li id="li-130" style="width:49%; float:left;"><p id="p-657">72 in \({\mathbb Z}_{240}\)</p></li>
+<li id="li-131" style="width:49%; float:left;"><p id="p-658">312 in \({\mathbb Z}_{471}\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-38" id="hint-38"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-38" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-659">(a) 12; (c) infinite; (e) 10.</p></span></span></span></article><article class="exercise-like" id="exercise-137"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">3</span>
+</h5>
+<p id="p-660">List all of the elements in each of the following subgroups.</p>
+<ol id="ol-24" style="list-style-type: lower-alpha;">
+<li id="li-132"><p id="p-661">The subgroup of \({\mathbb Z}\) generated by 7</p></li>
+<li id="li-133"><p id="p-662">The subgroup of \({\mathbb Z}_{24}\) generated by 15</p></li>
+<li id="li-134"><p id="p-663">All subgroups of \({\mathbb Z}_{12}\)</p></li>
+<li id="li-135"><p id="p-664">All subgroups of \({\mathbb Z}_{60}\)</p></li>
+<li id="li-136"><p id="p-665">All subgroups of \({\mathbb Z}_{13}\)</p></li>
+<li id="li-137"><p id="p-666">All subgroups of \({\mathbb Z}_{48}\)</p></li>
+<li id="li-138"><p id="p-667">The subgroup generated by 3  in \(U(20)\)</p></li>
+<li id="li-139"><p id="p-668">The subgroup generated by 5 in \(U(18)\)</p></li>
+<li id="li-140"><p id="p-669">The subgroup of \({\mathbb R}^\ast\) generated by 7</p></li>
+<li id="li-141"><p id="p-670">The subgroup of \({\mathbb C}^\ast\) generated by \(i\) where \(i^2 = -1\)</p></li>
+<li id="li-142"><p id="p-671">The subgroup of \({\mathbb C}^\ast\) generated by \(2i\)</p></li>
+<li id="li-143"><p id="p-672">The subgroup of \({\mathbb C}^\ast\) generated by \((1 + i) / \sqrt{2}\)</p></li>
+<li id="li-144"><p id="p-673">The subgroup of \({\mathbb C}^\ast\) generated by \((1 + \sqrt{3}\, i) / 2\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-39" id="hint-39"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-39" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-674">(a) \(7 {\mathbb Z} = \{ \ldots, -7, 0, 7, 14, \ldots \}\text{;}\) (b) \(\{ 0, 3, 6, 9, 12, 15, 18, 21 \}\text{;}\) (c) \(\{ 0 \}\text{,}\) \(\{ 0, 6 \}\text{,}\) \(\{ 0, 4, 8 \}\text{,}\) \(\{ 0, 3, 6, 9 \}\text{,}\) \(\{ 0, 2, 4, 6, 8, 10 \}\text{;}\) (g) \(\{ 1, 3, 7, 9 \}\text{;}\) (j) \(\{ 1, -1, i, -i \}\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-138"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">4</span>
+</h5>
+<p id="p-675">Find the subgroups of \(GL_2( {\mathbb R })\) generated by each of the following matrices.</p>
+<ol id="ol-25" class="cols3" style="list-style-type: lower-alpha;">
+<li id="li-145" style="width:32.6666666666667%; float:left;"><p id="p-676">\(\displaystyle \begin{pmatrix}
+0 &amp; 1 \\
+-1 &amp; 0
+\end{pmatrix}\)</p></li>
+<li id="li-146" style="width:32.6666666666667%; float:left;"><p id="p-677">\(\displaystyle
+\begin{pmatrix}
+0 &amp; 1/3 \\
+3 &amp; 0
+\end{pmatrix}\)</p></li>
+<li id="li-147" style="width:32.6666666666667%; float:left;"><p id="p-678">\(\displaystyle
+\begin{pmatrix}
+1 &amp; -1 \\
+1 &amp; 0
+\end{pmatrix}\)</p></li>
+<li id="li-148" style="width:32.6666666666667%; float:left;"><p id="p-679">\(\displaystyle
+\begin{pmatrix}
+1 &amp; -1 \\
+0 &amp; 1
+\end{pmatrix}\)</p></li>
+<li id="li-149" style="width:32.6666666666667%; float:left;"><p id="p-680">\(\displaystyle
+\begin{pmatrix}
+1 &amp; -1 \\
+-1 &amp; 0
+\end{pmatrix}\)</p></li>
+<li id="li-150" style="width:32.6666666666667%; float:left;"><p id="p-681">\(\displaystyle
+\begin{pmatrix}
+\sqrt{3}/ 2 &amp; 1/2 \\
+-1/2 &amp; \sqrt{3}/2
+\end{pmatrix}\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-40" id="hint-40"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-40" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-682">(a)
+\begin{equation*}
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix},
+\begin{pmatrix}
+-1 &amp; 0 \\
+0 &amp; -1
+\end{pmatrix},
+\begin{pmatrix}
+0 &amp; -1 \\
+1 &amp; 0
+\end{pmatrix},
+\begin{pmatrix}
+0 &amp; 1 \\
+-1 &amp; 0
+\end{pmatrix}.
+\end{equation*}
+</p>
+<p id="p-683">(c)
+\begin{equation*}
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix},
+\begin{pmatrix}
+1 &amp; -1 \\
+1 &amp; 0
+\end{pmatrix},
+\begin{pmatrix}
+-1 &amp; 1 \\
+-1 &amp; 0
+\end{pmatrix}, \\
+\begin{pmatrix}
+0 &amp; 1 \\
+-1 &amp; 1
+\end{pmatrix},
+\begin{pmatrix}
+0 &amp; -1 \\
+1 &amp; -1
+\end{pmatrix},
+\begin{pmatrix}
+-1 &amp; 0 \\
+0 &amp; -1
+\end{pmatrix}.
+\end{equation*}
+</p></span></span></span></article><article class="exercise-like" id="exercise-144"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">10</span>
+</h5>
+<p id="p-689">Find all elements of finite order in each of the following groups. Here the “\(\ast\)” indicates the set with zero removed.</p>
+<ol id="ol-26" class="cols3" style="list-style-type: lower-alpha;">
+<li id="li-151" style="width:32.6666666666667%; float:left;"><p id="p-690">\({\mathbb Z}\)</p></li>
+<li id="li-152" style="width:32.6666666666667%; float:left;"><p id="p-691">\({\mathbb Q}^\ast\)</p></li>
+<li id="li-153" style="width:32.6666666666667%; float:left;"><p id="p-692">\({\mathbb R}^\ast\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-41" id="hint-41"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-41" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-693">(a) \(0, 1, -1\text{;}\) (b) \(1, -1\)</p></span></span></span></article><article class="exercise-like" id="exercise-145"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">11</span>
+</h5>
+<p id="p-694">If \(a^{24} =e\) in a group \(G\text{,}\) what are the possible orders of \(a\text{?}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-42" id="hint-42"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-42" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-695">1, 2, 3, 4, 6, 8, 12, 24.</p></span></span></span></article><article class="exercise-like" id="exercise-149"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">15</span>
+</h5>
+<p id="p-699">Evaluate each of the following.</p>
+<ol id="ol-27" class="cols2" style="list-style-type: lower-alpha;">
+<li id="li-154" style="width:49%; float:left;"><p id="p-700">\((3-2i)+ (5i-6)\)</p></li>
+<li id="li-155" style="width:49%; float:left;"><p id="p-701">\((4-5i)-\overline{(4i -4)}\)</p></li>
+<li id="li-156" style="width:49%; float:left;"><p id="p-702">\((5-4i)(7+2i)\)</p></li>
+<li id="li-157" style="width:49%; float:left;"><p id="p-703">\((9-i) \overline{(9-i)}\)</p></li>
+<li id="li-158" style="width:49%; float:left;"><p id="p-704">\(i^{45}\)</p></li>
+<li id="li-159" style="width:49%; float:left;"><p id="p-705">\((1+i)+\overline{(1+i)}\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-43" id="hint-43"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-43" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-706">(a) \(-3 + 3i\text{;}\) (c) \(43- 18i\text{;}\) (e) \(i\)</p></span></span></span></article><article class="exercise-like" id="exercise-150"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">16</span>
+</h5>
+<p id="p-707">Convert the following complex numbers to the form \(a + bi\text{.}\)</p>
+<ol id="ol-28" class="cols2" style="list-style-type: lower-alpha;">
+<li id="li-160" style="width:49%; float:left;"><p id="p-708">\(2 \cis(\pi / 6 )\)</p></li>
+<li id="li-161" style="width:49%; float:left;"><p id="p-709">\(5 \cis(9\pi/4)\)</p></li>
+<li id="li-162" style="width:49%; float:left;"><p id="p-710">\(3 \cis(\pi)\)</p></li>
+<li id="li-163" style="width:49%; float:left;"><p id="p-711">\(\cis(7\pi/4) /2\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-44" id="hint-44"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-44" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-712">(a) \(\sqrt{3} + i\text{;}\) (c) \(-3\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-151"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">17</span>
+</h5>
+<p id="p-713">Change the following complex numbers to polar representation.</p>
+<ol id="ol-29" class="cols3" style="list-style-type: lower-alpha;">
+<li id="li-164" style="width:32.6666666666667%; float:left;"><p id="p-714">\(1-i\)</p></li>
+<li id="li-165" style="width:32.6666666666667%; float:left;"><p id="p-715">\(-5\)</p></li>
+<li id="li-166" style="width:32.6666666666667%; float:left;"><p id="p-716">\(2+2i\)</p></li>
+<li id="li-167" style="width:32.6666666666667%; float:left;"><p id="p-717">\(\sqrt{3} + i\)</p></li>
+<li id="li-168" style="width:32.6666666666667%; float:left;"><p id="p-718">\(-3i\)</p></li>
+<li id="li-169" style="width:32.6666666666667%; float:left;"><p id="p-719">\(2i + 2 \sqrt{3}\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-45" id="hint-45"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-45" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-720">(a) \(\sqrt{2} \cis( 7 \pi /4)\text{;}\) (c) \(2 \sqrt{2} \cis( \pi /4)\text{;}\) (e) \(3 \cis(3 \pi/2)\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-152"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">18</span>
+</h5>
+<p id="p-721">Calculate each of the following expressions.</p>
+<ol id="ol-30" class="cols2" style="list-style-type: lower-alpha;">
+<li id="li-170" style="width:49%; float:left;"><p id="p-722">\((1+i)^{-1}\)</p></li>
+<li id="li-171" style="width:49%; float:left;"><p id="p-723">\((1 - i)^{6}\)</p></li>
+<li id="li-172" style="width:49%; float:left;"><p id="p-724">\((\sqrt{3} + i)^{5}\)</p></li>
+<li id="li-173" style="width:49%; float:left;"><p id="p-725">\((-i)^{10}\)</p></li>
+<li id="li-174" style="width:49%; float:left;"><p id="p-726">\(((1-i)/2)^{4}\)</p></li>
+<li id="li-175" style="width:49%; float:left;"><p id="p-727">\((-\sqrt{2} - \sqrt{2}\, i)^{12}\)</p></li>
+<li id="li-176" style="width:49%; float:left;"><p id="p-728">\((-2 + 2i)^{-5}\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-46" id="hint-46"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-46" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-729">(a) \((1 - i)/2\text{;}\) (c) \(16(i - \sqrt{3}\, )\text{;}\) (e) \(-1/4\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-156"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">22</span>
+</h5>
+<p id="p-739">Calculate each of the following.</p>
+<ol id="ol-32" class="cols2" style="list-style-type: lower-alpha;">
+<li id="li-183" style="width:49%; float:left;"><p id="p-740">\(292^{3171} \pmod{ 582}\)</p></li>
+<li id="li-184" style="width:49%; float:left;"><p id="p-741">\(2557^{ 341} \pmod{ 5681}\)</p></li>
+<li id="li-185" style="width:49%; float:left;"><p id="p-742">\(2071^{ 9521} \pmod{ 4724}\)</p></li>
+<li id="li-186" style="width:49%; float:left;"><p id="p-743">\(971^{ 321} \pmod{ 765}\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-47" id="hint-47"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-47" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-744">(a) 292; (c) 1523.</p></span></span></span></article><article class="exercise-like" id="exercise-161"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">27</span>
+</h5>
+<p id="p-752">If \(g\) and \(h\) have orders 15 and 16 respectively in a group \(G\text{,}\) what is the order of \(\langle g \rangle  \cap \langle h \rangle \text{?}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-48" id="hint-48"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-48" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-753">\(|\langle g \rangle \cap \langle h \rangle| = 1\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-165"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">31</span>
+</h5>
+<p id="p-757">Let \(G\) be an abelian group. Show that the elements of finite order in \(G\) form a subgroup. This subgroup is called the <em class="terminology">torsion subgroup</em> of \(G\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-49" id="hint-49"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-49" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-758">The identity element in any group has finite order. Let \(g, h \in G\) have orders \(m\) and \(n\text{,}\) respectively. Since \((g^{-1})^m = e\) and \((gh)^{mn} = e\text{,}\) the elements of finite order in \(G\) form a subgroup of \(G\text{.}\)</p></span></span></span></article><article class="exercise-like" id="exercise-171"><h5 class="heading hidden-type">
+<span class="type">Exercise</span><span class="codenumber">37</span>
+</h5>
+<p id="p-764">Prove that if \(G\) has no proper nontrivial subgroups, then \(G\) is a cyclic group.</p>
+<span class="hidden-knowl-wrapper"><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-50" id="hint-50"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-50" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-765">If \(g\) is an element distinct from the identity in \(G\text{,}\) \(g\) must generate \(G\text{;}\) otherwise, \(\langle g \rangle\) is a nontrivial proper subgroup of \(G\text{.}\)</p></span></span></span></article></section></section></div></main>
+</div>
+</body>
+</html>

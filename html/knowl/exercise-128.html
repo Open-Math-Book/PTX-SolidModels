@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-06-04T18:28:10-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="exercise-like"><h5 class="heading">
+<span class="type">Exercise</span><span class="codenumber">4</span><span class="title">ISBN Codes</span>
+</h5>
+<p id="p-556">Every book has an International Standard Book Number (ISBN) code.  This is a 10-digit code indicating the book's publisher and title.  The tenth digit is a check digit satisfying
+\begin{equation*}
+(d_1, d_2, \ldots, d_{10} ) \cdot (10, 9, \ldots, 1 )  \equiv 0 \pmod{11}.
+\end{equation*}
+One problem is that \(d_{10}\) might have to be a 10 to make the inner product zero; in this case, 11 digits would be  needed to make this scheme work.  Therefore, the character X is used for the eleventh digit.  So ISBN 3-540-96035-X is a valid ISBN code.</p>
+<ol id="ol-21" style="list-style-type: lower-alpha;">
+<li id="li-116"><p id="p-557">Is ISBN 0-534-91500-0 a valid ISBN code?  What about ISBN 0-534-91700-0 and ISBN 0-534-19500-0?</p></li>
+<li id="li-117"><p id="p-558">Does this method detect all single-digit errors?  What about all transposition errors?</p></li>
+<li id="li-118"><p id="p-559">How many different ISBN codes are there?</p></li>
+<li id="li-119"><p id="p-560">Write a computer program that will calculate the check digit for the first nine digits of an ISBN code.</p></li>
+<li id="li-120"><p id="p-561">A publisher has houses in Germany and the United States.  Its German prefix is <tt class="code-inline tex2jax_ignore">3-540</tt>.  If its United States prefix will be <tt class="code-inline tex2jax_ignore">0-abc</tt>, find <tt class="code-inline tex2jax_ignore">abc</tt> such that the rest of the ISBN code will be the same for a book printed in Germany and in the United States. Under the ISBN coding method the first digit identifies the language; German is <tt class="code-inline tex2jax_ignore">3</tt> and English is <tt class="code-inline tex2jax_ignore">0</tt>.  The next group of numbers identifies the publisher, and the last group identifies the specific book.</p></li>
+</ol></article><span class="incontext"><a href="exercises-7.html#exercise-128">in-context</a></span>
+</body>
+</html>

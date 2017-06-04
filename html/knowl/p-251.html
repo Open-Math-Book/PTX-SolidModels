@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-06-04T18:28:09-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>We will prove the binomial theorem using mathematical induction; that is, 
+\begin{equation*}
+(a + b)^n = \sum_{k = 0}^{n} \binom{n}{k} a^k b^{n - k},
+\end{equation*}
+ where \(a\) and \(b\) are real numbers, \(n \in \mathbb{N}\text{,}\), and 
+\begin{equation*}
+\binom{n}{k} = \frac{n!}{k! (n - k)!}
+\end{equation*}
+ is the binomial coefficient.  We first show that 
+\begin{equation*}
+\binom{n + 1}{k} = \binom{n}{k} + \binom{n}{k - 1}.
+\end{equation*}
+ This result follows from
+\begin{align*}
+\binom{n}{k} + \binom{n}{k - 1} &amp; = \frac{n!}{k!(n - k)!} +\frac{n!}{(k-1)!(n - k + 1)!}\\
+&amp; = \frac{(n + 1)!}{k!(n + 1 - k)!}\\
+&amp; =\binom{n + 1}{k}.
+\end{align*}
+</p>
+<span class="incontext"><a href="section-math-induction.html#p-251">in-context</a></span>
+</body>
+</html>

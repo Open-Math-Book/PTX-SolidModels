@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-06-04T18:28:08-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Cyclic Groups</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script><script>$(function () {
+    // Make *any* div with class 'sage-display' a visible, uneditable Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.sage-display',
+                           editor: 'codemirror-readonly',
+                           hide: ['evalButton', 'editorToggle', 'language']});
+});
+</script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="extra.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{{\not{\mid}}}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2014.png"></a><div class="title-container">
+<h1 class="heading"><a href="sample-book.html"><span class="title">Abstract Algebra</span><span class="subtitle">MATHBOOK XML SAMPLE ONLY</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="groups-sage-exercises.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sample-book.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="groups-sage-exercises.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="sample-book.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="backmatter.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html" data-scroll="index"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="biography-1.html" data-scroll="biography-1">Author Biography</a></li>
+<li><a href="biography-2.html" data-scroll="biography-2">About Robert A. Beezer</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1">Dedication</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+<li><a href="preface-2.html" data-scroll="preface-2">Contributors to the 4\(^\mathrm{th}\) Edition</a></li>
+</ul>
+<h2 class="link"><a href="sets.html" data-scroll="sets"><span class="codenumber">1</span><span class="title">Preliminaries</span></a></h2>
+<ul>
+<li><a href="section-note-on-proofs.html" data-scroll="section-note-on-proofs">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-equivalence-relations.html" data-scroll="section-sets-and-equivalence-relations">Sets and Equivalence Relations</a></li>
+<li><a href="exercises-sets.html" data-scroll="exercises-sets">Exercises</a></li>
+<li><a href="references-1.html" data-scroll="references-1">References and Suggested Readings</a></li>
+<li><a href="sets-sage.html" data-scroll="sets-sage">Sage</a></li>
+<li><a href="sets-sage-exercises.html" data-scroll="sets-sage-exercises">Sage Exercises</a></li>
+</ul>
+<h2 class="link"><a href="integers.html" data-scroll="integers"><span class="codenumber">2</span><span class="title">The Integers</span></a></h2>
+<ul>
+<li><a href="section-math-induction.html" data-scroll="section-math-induction">Mathematical Induction</a></li>
+<li><a href="section-division-algorithm.html" data-scroll="section-division-algorithm">The Division Algorithm</a></li>
+<li><a href="exercises-integers.html" data-scroll="exercises-integers">Exercises</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Programming Exercises</a></li>
+<li><a href="references-2.html" data-scroll="references-2">References and Suggested Readings</a></li>
+<li><a href="integers-sage.html" data-scroll="integers-sage">Sage</a></li>
+<li><a href="integers-sage-exercises.html" data-scroll="integers-sage-exercises">Sage Exercises</a></li>
+</ul>
+<h2 class="link"><a href="groups.html" data-scroll="groups"><span class="codenumber">3</span><span class="title">Groups</span></a></h2>
+<ul>
+<li><a href="section-mod-n-sym.html" data-scroll="section-mod-n-sym">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="section-groups-define">Definitions and Examples</a></li>
+<li><a href="section-subgroups.html" data-scroll="section-subgroups">Subgroups</a></li>
+<li><a href="exercises-groups.html" data-scroll="exercises-groups">Exercises</a></li>
+<li><a href="exercises-7.html" data-scroll="exercises-7">Additional Exercises: Detecting Errors</a></li>
+<li><a href="references-3.html" data-scroll="references-3">References and Suggested Readings</a></li>
+<li><a href="groups-sage.html" data-scroll="groups-sage">Sage</a></li>
+<li><a href="groups-sage-exercises.html" data-scroll="groups-sage-exercises">Sage Exercises</a></li>
+</ul>
+<h2 class="link active"><a href="cyclic.html" data-scroll="cyclic"><span class="codenumber">4</span><span class="title">Cyclic Groups</span></a></h2>
+<ul>
+<li><a href="exercises-cyclic.html" data-scroll="exercises-cyclic">Exercises</a></li>
+<li><a href="exercises-10.html" data-scroll="exercises-10">Programming Exercises</a></li>
+<li><a href="references-4.html" data-scroll="references-4">References and Suggested Readings</a></li>
+<li><a href="cyclic-sage-exercises.html" data-scroll="cyclic-sage-exercises">Sage Exercises</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html" data-scroll="appendix-1">Notation</a></li>
+<li><a href="appendix-2.html" data-scroll="appendix-2">Hints and Solutions to Selected Exercises</a></li>
+<li><a href="appendix-gfdl.html" data-scroll="appendix-gfdl">GNU Free Documentation License</a></li>
+<li><a href="index-part-1.html" data-scroll="index-part-1">Index</a></li>
+<li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="chapter" id="cyclic"><header title="Chapter 4 Cyclic Groups"><h1 class="heading" alt="Chapter 4 Cyclic Groups">
+<span class="type">Chapter</span><span class="codenumber">4</span><span class="title">Cyclic Groups</span><a href="cyclic.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-592">The groups \(\mathbb Z\) and \({\mathbb Z}_n\text{,}\) which are among the most familiar and easily understood groups, are both examples of what are called cyclic groups.  In this chapter we will study the properties of cyclic groups and cyclic subgroups, which play a fundamental part in the classification of all abelian groups.</p>
+<p id="p-593">Often a subgroup will depend entirely on a single element of the group; that is, knowing that particular element will allow us to compute any other element in the subgroup.</p>
+<article class="example-like" id="example-cyclic-z3"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.0.1</span>
+</h5>
+<p id="p-594">Suppose that we consider \(3 \in {\mathbb Z}\) and look at all multiples (both positive and negative) of 3.  As a set, this is
+\begin{equation*}
+3 {\mathbb Z} = \{ \ldots, -3, 0, 3, 6, \ldots \}.
+\end{equation*}
+It is easy to see that \(3 {\mathbb Z}\) is a subgroup of the integers.  This subgroup is completely determined by the element 3 since we can obtain all of the other elements of the group by taking multiples of 3.  Every element in the subgroup is “generated” by 3.</p></article><article class="example-like" id="example-cyclic-2n"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.0.2</span>
+</h5>
+<p id="p-595">If \(H = \{ 2^n : n \in {\mathbb Z} \}\text{,}\) then \(H\) is a subgroup of the multiplicative group of nonzero rational numbers, \({\mathbb Q}^*\text{.}\)  If \(a = 2^m\) and \(b = 2^n\) are in \(H\text{,}\) then \(ab^{-1} = 2^m 2^{-n} = 2^{m-n}\) is also in \(H\text{.}\)  By Proposition <a knowl="./knowl/proposition-subgroup.html" knowl-id="xref-proposition-subgroup" alt="Proposition 3.3.8 " title="Proposition 3.3.8 ">3.3.8</a>, \(H\) is a subgroup of \({\mathbb Q}^*\) determined by the element 2.</p></article><article class="theorem-like" id="theorem-cyclic-subgroup"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">4.0.3</span>
+</h5>
+<p id="p-596">Let \(G\) be a group and \(a\) be any element in \(G\text{.}\)  Then the set
+\begin{equation*}
+\langle a \rangle  = \{ a^k : k \in {\mathbb Z} \}
+\end{equation*}
+is a subgroup of \(G\text{.}\)  Furthermore, \(\langle a \rangle\) is the smallest subgroup of \(G\) that contains~\(a\text{.}\)</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-20" id="proof-20"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-20" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-597">The identity is in \(\langle a \rangle \) since \(a^0 = e\text{.}\) If \(g\) and \(h\) are any two elements in \(\langle a \rangle \text{,}\) then by the definition of \(\langle a \rangle\) we can write \(g = a^m\) and \(h = a^n\) for some integers \(m\) and \(n\text{.}\) So \(gh = a^m a^n = a^{m+n}\) is again in \(\langle a \rangle \text{.}\) Finally, if \(g = a^n\) in \(\langle a \rangle \text{,}\) then the inverse \(g^{-1} = a^{-n}\) is also in \(\langle a \rangle \text{.}\) Clearly, any subgroup \(H\) of \(G\) containing \(a\) must contain all the powers of \(a\) by closure; hence, \(H\) contains \(\langle a \rangle \text{.}\) Therefore, \(\langle a \rangle \) is the smallest subgroup of \(G\) containing \(a\text{.}\)</p></article></span>
+</div>
+<article class="remark-like" id="remark-3"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">4.0.4</span>
+</h5>
+<p id="p-598">If we are using the “+” notation, as in the case of the integers under addition, we write \(\langle a \rangle  = \{ na : n \in {\mathbb Z} \}\text{.}\)</p></article><p id="p-599">For \(a \in G\text{,}\) we call \(\langle a \rangle \) the <em class="terminology">cyclic subgroup</em> generated by \(a\text{.}\) If \(G\) contains some element \(a\) such that \(G = \langle a \rangle \text{,}\) then \(G\) is a <em class="terminology">cyclic group</em>. In this case \(a\) is a <em class="terminology">generator</em> of \(G\text{.}\)  If \(a\) is an element of a group \(G\text{,}\) we define the <em class="terminology">order</em> of \(a\) to be the smallest positive integer \(n\) such that \(a^n= e\text{,}\) and we write \(|a| = n\text{.}\)  If there is no such integer \(n\text{,}\) we say that the order of \(a\) is infinite and  write \(|a| = \infty\) to denote the order of \(a\text{.}\)</p>
+<article class="example-like" id="example-cyclic-z6"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.0.5</span>
+</h5>
+<p id="p-600">Notice that a cyclic group can have more than a single generator. Both 1 and 5 generate \({\mathbb Z}_6\text{;}\) hence, \({\mathbb Z}_6\) is a cyclic group. Not every element in a cyclic group is necessarily a generator of the group. The order of \(2 \in {\mathbb Z}_6\) is 3. The cyclic subgroup generated by 2 is \(\langle 2 \rangle  = \{ 0, 2, 4 \}\text{.}\)</p></article><p id="p-601">The groups \({\mathbb Z}\) and \({\mathbb Z}_n\) are cyclic groups. The elements 1 and \(-1\) are generators for \({\mathbb Z}\text{.}\)  We can certainly generate \({\mathbb Z}_n\) with 1 although there may be other generators of \({\mathbb Z}_n\text{,}\) as in the case of \({\mathbb Z}_6\text{.}\)</p>
+<article class="example-like" id="example-cyclic-u9"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.0.6</span>
+</h5>
+<p id="p-602">The group of units, \(U(9)\text{,}\) in \({\mathbb Z}_9\) is a cyclic group.  As a set, \(U(9)\) is \(\{ 1, 2, 4, 5, 7, 8  \}\text{.}\) The element 2 is a generator for \(U(9)\) since
+\begin{align*}
+2^1 &amp; = 2 \qquad 2^2 = 4\\
+2^3 &amp; = 8 \qquad 2^4 = 7\\
+2^5 &amp; =  5 \qquad 2^6 = 1.
+\end{align*}
+</p></article><article class="example-like" id="example-cyclic-s3-not-cyclic"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.0.7</span>
+</h5>
+<p id="p-603">Not every group is a cyclic group.  Consider the symmetry group of an equilateral triangle \(S_3\text{.}\)  The subgroups of \(S_3\) are shown in Figure <a knowl="./knowl/figure-subgrps-s3.html" knowl-id="xref-figure-subgrps-s3" alt="Figure 4.0.8 " title="Figure 4.0.8 ">4.0.8</a>.  Notice that every subgroup is cyclic; however, no single element generates the entire group.</p></article><figure class="figure-like" id="figure-subgrps-s3"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/cyclic-s3-subgroups.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">4.0.8</span>Subgroups of \(S_3\)</figcaption></figure><article class="theorem-like" id="theorem-cyclic-abelian"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">4.0.9</span>
+</h5>
+<p id="p-604">Every cyclic group is abelian.</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-21" id="proof-21"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-21" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-605">Let \(G\) be a cyclic group and \(a \in G\) be a generator for \(G\text{.}\) If \(g\) and \(h\) are in \(G\text{,}\) then they can be written as powers of \(a\text{,}\) say \(g = a^r\) and \(h = a^s\text{.}\) Since
+\begin{equation*}
+g  h = a^r a^s = a^{r+s} = a^{s+r} = a^s a^r = h g,
+\end{equation*}
+\(G\) is abelian.</p></article></span>
+</div>
+<p id="p-606">We can ask some interesting questions about cyclic subgroups of a group and subgroups of a cyclic group.  If \(G\) is a group, which subgroups of \(G\) are cyclic? If \(G\) is a cyclic group, what type of subgroups does \(G\) possess?</p>
+<article class="theorem-like" id="theorem-cyclic-subgroups"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">4.0.10</span>
+</h5>
+<p id="p-607">Every subgroup of a cyclic group is cyclic.</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-22" id="proof-22"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-22" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-608">The main tools used in this proof are the division algorithm and the Principle of Well-Ordering. Let \(G\) be a cyclic group generated by \(a\) and suppose that \(H\) is a subgroup of \(G\text{.}\) If \(H = \{ e \}\text{,}\) then trivially \(H\) is cyclic. Suppose that \(H\) contains some other element \(g\) distinct from the identity. Then \(g\) can be written as \(a^n\) for some integer \(n\text{.}\) Since \(H\) is a subgroup, \(g^{-1} = a^{n}\) must also be in \(H\text{.}\)  Since either \(n\) or \(-n\) is postive, we can assume that \(H\) contains positve powers of \(a\) and \(n \gt 0\text{.}\) Let \(m\) be the smallest natural number such that \(a^m \in H\text{.}\) Such an \(m\) exists by the Principle of Well-Ordering.</p>
+<p id="p-609">We claim that \(h = a^m\) is a generator for \(H\text{.}\)  We must show that every \(h' \in H\) can be written as a power of \(h\text{.}\) Since \(h' \in H\) and \(H\) is a subgroup of \(G\text{,}\) \(h' = a^k\) for some integer \(k\text{.}\) Using the division algorithm, we can find numbers \(q\) and \(r\) such that \(k = mq +r\) where \(0 \leq r \lt m\text{;}\) hence,
+\begin{equation*}
+a^k = a^{mq +r} = (a^m)^q a^r = h^q a^r.
+\end{equation*}
+So \(a^r = a^k h^{-q}\text{.}\) Since \(a^k\) and \(h^{-q}\) are in \(H\text{,}\) \(a^r\) must also be in \(H\text{.}\)  However, \(m\) was the smallest positive number such that \(a^m\) was in \(H\text{;}\) consequently, \(r=0\) and so \(k=mq\text{.}\) Therefore,
+\begin{equation*}
+h' = a^k = a^{mq} =  h^q
+\end{equation*}
+and \(H\) is generated by \(h\text{.}\)</p></article></span>
+</div>
+<article class="theorem-like" id="corollary-3"><h5 class="heading">
+<span class="type">Corollary</span><span class="codenumber">4.0.11</span>
+</h5>
+<p id="p-610">The subgroups of \({\mathbb Z}\) are exactly \(n{\mathbb Z}\) for \(n = 0, 1, 2,\ldots\text{.}\)</p></article><article class="theorem-like" id="proposition-cyclic-subgrp-order"><h5 class="heading">
+<span class="type">Proposition</span><span class="codenumber">4.0.12</span>
+</h5>
+<p id="p-611">Let \(G\) be a cyclic group of order \(n\) and suppose that \(a\) is a generator for  \(G\text{.}\) Then \(a^k=e\) if and only if \(n\) divides \(k\text{.}\)</p></article><div class="posterior">
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-23" id="proof-23"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></div>
+<div id="hk-proof-23" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-612">First suppose that \(a^k=e\text{.}\) By the division algorithm, \(k = nq + r\) where \(0 \leq r \lt n\text{;}\) hence,
+\begin{equation*}
+e = a^k = a^{nq + r} = a^{nq} a^r = e a^r = a^r.
+\end{equation*}
+Since the smallest positive integer \(m\) such that \(a^m = e\) is \(n\text{,}\) \(r= 0\text{.}\)</p>
+<p id="p-613">Conversely, if \(n\) divides \(k\text{,}\) then \(k=ns\) for some integer \(s\text{.}\) Consequently,
+\begin{equation*}
+a^k = a^{ns} = (a^n)^s = e^s = e.
+\end{equation*}
+</p></article></div>
+</div>
+<article class="theorem-like" id="theorem-cyclic-orders"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">4.0.13</span>
+</h5>
+<p id="p-614">Let \(G\) be a cyclic group of order \(n\) and suppose that \(a \in G\) is a generator of the group.  If \(b = a^k\text{,}\) then the order of \(b\) is \(n/d\text{,}\) where \(d = \gcd(k,n)\text{.}\)</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-24" id="proof-24"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-24" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-615">We wish to find the smallest integer \(m\) such that \(e = b^m = a^{km}\text{.}\) By Proposition <a knowl="./knowl/proposition-cyclic-subgrp-order.html" knowl-id="xref-proposition-cyclic-subgrp-order" alt="Proposition 4.0.12 " title="Proposition 4.0.12 ">4.0.12</a>, this is the smallest integer \(m\) such that \(n\) divides \(km\) or, equivalently, \(n/d\) divides \(m(k/d)\text{.}\)  Since \(d\) is the greatest common divisor of \(n\) and \(k\text{,}\) \(n/d\) and \(k/d\) are relatively prime. Hence, for \(n/d\) to divide \(m(k/d)\) it must divide \(m\text{.}\)  The smallest such \(m\) is \(n/d\text{.}\)</p></article></span>
+</div>
+<article class="theorem-like" id="corollary-cyclic-modngenerators"><h5 class="heading">
+<span class="type">Corollary</span><span class="codenumber">4.0.14</span>
+</h5>
+<p id="p-616">The generators of \({\mathbb Z}_n\) are the integers \(r\) such that \(1 \leq r \lt n\) and \(\gcd(r,n) =  1\text{.}\)</p></article><article class="example-like" id="example-cyclic-z16"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.0.15</span>
+</h5>
+<p id="p-617">Let us examine the group \({\mathbb Z}_{16}\text{.}\)  The numbers 1, 3, 5, 7, 9, 11, 13, and 15 are the elements of \({\mathbb Z}_{16}\) that are relatively prime to 16.  Each of these elements generates \({\mathbb Z}_{16}\text{.}\) For example,
+\begin{align*}
+1 \cdot 9  &amp; =  9  &amp;  2 \cdot 9  &amp; = 2  &amp; 3 \cdot 9  &amp; = 11\\
+4 \cdot 9  &amp; =  4  &amp;  5 \cdot 9  &amp; = 13 &amp;     6 \cdot 9 &amp; = 6 \\
+7 \cdot 9  &amp; =  15 &amp; 8 \cdot 9  &amp; = 8  &amp;  9 \cdot 9 &amp;  = 1 \\
+10 \cdot 9 &amp; =  10 &amp; 11 \cdot 9 &amp; = 3  &amp; 12 \cdot 9 &amp;  = 12\\
+13 \cdot 9 &amp; =  5 &amp; 14 \cdot 9 &amp; = 14 &amp;   15 \cdot 9 &amp; = 7.
+\end{align*}
+</p></article><p id="p-618">The <em class="terminology">complex numbers</em> are defined as
+\begin{equation*}
+{\mathbb C} = \{ a + bi : a, b \in {\mathbb R} \},
+\end{equation*}
+where \(i^2 = -1\text{.}\)  If \(z = a + bi\text{,}\) then \(a\) is the <em class="terminology">real part</em> of \(z\) and \(b\) is the <em class="terminology">imaginary part</em> of \(z\text{.}\)</p>
+<p id="p-619">To add two complex numbers \(z=a+bi\) and \(w= c+di\text{,}\) we just add the corresponding real and imaginary parts:
+\begin{equation*}
+z + w=(a + bi ) + (c + di)  =  (a + c) + (b + d)i.
+\end{equation*}
+Remembering that \(i^2 = -1\text{,}\)  we multiply complex numbers just like polynomials. The product of \(z\) and \(w\) is
+\begin{equation*}
+(a + bi )(c + di)  =   ac + bdi^2 + adi + bci =  (ac -bd) +(ad + bc)i.
+\end{equation*}
+</p>
+<p id="p-620">Every nonzero complex number \(z = a +bi\) has a multiplicative inverse; that is, there exists a \(z^{-1} \in {\mathbb C}^\ast\) such that \(z z^{-1} = z^{-1} z = 1\text{.}\) If \(z = a + bi\text{,}\) then
+\begin{equation*}
+z^{-1} = \frac{a-bi}{ a^2 + b^2  }.
+\end{equation*}
+The <em class="terminology">complex conjugate</em> of a complex number \(z = a + bi\) is defined to be \(\overline{z} = a- bi\text{.}\)  The <em class="terminology">absolute value</em> or <em class="terminology">modulus</em> of  \(z = a + bi\)  is \(|z| = \sqrt{a^2 + b^2}\text{.}\)</p>
+<article class="example-like" id="example-cyclic-complex-add"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.0.16</span>
+</h5>
+<p id="p-621">Let \(z = 2 + 3i\) and \(w = 1-2i\text{.}\) Then
+\begin{equation*}
+z + w = (2 + 3i) + (1 - 2i) = 3 + i
+\end{equation*}
+and
+\begin{equation*}
+z  w = (2 + 3i)(1 - 2i ) = 8 - i.
+\end{equation*}
+Also,
+\begin{align*}
+z^{-1} &amp; = \frac{2}{13} - \frac{3}{13}i\\
+|z| &amp; = \sqrt{13}\\
+\overline{z} &amp; = 2-3i.
+\end{align*}
+</p></article><figure class="figure-like" id="figure-rectcoord"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/cyclic-complex-rectangular.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">4.0.17</span>Rectangular coordinates of a complex number</figcaption></figure><p id="p-622">There are several ways of graphically representing complex numbers. We can represent a complex number \(z = a +bi\) as an ordered pair on the \(xy\) plane where \(a\) is the \(x\) (or real) coordinate and \(b\) is the \(y\) (or imaginary) coordinate. This is called the <em class="terminology">rectangular</em> or <em class="terminology">Cartesian</em> representation. The rectangular representations of \(z_1 = 2 + 3i\text{,}\) \(z_2 = 1 - 2i\text{,}\) and \(z_3 = - 3 + 2i\) are depicted in Figure <a knowl="./knowl/figure-rectcoord.html" knowl-id="xref-figure-rectcoord" alt="Figure 4.0.17 " title="Figure 4.0.17 ">4.0.17</a>.</p>
+<figure class="figure-like" id="figure-polarcoord"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/cyclic-complex-polar.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">4.0.18</span>Polar coordinates of a complex number</figcaption></figure><p id="p-623">Nonzero complex numbers can also be represented using <em class="terminology">polar coordinates</em>.  To specify  any nonzero point on the plane, it suffices to give an angle \(\theta\) from the positive \(x\) axis in the counterclockwise direction and a distance \(r\) from the origin, as in  Figure <a knowl="./knowl/figure-polarcoord.html" knowl-id="xref-figure-polarcoord" alt="Figure 4.0.18 " title="Figure 4.0.18 ">4.0.18</a>. We can see that
+\begin{equation*}
+z = a + bi = r( \cos \theta + i \sin \theta).
+\end{equation*}
+Hence,
+\begin{equation*}
+r = |z| = \sqrt{a^2 + b^2}
+\end{equation*}
+and
+\begin{align*}
+a &amp; = r \cos \theta\\
+b &amp; = r \sin \theta.
+\end{align*}
+We sometimes abbreviate \(r( \cos \theta + i \sin \theta)\) as \(r \cis \theta\text{.}\)  To assure that the representation of \(z\) is  well-defined, we also require that \(0^{\circ} \leq \theta \lt 360^{\circ}\text{.}\)  If the measurement is in radians, then \(0 \leq \theta \lt2 \pi\text{.}\)</p>
+<article class="example-like" id="example-cyclic-polar"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.0.19</span>
+</h5>
+<p id="p-624">Suppose that \(z = 2 \cis  60^{\circ}\text{.}\) Then
+\begin{equation*}
+a = 2 \cos 60^{\circ} = 1
+\end{equation*}
+and
+\begin{equation*}
+b = 2 \sin 60^{\circ} = \sqrt{3}.
+\end{equation*}
+Hence, the rectangular representation is \(z = 1+\sqrt{3}\, i\text{.}\)</p>
+<p id="p-625">Conversely, if we are given a rectangular representation of a complex number, it is often useful to know the number's polar representation. If \(z = 3 \sqrt{2} - 3 \sqrt{2}\, i\text{,}\) then
+\begin{equation*}
+r = \sqrt{a^2 + b^2} = \sqrt{36 } = 6
+\end{equation*}
+and
+\begin{equation*}
+\theta = \arctan \left( \frac{b}{a} \right) = \arctan( - 1) = 315^{\circ},
+\end{equation*}
+so \(3 \sqrt{2} - 3 \sqrt{2}\, i=6 \cis  315^{\circ}\text{.}\)</p></article><p id="p-626">The polar representation of a complex number makes it easy to find products and powers of complex numbers.  The proof of the following proposition is straightforward and is left as an exercise.</p>
+<article class="theorem-like" id="proposition-polar-mult"><h5 class="heading">
+<span class="type">Proposition</span><span class="codenumber">4.0.20</span>
+</h5>
+<p id="p-627">Let \(z = r \cis \theta\) and \(w = s \cis \phi\) be two nonzero complex numbers. Then
+\begin{equation*}
+zw = r s \cis( \theta + \phi).
+\end{equation*}
+</p></article><article class="example-like" id="example-cyclic-polar-mult"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.0.21</span>
+</h5>
+<p id="p-628">If \(z =  3 \cis( \pi / 3 )\) and \(w = 2 \cis(\pi / 6 )\text{,}\) then \(zw = 6 \cis( \pi / 2 ) = 6i\text{.}\)</p></article><article class="theorem-like" id="theorem-15"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">4.0.22</span><span class="title">DeMoivre</span>
+</h5>
+<p id="p-629">Let \(z = r \cis  \theta\) be a nonzero complex number. Then
+\begin{equation*}
+[r \cis \theta  ]^n = r^n \cis( n \theta)
+\end{equation*}
+for \(n = 1, 2, \ldots\text{.}\)</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-25" id="proof-25"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-25" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-630">We will use induction on \(n\text{.}\) For \(n = 1\) the theorem is trivial. Assume that the theorem is true for all \(k\) such that \(1  \leq k \leq n\text{.}\) Then
+\begin{align*}
+z^{n+1} &amp; = z^n z\\
+&amp; = r^n( \cos  n \theta + i \sin n \theta ) r( \cos \theta + i\sin \theta )\\
+&amp; = r^{n+1} [( \cos n \theta \cos \theta - \sin n \theta \sin \theta ) + i ( \sin n \theta \cos \theta + \cos n \theta \sin \theta)]\\
+&amp; = r^{n+1} [ \cos( n \theta + \theta) + i \sin( n \theta + \theta) ]\\
+&amp; = r^{n+1} [ \cos( n +1) \theta + i \sin( n+1) \theta  ].
+\end{align*}
+</p></article></span>
+</div>
+<article class="example-like" id="theorem-demoivre"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.0.23</span>
+</h5>
+<p id="p-631">Suppose that \(z= 1+i\) and we wish to compute \(z^{10}\text{.}\) Rather than computing \((1 + i)^{10}\) directly, it is much easier to switch to polar coordinates and calculate \(z^{10}\) using DeMoivre's Theorem:
+\begin{align*}
+z^{10} &amp; = (1+i)^{10}\\
+&amp; = \left( \sqrt{2} \cis \left( \frac{\pi }{4} \right) \right)^{10}\\
+&amp; = ( \sqrt{2}\, )^{10} \cis \left( \frac{5\pi }{2} \right)\\
+&amp; = 32  \cis \left( \frac{\pi }{2} \right)\\
+&amp; = 32i.
+\end{align*}
+</p></article><p id="p-632">The multiplicative group of the complex numbers, \({\mathbb C}^*\text{,}\) possesses some interesting subgroups.  Whereas \({\mathbb Q}^*\) and \({\mathbb R}^*\) have no interesting subgroups of finite order, \({\mathbb C}^*\) has many. We first consider the <em class="terminology">circle group</em>,
+\begin{equation*}
+{\mathbb T} = \{ z \in {\mathbb C} : |z| = 1 \}.
+\end{equation*}
+The following proposition is a direct result of Proposition <a knowl="./knowl/proposition-polar-mult.html" knowl-id="xref-proposition-polar-mult" alt="Proposition 4.0.20 " title="Proposition 4.0.20 ">4.0.20</a>.</p>
+<article class="theorem-like" id="proposition-13"><h5 class="heading">
+<span class="type">Proposition</span><span class="codenumber">4.0.24</span>
+</h5>
+<p id="p-633">The circle group is a subgroup of  \({\mathbb C}^*\text{.}\)</p></article><p id="p-634">Although the circle group has infinite order, it has many interesting finite subgroups. Suppose that \(H = \{ 1, -1, i, -i \}\text{.}\) Then \(H\) is a subgroup of the circle group. Also, \(1\text{,}\) \(-1\text{,}\) \(i\text{,}\) and \(-i\) are exactly those complex numbers that satisfy the equation \(z^4 = 1\text{.}\) The complex numbers satisfying the equation \(z^n=1\) are called the <em class="terminology">\(n\)th roots of unity</em>.</p>
+<article class="theorem-like" id="theorem-16"><h5 class="heading">
+<span class="type">Theorem</span><span class="codenumber">4.0.25</span>
+</h5>
+<p id="p-635">If \(z^n = 1\text{,}\) then the \(n\)th roots of unity are
+\begin{equation*}
+z = \cis\left( \frac{2 k \pi}{n } \right),
+\end{equation*}
+where \(k = 0, 1, \ldots, n-1\text{.}\) Furthermore, the \(n\)th roots of unity form a cyclic subgroup of \({\mathbb T}\) of order \(n\)</p></article><div class="posterior">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-proof-26" id="proof-26"><article class="hiddenproof"><h5 class="heading"><span class="type">Proof</span></h5></article></a></span><span id="hk-proof-26" style="display: none;" class="tex2jax_ignore"><article class="hiddenproof"><p id="p-636">By DeMoivre's Theorem,
+\begin{equation*}
+z^n = \cis \left( n \frac{2 k \pi}{n } \right) = \cis( 2 k \pi ) = 1.
+\end{equation*}
+The \(z\)'s are distinct since the numbers \(2 k \pi /n\) are all distinct and are greater than or equal to 0 but less than \(2 \pi\text{.}\)  We will leave the proof that the \(n\)th roots of unity form a cyclic subgroup of \({\mathbb T}\) as an exercise.</p></article></span>
+</div>
+<p id="p-637">A generator for the group of the \(n\)th roots of unity is called a <em class="terminology">primitive \(n\)th root of unity</em>.</p>
+<article class="example-like" id="example-roots_unity"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.0.26</span>
+</h5>
+<p id="p-638">The 8th roots of unity can be represented as eight equally spaced points on the unit circle (Figure <a knowl="./knowl/figure-rtsunity.html" knowl-id="xref-figure-rtsunity" alt="Figure 4.0.27 " title="Figure 4.0.27 ">4.0.27</a>).  The primitive 8th roots of unity are
+\begin{align*}
+\omega &amp; = \frac{\sqrt{2}}{2}  + \frac{\sqrt{2}}{2} i\\
+\omega^3 &amp; = -\frac{\sqrt{2}}{2}  + \frac{\sqrt{2}}{2} i\\
+\omega^5 &amp; = -\frac{\sqrt{2}}{2}  - \frac{\sqrt{2}}{2} i\\
+\omega^7 &amp; = \frac{\sqrt{2}}{2}  - \frac{\sqrt{2}}{2}i. 
+\end{align*}
+</p></article><figure class="figure-like" id="figure-rtsunity"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/cyclic-roots-unity.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">4.0.27</span>8th roots of unity</figcaption></figure><p id="p-639">Computing large powers can be very time-consuming. Just as anyone can compute \(2^2\) or \(2^8\text{,}\) everyone knows how to compute
+\begin{equation*}
+2^{2^{1000000} }.
+\end{equation*}
+However, such numbers are so large that we do not want to attempt the calculations; moreover, past a certain point the computations would not be feasible even if we had every computer in the world at our disposal. Even writing down the decimal representation of a very large number may not be reasonable. It could be thousands or even millions of digits long. However, if we could compute something like \(2^{37398332 } \pmod{ 46389}\text{,}\) we could very easily write the result down since it would be a number between 0 and 46,388. If we want to compute powers modulo \(n\) quickly and efficiently, we will have to be clever.</p>
+<p id="p-640">The first thing to notice is that any number \(a\) can be written as the sum of distinct powers of 2; that is, we can write
+\begin{equation*}
+a = 2^{k_1} + 2^{k_2} + \cdots + 2^{k_n},
+\end{equation*}
+where \(k_1 \lt k_2 \lt \cdots \lt k_n\text{.}\)  This is just the binary representation of \(a\text{.}\) For example, the binary representation of 57 is 111001, since we can write \(57 = 2^0 + 2^3 + 2^4 + 2^5\text{.}\)</p>
+<p id="p-641">The laws of exponents still work in \({\mathbb Z}_n\text{;}\) that is, if \(b \equiv a^x \pmod{ n}\) and \(c \equiv a^y \pmod{ n}\text{,}\) then \(bc \equiv a^{x+y} \pmod{ n}\text{.}\) We can compute \(a^{2^k} \pmod{ n}\) in \(k\) multiplications by computing
+\begin{gather*}
+a^{2^0} \pmod{ n}\\
+a^{2^1} \pmod{ n }\\
+\vdots\\
+a^{2^k} \pmod{ n}.
+\end{gather*}
+Each step involves squaring the answer obtained in the previous step, dividing by \(n\text{,}\) and taking the remainder.</p>
+<article class="example-like" id="example-cyclic-repeated-squares"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.0.28</span>
+</h5>
+<p id="p-642">We will compute \(271^{321} \pmod{ 481}\text{.}\) Notice that
+\begin{equation*}
+321 = 2^0 +2^6 + 2^8;
+\end{equation*}
+hence, computing \(271^{321} \pmod{ 481}\) is the same as computing
+\begin{equation*}
+271^{2^0 +2^6 + 2^8 } \equiv 271^{2^0} \cdot 271^{2^6} \cdot 271^{2^8} \pmod{481}.
+\end{equation*}
+So it will suffice to compute \(271^{2^i} \pmod{481}\) where \(i = 0, 6, 8\text{.}\) It is very easy to see that
+\begin{equation*}
+271^{2^1}  = \mbox{73,441} \equiv 329 \pmod{481}.
+\end{equation*}
+We can square this result to obtain a value for \(271^{2^2} \pmod{481}\text{:}\)
+\begin{align*}
+271^{ 2^2}  &amp; \equiv (271^{ 2^1})^2 \pmod{ 481}\\
+&amp; \equiv (329)^2 \pmod{ 481}\\
+&amp; \equiv \mbox{108,241} \pmod{ 481}\\
+&amp; \equiv 16 \pmod{ 481}.
+\end{align*}
+We are using the fact that \((a^{2^n})^2  \equiv a^{2 \cdot 2^n} \equiv a^{ 2^{n+1} } \pmod{ n}\text{.}\) Continuing, we can calculate
+\begin{equation*}
+271^{ 2^6 } \equiv 419 \pmod{ 481}
+\end{equation*}
+and
+\begin{equation*}
+271^{ 2^8 }  \equiv 16 \pmod{ 481}.
+\end{equation*}
+Therefore,
+\begin{align*}
+271^{ 321} &amp; \equiv 271^{ 2^0 +2^6 + 2^8 } \pmod{ 481}\\
+&amp; \equiv 271^{ 2^0 } \cdot 271^{ 2^6 } \cdot 271^{ 2^8 } \pmod{ 481}\\
+&amp; \equiv 271 \cdot 419 \cdot 16 \pmod{ 481}\\
+&amp; \equiv \mbox{1,816,784} \pmod{ 481}\\
+&amp; \equiv 47 \pmod{ 481}.
+\end{align*}
+</p></article><p id="p-643">The method of repeated squares will prove to be a very useful tool when we explore  <abbr class="acronym"><!--Style me-->RSA</abbr> cryptography. To encode and decode messages in a reasonable manner under this scheme, it is necessary to be able to quickly compute large powers of integers mod \(n\text{.}\)</p>
+<article class="remark-like" id="remark-4"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">4.0.29</span><span class="title">Sage</span>
+</h5>
+<p id="p-644">Sage support for cyclic groups is a little spotty — but we can still make effective use of Sage and perhaps this situation could change soon.</p></article><section class="exercises" id="exercises-cyclic"><header title="Exercises 4.1 Exercises"><h1 class="heading hide-type" alt="Exercises 4.1 Exercises">
+<span class="type">Section</span><span class="codenumber">4.1</span><span class="title">Exercises</span><a href="exercises-cyclic.html" class="permalink">¶ permalink</a>
+</h1></header><article class="exercise-like" id="exercise-135"><h5 class="heading"><span class="codenumber">1</span></h5>
+<p id="p-645">Prove or disprove each of the following statements.</p>
+<ol id="ol-22" style="list-style-type: lower-alpha;">
+<li id="li-121"><p id="p-646">All of the generators of \({\mathbb Z}_{60}\) are prime.</p></li>
+<li id="li-122"><p id="p-647">\(U(8)\) is cyclic.</p></li>
+<li id="li-123"><p id="p-648">\({\mathbb Q}\) is cyclic.</p></li>
+<li id="li-124"><p id="p-649">If every proper subgroup of a group \(G\) is cyclic, then \(G\) is a cyclic group.</p></li>
+<li id="li-125"><p id="p-650">A group with a finite number of subgroups is finite.</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-37" id="hint-37"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-37" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-651">(a) False; (c) false; (e) true.</p></span></span> </article><article class="exercise-like" id="exercise-136"><h5 class="heading"><span class="codenumber">2</span></h5>
+<p id="p-652">Find the order of each of the following elements.</p>
+<ol id="ol-23" class="cols2" style="list-style-type: lower-alpha;">
+<li id="li-126" style="width:49%; float:left;"><p id="p-653">\(5 \in {\mathbb Z}_{12}\)</p></li>
+<li id="li-127" style="width:49%; float:left;"><p id="p-654">\(\sqrt{3} \in {\mathbb R}\)</p></li>
+<li id="li-128" style="width:49%; float:left;"><p id="p-655">\(\sqrt{3} \in {\mathbb R}^\ast\)</p></li>
+<li id="li-129" style="width:49%; float:left;"><p id="p-656">\(-i \in {\mathbb C}^\ast\)</p></li>
+<li id="li-130" style="width:49%; float:left;"><p id="p-657">72 in \({\mathbb Z}_{240}\)</p></li>
+<li id="li-131" style="width:49%; float:left;"><p id="p-658">312 in \({\mathbb Z}_{471}\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-38" id="hint-38"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-38" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-659">(a) 12; (c) infinite; (e) 10.</p></span></span> </article><article class="exercise-like" id="exercise-137"><h5 class="heading"><span class="codenumber">3</span></h5>
+<p id="p-660">List all of the elements in each of the following subgroups.</p>
+<ol id="ol-24" style="list-style-type: lower-alpha;">
+<li id="li-132"><p id="p-661">The subgroup of \({\mathbb Z}\) generated by 7</p></li>
+<li id="li-133"><p id="p-662">The subgroup of \({\mathbb Z}_{24}\) generated by 15</p></li>
+<li id="li-134"><p id="p-663">All subgroups of \({\mathbb Z}_{12}\)</p></li>
+<li id="li-135"><p id="p-664">All subgroups of \({\mathbb Z}_{60}\)</p></li>
+<li id="li-136"><p id="p-665">All subgroups of \({\mathbb Z}_{13}\)</p></li>
+<li id="li-137"><p id="p-666">All subgroups of \({\mathbb Z}_{48}\)</p></li>
+<li id="li-138"><p id="p-667">The subgroup generated by 3  in \(U(20)\)</p></li>
+<li id="li-139"><p id="p-668">The subgroup generated by 5 in \(U(18)\)</p></li>
+<li id="li-140"><p id="p-669">The subgroup of \({\mathbb R}^\ast\) generated by 7</p></li>
+<li id="li-141"><p id="p-670">The subgroup of \({\mathbb C}^\ast\) generated by \(i\) where \(i^2 = -1\)</p></li>
+<li id="li-142"><p id="p-671">The subgroup of \({\mathbb C}^\ast\) generated by \(2i\)</p></li>
+<li id="li-143"><p id="p-672">The subgroup of \({\mathbb C}^\ast\) generated by \((1 + i) / \sqrt{2}\)</p></li>
+<li id="li-144"><p id="p-673">The subgroup of \({\mathbb C}^\ast\) generated by \((1 + \sqrt{3}\, i) / 2\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-39" id="hint-39"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-39" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-674">(a) \(7 {\mathbb Z} = \{ \ldots, -7, 0, 7, 14, \ldots \}\text{;}\) (b) \(\{ 0, 3, 6, 9, 12, 15, 18, 21 \}\text{;}\) (c) \(\{ 0 \}\text{,}\) \(\{ 0, 6 \}\text{,}\) \(\{ 0, 4, 8 \}\text{,}\) \(\{ 0, 3, 6, 9 \}\text{,}\) \(\{ 0, 2, 4, 6, 8, 10 \}\text{;}\) (g) \(\{ 1, 3, 7, 9 \}\text{;}\) (j) \(\{ 1, -1, i, -i \}\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-138"><h5 class="heading"><span class="codenumber">4</span></h5>
+<p id="p-675">Find the subgroups of \(GL_2( {\mathbb R })\) generated by each of the following matrices.</p>
+<ol id="ol-25" class="cols3" style="list-style-type: lower-alpha;">
+<li id="li-145" style="width:32.6666666666667%; float:left;"><p id="p-676">\(\displaystyle \begin{pmatrix}
+0 &amp; 1 \\
+-1 &amp; 0
+\end{pmatrix}\)</p></li>
+<li id="li-146" style="width:32.6666666666667%; float:left;"><p id="p-677">\(\displaystyle
+\begin{pmatrix}
+0 &amp; 1/3 \\
+3 &amp; 0
+\end{pmatrix}\)</p></li>
+<li id="li-147" style="width:32.6666666666667%; float:left;"><p id="p-678">\(\displaystyle
+\begin{pmatrix}
+1 &amp; -1 \\
+1 &amp; 0
+\end{pmatrix}\)</p></li>
+<li id="li-148" style="width:32.6666666666667%; float:left;"><p id="p-679">\(\displaystyle
+\begin{pmatrix}
+1 &amp; -1 \\
+0 &amp; 1
+\end{pmatrix}\)</p></li>
+<li id="li-149" style="width:32.6666666666667%; float:left;"><p id="p-680">\(\displaystyle
+\begin{pmatrix}
+1 &amp; -1 \\
+-1 &amp; 0
+\end{pmatrix}\)</p></li>
+<li id="li-150" style="width:32.6666666666667%; float:left;"><p id="p-681">\(\displaystyle
+\begin{pmatrix}
+\sqrt{3}/ 2 &amp; 1/2 \\
+-1/2 &amp; \sqrt{3}/2
+\end{pmatrix}\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-40" id="hint-40"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-40" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-682">(a)
+\begin{equation*}
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix},
+\begin{pmatrix}
+-1 &amp; 0 \\
+0 &amp; -1
+\end{pmatrix},
+\begin{pmatrix}
+0 &amp; -1 \\
+1 &amp; 0
+\end{pmatrix},
+\begin{pmatrix}
+0 &amp; 1 \\
+-1 &amp; 0
+\end{pmatrix}.
+\end{equation*}
+</p>
+<p id="p-683">(c)
+\begin{equation*}
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix},
+\begin{pmatrix}
+1 &amp; -1 \\
+1 &amp; 0
+\end{pmatrix},
+\begin{pmatrix}
+-1 &amp; 1 \\
+-1 &amp; 0
+\end{pmatrix}, \\
+\begin{pmatrix}
+0 &amp; 1 \\
+-1 &amp; 1
+\end{pmatrix},
+\begin{pmatrix}
+0 &amp; -1 \\
+1 &amp; -1
+\end{pmatrix},
+\begin{pmatrix}
+-1 &amp; 0 \\
+0 &amp; -1
+\end{pmatrix}.
+\end{equation*}
+</p></span></span> </article><article class="exercise-like" id="exercise-139"><h5 class="heading"><span class="codenumber">5</span></h5>
+<p id="p-684">Find the order of every element in \({\mathbb Z}_{18}\text{.}\)</p></article><article class="exercise-like" id="exercise-140"><h5 class="heading"><span class="codenumber">6</span></h5>
+<p id="p-685">Find the order of every element in the symmetry group of the square, \(D_4\text{.}\)</p></article><article class="exercise-like" id="exercise-141"><h5 class="heading"><span class="codenumber">7</span></h5>
+<p id="p-686">What are all of the cyclic subgroups of the quaternion group, \(Q_8\text{?}\)</p></article><article class="exercise-like" id="exercise-142"><h5 class="heading"><span class="codenumber">8</span></h5>
+<p id="p-687">List all of the cyclic subgroups of \(U(30)\text{.}\)</p></article><article class="exercise-like" id="exercise-143"><h5 class="heading"><span class="codenumber">9</span></h5>
+<p id="p-688">List every generator of each subgroup of order 8 in \({\mathbb Z}_{32}\text{.}\)</p></article><article class="exercise-like" id="exercise-144"><h5 class="heading"><span class="codenumber">10</span></h5>
+<p id="p-689">Find all elements of finite order in each of the following groups. Here the “\(\ast\)” indicates the set with zero removed.</p>
+<ol id="ol-26" class="cols3" style="list-style-type: lower-alpha;">
+<li id="li-151" style="width:32.6666666666667%; float:left;"><p id="p-690">\({\mathbb Z}\)</p></li>
+<li id="li-152" style="width:32.6666666666667%; float:left;"><p id="p-691">\({\mathbb Q}^\ast\)</p></li>
+<li id="li-153" style="width:32.6666666666667%; float:left;"><p id="p-692">\({\mathbb R}^\ast\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-41" id="hint-41"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-41" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-693">(a) \(0, 1, -1\text{;}\) (b) \(1, -1\)</p></span></span> </article><article class="exercise-like" id="exercise-145"><h5 class="heading"><span class="codenumber">11</span></h5>
+<p id="p-694">If \(a^{24} =e\) in a group \(G\text{,}\) what are the possible orders of \(a\text{?}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-42" id="hint-42"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-42" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-695">1, 2, 3, 4, 6, 8, 12, 24.</p></span></span> </article><article class="exercise-like" id="exercise-146"><h5 class="heading"><span class="codenumber">12</span></h5>
+<p id="p-696">Find a cyclic group with exactly one generator. Can you find cyclic groups with exactly two generators? Four generators? How about \(n\) generators?</p></article><article class="exercise-like" id="exercise-147"><h5 class="heading"><span class="codenumber">13</span></h5>
+<p id="p-697">For \(n \leq 20\text{,}\) which groups \(U(n)\) are cyclic?  Make a conjecture as to what is true in general.  Can you prove your conjecture?</p></article><article class="exercise-like" id="exercise-148"><h5 class="heading"><span class="codenumber">14</span></h5>
+<p id="p-698">Let
+\begin{equation*}
+A =
+\begin{pmatrix}
+0 &amp; 1 \\
+-1 &amp; 0
+\end{pmatrix}
+\qquad \text{and} \qquad
+B =
+\begin{pmatrix}
+0 &amp; -1 \\
+1 &amp; -1
+\end{pmatrix}
+\end{equation*}
+be elements in \(GL_2( {\mathbb R} )\text{.}\) Show that \(A\) and \(B\) have finite orders but \(AB\) does not.</p></article><article class="exercise-like" id="exercise-149"><h5 class="heading"><span class="codenumber">15</span></h5>
+<p id="p-699">Evaluate each of the following.</p>
+<ol id="ol-27" class="cols2" style="list-style-type: lower-alpha;">
+<li id="li-154" style="width:49%; float:left;"><p id="p-700">\((3-2i)+ (5i-6)\)</p></li>
+<li id="li-155" style="width:49%; float:left;"><p id="p-701">\((4-5i)-\overline{(4i -4)}\)</p></li>
+<li id="li-156" style="width:49%; float:left;"><p id="p-702">\((5-4i)(7+2i)\)</p></li>
+<li id="li-157" style="width:49%; float:left;"><p id="p-703">\((9-i) \overline{(9-i)}\)</p></li>
+<li id="li-158" style="width:49%; float:left;"><p id="p-704">\(i^{45}\)</p></li>
+<li id="li-159" style="width:49%; float:left;"><p id="p-705">\((1+i)+\overline{(1+i)}\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-43" id="hint-43"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-43" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-706">(a) \(-3 + 3i\text{;}\) (c) \(43- 18i\text{;}\) (e) \(i\)</p></span></span> </article><article class="exercise-like" id="exercise-150"><h5 class="heading"><span class="codenumber">16</span></h5>
+<p id="p-707">Convert the following complex numbers to the form \(a + bi\text{.}\)</p>
+<ol id="ol-28" class="cols2" style="list-style-type: lower-alpha;">
+<li id="li-160" style="width:49%; float:left;"><p id="p-708">\(2 \cis(\pi / 6 )\)</p></li>
+<li id="li-161" style="width:49%; float:left;"><p id="p-709">\(5 \cis(9\pi/4)\)</p></li>
+<li id="li-162" style="width:49%; float:left;"><p id="p-710">\(3 \cis(\pi)\)</p></li>
+<li id="li-163" style="width:49%; float:left;"><p id="p-711">\(\cis(7\pi/4) /2\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-44" id="hint-44"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-44" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-712">(a) \(\sqrt{3} + i\text{;}\) (c) \(-3\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-151"><h5 class="heading"><span class="codenumber">17</span></h5>
+<p id="p-713">Change the following complex numbers to polar representation.</p>
+<ol id="ol-29" class="cols3" style="list-style-type: lower-alpha;">
+<li id="li-164" style="width:32.6666666666667%; float:left;"><p id="p-714">\(1-i\)</p></li>
+<li id="li-165" style="width:32.6666666666667%; float:left;"><p id="p-715">\(-5\)</p></li>
+<li id="li-166" style="width:32.6666666666667%; float:left;"><p id="p-716">\(2+2i\)</p></li>
+<li id="li-167" style="width:32.6666666666667%; float:left;"><p id="p-717">\(\sqrt{3} + i\)</p></li>
+<li id="li-168" style="width:32.6666666666667%; float:left;"><p id="p-718">\(-3i\)</p></li>
+<li id="li-169" style="width:32.6666666666667%; float:left;"><p id="p-719">\(2i + 2 \sqrt{3}\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-45" id="hint-45"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-45" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-720">(a) \(\sqrt{2} \cis( 7 \pi /4)\text{;}\) (c) \(2 \sqrt{2} \cis( \pi /4)\text{;}\) (e) \(3 \cis(3 \pi/2)\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-152"><h5 class="heading"><span class="codenumber">18</span></h5>
+<p id="p-721">Calculate each of the following expressions.</p>
+<ol id="ol-30" class="cols2" style="list-style-type: lower-alpha;">
+<li id="li-170" style="width:49%; float:left;"><p id="p-722">\((1+i)^{-1}\)</p></li>
+<li id="li-171" style="width:49%; float:left;"><p id="p-723">\((1 - i)^{6}\)</p></li>
+<li id="li-172" style="width:49%; float:left;"><p id="p-724">\((\sqrt{3} + i)^{5}\)</p></li>
+<li id="li-173" style="width:49%; float:left;"><p id="p-725">\((-i)^{10}\)</p></li>
+<li id="li-174" style="width:49%; float:left;"><p id="p-726">\(((1-i)/2)^{4}\)</p></li>
+<li id="li-175" style="width:49%; float:left;"><p id="p-727">\((-\sqrt{2} - \sqrt{2}\, i)^{12}\)</p></li>
+<li id="li-176" style="width:49%; float:left;"><p id="p-728">\((-2 + 2i)^{-5}\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-46" id="hint-46"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-46" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-729">(a) \((1 - i)/2\text{;}\) (c) \(16(i - \sqrt{3}\, )\text{;}\) (e) \(-1/4\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-153"><h5 class="heading"><span class="codenumber">19</span></h5>
+<p id="p-730">Prove each of the following statements.</p>
+<ol id="ol-31" class="cols2" style="list-style-type: lower-alpha;">
+<li id="li-177" style="width:49%; float:left;"><p id="p-731">\(|z| = | \overline{z}|\)</p></li>
+<li id="li-178" style="width:49%; float:left;"><p id="p-732">\(z \overline{z} = |z|^2\)</p></li>
+<li id="li-179" style="width:49%; float:left;"><p id="p-733">\(z^{-1} = \overline{z} / |z|^2\)</p></li>
+<li id="li-180" style="width:49%; float:left;"><p id="p-734">\(|z +w| \leq |z| + |w|\)</p></li>
+<li id="li-181" style="width:49%; float:left;"><p id="p-735">\(|z - w| \geq | |z| - |w||\)</p></li>
+<li id="li-182" style="width:49%; float:left;"><p id="p-736">\(|z w| = |z|  |w|\)</p></li>
+</ol></article><article class="exercise-like" id="exercise-154"><h5 class="heading"><span class="codenumber">20</span></h5>
+<p id="p-737">List and graph the 6th roots of unity. What are the generators of this group?  What are the primitive 6th roots of unity?</p></article><article class="exercise-like" id="exercise-155"><h5 class="heading"><span class="codenumber">21</span></h5>
+<p id="p-738">List and graph the 5th roots of unity. What are the generators of this group?  What are the primitive 5th roots of unity?</p></article><article class="exercise-like" id="exercise-156"><h5 class="heading"><span class="codenumber">22</span></h5>
+<p id="p-739">Calculate each of the following.</p>
+<ol id="ol-32" class="cols2" style="list-style-type: lower-alpha;">
+<li id="li-183" style="width:49%; float:left;"><p id="p-740">\(292^{3171} \pmod{ 582}\)</p></li>
+<li id="li-184" style="width:49%; float:left;"><p id="p-741">\(2557^{ 341} \pmod{ 5681}\)</p></li>
+<li id="li-185" style="width:49%; float:left;"><p id="p-742">\(2071^{ 9521} \pmod{ 4724}\)</p></li>
+<li id="li-186" style="width:49%; float:left;"><p id="p-743">\(971^{ 321} \pmod{ 765}\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-47" id="hint-47"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-47" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-744">(a) 292; (c) 1523.</p></span></span> </article><article class="exercise-like" id="exercise-157"><h5 class="heading"><span class="codenumber">23</span></h5>
+<p id="p-745">Let \(a, b \in G\text{.}\)  Prove the following statements.</p>
+<ol id="ol-33" style="list-style-type: lower-alpha;">
+<li id="li-187"><p id="p-746">The order of \(a\) is the same as the order of \(a^{-1}\text{.}\)</p></li>
+<li id="li-188"><p id="p-747">For all \(g \in G\text{,}\) \(|a| = |g^{-1}ag|\text{.}\)</p></li>
+<li id="li-189"><p id="p-748">The order of \(ab\) is the same as the order of \(ba\text{.}\)</p></li>
+</ol></article><article class="exercise-like" id="exercise-158"><h5 class="heading"><span class="codenumber">24</span></h5>
+<p id="p-749">Let \(p\) and \(q\) be distinct primes.  How many generators does \({\mathbb  Z}_{pq}\) have?</p></article><article class="exercise-like" id="exercise-159"><h5 class="heading"><span class="codenumber">25</span></h5>
+<p id="p-750">Let \(p\) be prime and \(r\) be a positive integer. How many generators does \({\mathbb Z}_{p^r}\) have?</p></article><article class="exercise-like" id="exercise-160"><h5 class="heading"><span class="codenumber">26</span></h5>
+<p id="p-751">Prove that  \({\mathbb Z}_{p}\) has no nontrivial subgroups if \(p\) is prime.</p></article><article class="exercise-like" id="exercise-161"><h5 class="heading"><span class="codenumber">27</span></h5>
+<p id="p-752">If \(g\) and \(h\) have orders 15 and 16 respectively in a group \(G\text{,}\) what is the order of \(\langle g \rangle  \cap \langle h \rangle \text{?}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-48" id="hint-48"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-48" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-753">\(|\langle g \rangle \cap \langle h \rangle| = 1\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-162"><h5 class="heading"><span class="codenumber">28</span></h5>
+<p id="p-754">Let \(a\) be an element in a group \(G\text{.}\) What is a generator for the subgroup \(\langle a^m \rangle  \cap  \langle a^n \rangle\text{?}\)</p></article><article class="exercise-like" id="exercise-163"><h5 class="heading"><span class="codenumber">29</span></h5>
+<p id="p-755">Prove that \({\mathbb Z}_n\) has an even number of generators for \(n \gt 2\text{.}\)</p></article><article class="exercise-like" id="exercise-164"><h5 class="heading"><span class="codenumber">30</span></h5>
+<p id="p-756">Suppose that \(G\) is a group and let \(a\text{,}\) \(b \in G\text{.}\) Prove that if \(|a| = m\) and \(|b| = n\) with \(\gcd(m,n) = 1\text{,}\) then \(\langle a \rangle \cap \langle b \rangle  = \{ e \}\text{.}\)</p></article><article class="exercise-like" id="exercise-165"><h5 class="heading"><span class="codenumber">31</span></h5>
+<p id="p-757">Let \(G\) be an abelian group. Show that the elements of finite order in \(G\) form a subgroup. This subgroup is called the <em class="terminology">torsion subgroup</em> of \(G\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-49" id="hint-49"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-49" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-758">The identity element in any group has finite order. Let \(g, h \in G\) have orders \(m\) and \(n\text{,}\) respectively. Since \((g^{-1})^m = e\) and \((gh)^{mn} = e\text{,}\) the elements of finite order in \(G\) form a subgroup of \(G\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-166"><h5 class="heading"><span class="codenumber">32</span></h5>
+<p id="p-759">Let \(G\) be a finite cyclic group of order \(n\) generated by \(x\text{.}\) Show that if \(y = x^k\) where \(\gcd(k,n) = 1\text{,}\) then \(y\) must be a generator of \(G\text{.}\)</p></article><article class="exercise-like" id="exercise-167"><h5 class="heading"><span class="codenumber">33</span></h5>
+<p id="p-760">If \(G\) is an abelian group that contains a pair of cyclic subgroups of order 2, show that \(G\) must contain a subgroup of order 4. Does this subgroup have to be cyclic?</p></article><article class="exercise-like" id="exercise-168"><h5 class="heading"><span class="codenumber">34</span></h5>
+<p id="p-761">Let \(G\) be an abelian group of order \(pq\) where \(\gcd(p,q) = 1\text{.}\)  If \(G\) contains elements \(a\) and \(b\) of order \(p\) and \(q\) respectively, then show that \(G\) is cyclic.</p></article><article class="exercise-like" id="exercise-169"><h5 class="heading"><span class="codenumber">35</span></h5>
+<p id="p-762">Prove that the subgroups of \(\mathbb Z\) are exactly \(n{\mathbb Z}\) for \(n = 0, 1, 2, \ldots\text{.}\)</p></article><article class="exercise-like" id="exercise-170"><h5 class="heading"><span class="codenumber">36</span></h5>
+<p id="p-763">Prove that the generators of \({\mathbb Z}_n\) are the integers \(r\) such that \(1 \leq r \lt n\) and \(\gcd(r,n) =  1\text{.}\)</p></article><article class="exercise-like" id="exercise-171"><h5 class="heading"><span class="codenumber">37</span></h5>
+<p id="p-764">Prove that if \(G\) has no proper nontrivial subgroups, then \(G\) is a cyclic group.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-50" id="hint-50"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-50" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-765">If \(g\) is an element distinct from the identity in \(G\text{,}\) \(g\) must generate \(G\text{;}\) otherwise, \(\langle g \rangle\) is a nontrivial proper subgroup of \(G\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-172"><h5 class="heading"><span class="codenumber">38</span></h5>
+<p id="p-766">Prove that the order of an element in a cyclic group \(G\) must divide the order of the group.</p></article><article class="exercise-like" id="cyclic-exercise-subgroups-exist"><h5 class="heading"><span class="codenumber">39</span></h5>
+<p id="p-767">Prove that if \(G\) is a cyclic group of order \(m\) and \(d \mid m\text{,}\) then \(G\) must have a subgroup of order \(d\text{.}\)</p></article><article class="exercise-like" id="exercise-174"><h5 class="heading"><span class="codenumber">40</span></h5>
+<p id="p-768">For what integers \(n\) is \(-1\) an \(n\)th root of unity?</p></article><article class="exercise-like" id="exercise-175"><h5 class="heading"><span class="codenumber">41</span></h5>
+<p id="p-769">If \(z = r( \cos \theta + i \sin \theta)\) and \(w = s(\cos \phi + i \sin \phi)\) are two nonzero complex numbers, show that
+\begin{equation*}
+zw = rs[ \cos( \theta + \phi)  + i \sin( \theta + \phi)].
+\end{equation*}
+</p></article><article class="exercise-like" id="exercise-176"><h5 class="heading"><span class="codenumber">42</span></h5>
+<p id="p-770">Prove that the circle group is a subgroup of  \({\mathbb C}^*\text{.}\)</p></article><article class="exercise-like" id="exercise-177"><h5 class="heading"><span class="codenumber">43</span></h5>
+<p id="p-771">Prove that the \(n\)th roots of unity form a cyclic subgroup of \({\mathbb T}\)  of order \(n\text{.}\)</p></article><article class="exercise-like" id="exercise-178"><h5 class="heading"><span class="codenumber">44</span></h5>
+<p id="p-772">Let \(\alpha \in \mathbb T\text{.}\) Prove that \(\alpha^m =1\) and \(\alpha^n = 1\) if and only if \(\alpha^d = 1\) for \(d = \gcd(m,n)\text{.}\)</p></article><article class="exercise-like" id="exercise-179"><h5 class="heading"><span class="codenumber">45</span></h5>
+<p id="p-773">Let \(z \in {\mathbb C}^\ast\text{.}\) If \(|z| \neq 1\text{,}\) prove that the order of \(z\) is infinite.</p></article><article class="exercise-like" id="exercise-180"><h5 class="heading"><span class="codenumber">46</span></h5>
+<p id="p-774">Let \(z =\cos \theta + i \sin \theta\) be in \({\mathbb T}\) where \(\theta \in {\mathbb Q}\text{.}\)  Prove that the order of \(z\)  is infinite.</p></article></section><section class="exercises" id="exercises-10"><header title="Exercises 4.2 Programming Exercises"><h1 class="heading hide-type" alt="Exercises 4.2 Programming Exercises">
+<span class="type">Section</span><span class="codenumber">4.2</span><span class="title">Programming Exercises</span>
+</h1></header><article class="exercise-like" id="exercise-181"><h5 class="heading"><span class="codenumber">1</span></h5>
+<p id="p-775">Write a computer program that will write any decimal number as the sum of distinct powers of 2.  What is the largest integer that yourprogram will handle?</p></article><article class="exercise-like" id="exercise-182"><h5 class="heading"><span class="codenumber">2</span></h5>
+<p id="p-776">Write a computer program to calculate \(a^x \pmod{ n}\) by the method of repeated squares.  What are the largest values of \(n\) and \(x\) that your program will accept?</p></article></section><section class="references" id="references-4"><header title="References 4.3 References and Suggested Readings"><h1 class="heading hide-type" alt="References 4.3 References and Suggested Readings">
+<span class="type">Section</span><span class="codenumber">4.3</span><span class="title">References and Suggested Readings</span>
+</h1></header><article class="bib" id="biblio-26"><div class="bibitem">[1]</div>  <div class="bibentry">Koblitz, N. <i>A Course in Number Theory and Cryptography</i>. 2nd ed. Springer, New York, 1994.</div></article><article class="bib" id="biblio-pomerance-1990"><div class="bibitem">[2]</div>  <div class="bibentry">Pomerance, C. “Cryptology and Computational Number Theory—An Introduction,” in <i>Cryptology and Computational Number Theory</i>, Pomerance, C., ed. Proceedings of Symposia in Applied Mathematics, vol. 42, American Mathematical Society, Providence, RI, 1990.  Thisbook gives an excellent account of how the method of repeated squares is used in cryptography.</div></article></section><section class="exercises" id="cyclic-sage-exercises"><header title="Exercises 4.4 Sage Exercises"><h1 class="heading hide-type" alt="Exercises 4.4 Sage Exercises">
+<span class="type">Section</span><span class="codenumber">4.4</span><span class="title">Sage Exercises</span><a href="cyclic-sage-exercises.html" class="permalink">¶ permalink</a>
+</h1></header><section class="introduction" id="introduction-13"><p id="p-777">This group of exercises is about the group of units mod \(n\text{,}\) \(U(n)\text{,}\) which is sometimes cyclic, sometimes not.  There are some commands in Sage that will answer some of these questions very quickly, but instead of using those now, just use the basic techniques described.  The idea here is to just work with elements, and lists of elements, to discern the subgroup structure of these groups.</p></section><article class="exercise-like" id="exercise-183"><h5 class="heading"><span class="codenumber">1</span></h5>
+<p id="p-778">Execute the statement <tt class="code-inline tex2jax_ignore">R = Integers(40)</tt> to create the set <tt class="code-inline tex2jax_ignore">[0,1,2,...,39]</tt>  This is a group under addition mod \(40\text{,}\) which we will ignore.  Instead we are interested in the subset of elements which have an inverse under <!--Style me with CSS--><em>multiplication</em> mod \(40\text{.}\)  Determine how big this subgroup is by executing the command <tt class="code-inline tex2jax_ignore">R.unit_group_order()</tt>, and then obtain a list of these elements with <tt class="code-inline tex2jax_ignore">R.list_of_elements_of_multiplicative_group()</tt>.</p></article><article class="exercise-like" id="exercise-184"><h5 class="heading"><span class="codenumber">2</span></h5>
+<p id="p-779">You can create elements of this group by coercing regular integers into <tt class="code-inline tex2jax_ignore">U</tt>, such as  with the statement <tt class="code-inline tex2jax_ignore">a = U(7)</tt>.  (Don't confuse this with our mathematical notation \(U(40)\text{.}\))  This will tell Sage that you want to view \(7\) as an element of \(U\text{,}\) subject to the corresponding operations.  Determine the elements of the cyclic subgroup of \(U\) generated by \(7\) with a list comprehension as follows:</p>
+<div class="sage-display"><script type="text/x-sage">R = Integers(40)
+a = R(7)
+[a^i for i in srange(16)]
+</script></div>
+<p id="p-780">What is the order of \(7\) in \(U(40)\text{?}\)</p></article><article class="exercise-like" id="exercise-185"><h5 class="heading"><span class="codenumber">3</span></h5>
+<p id="p-781">The group \(U(49)\) is cyclic.  Using only the Sage commands described previously, use Sage to find a generator for this group.  Now using <!--Style me with CSS--><em>only</em> theorems about the structure of cyclic groups, describe each of the subgroups of \(U(49)\) by specifying its order and by giving an explicit generator.  Do not repeat any of the subgroups — in other words, present each subgroup <!--Style me with CSS--><em>exactly</em> once.  You can use Sage to check your work on the subgroups, but your answer about the subgroups should rely only on theorems and be a nicely written paragraph with a table, etc.</p></article><article class="exercise-like" id="exercise-186"><h5 class="heading"><span class="codenumber">4</span></h5>
+<p id="p-782">The group \(U(35)\) is not cyclic.  Again, using only the Sage commands described previously, use computations to provide irrefutable evidence of this.  How many of the \(16\) different subgroups of \(U(35)\) can you list?</p></article><article class="exercise-like" id="exercise-187"><h5 class="heading"><span class="codenumber">5</span></h5>
+<p id="p-783">Again, using only the Sage commands described previously, explore the structure of \(U(n)\) for various values of \(n\) and see if you can formulate an interesting conjecture about some basic property of this group.  (Yes, this is a <!--Style me with CSS--><em>very</em> open-ended question, but this is ultimately the real power of exploring mathematics with Sage.)</p></article></section></section></div></main>
+</div>
+</body>
+</html>
