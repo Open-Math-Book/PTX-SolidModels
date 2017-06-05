@@ -2,6 +2,6 @@
 
 [aaa.html](./aaa.html)
 
-[sample-book](./html/sample-book.html)
+[minimal](./html/minimal.html)
 
 
