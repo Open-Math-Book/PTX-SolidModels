@@ -48,6 +48,13 @@ MathJax.Hub.Config({
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
 <link href="extra.css" rel="stylesheet" type="text/css">
+
+<script src="../js/three.js"></script>
+<script src="../js/OrbitControls.js"></script>
+<script src="../js/STLLoader.js"></script>
+<script src="../js/Detector.js"></script>
+<script src="../js/stats.min.js"></script>
+
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\doubler}[1]{2#1}
@@ -93,20 +100,12 @@ MathJax.Hub.Config({
 </pre>
 <p id="p-11">Here's a spaceship:</p>
 
-<div id="info" width=80%>
+<div id="model-1" width=80%>
       <a href="https://mathbook.pugetsound.edu/" target="_blank">PreTeXt</a> solid modelling via <a href="http://threejs.org" target="_blank">three.js</a> 
     </div>
     <button id="spin" type="button" align="right">toggle spinning</button>
 
-    <script src="../js/three.js"></script>
-
-    <script src="../js/OrbitControls.js"></script>
-
-    <script src="../js/STLLoader.js"></script>
-
-    <script src="../js/Detector.js"></script>
-
-    <script src="../js/stats.min.js"></script>
+    
 
     <script>
 
@@ -119,8 +118,8 @@ MathJax.Hub.Config({
 
       function init() {
 
-        container = document.createElement( 'div' );
-        document.body.appendChild( container );
+        container = document.getElementById( 'model-1' );
+        //document.body.appendChild( container );
 
         camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, .1, 1000 );
         camera.position.set( -30, 50, 100 );
@@ -134,7 +133,7 @@ MathJax.Hub.Config({
 
         renderer = new THREE.WebGLRenderer( { antialias: true } );
         renderer.setPixelRatio( window.devicePixelRatio );
-        renderer.setSize( window.innerWidth-200, window.innerHeight-200 );
+        renderer.setSize( container.innerWidth, .75*container.innerWidth );
         document.body.appendChild( renderer.domElement );
 
 
