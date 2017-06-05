@@ -121,7 +121,7 @@ MathJax.Hub.Config({
         container = document.getElementById( 'model-1' );
         //document.body.appendChild( container );
 
-        camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, .1, 1000 );
+        camera = new THREE.PerspectiveCamera( 35, 4/3, .1, 1000 );
         camera.position.set( -30, 50, 100 );
 
         cameraTarget = new THREE.Vector3( 0, 10, 0 );
@@ -134,7 +134,7 @@ MathJax.Hub.Config({
         renderer = new THREE.WebGLRenderer( { antialias: true } );
         renderer.setPixelRatio( window.devicePixelRatio );
         renderer.setSize( container.innerWidth, .75*container.innerWidth );
-        document.body.appendChild( renderer.domElement );
+        container.appendChild( renderer.domElement );
 
 
         renderer.setClearColor( scene.fog.color );
@@ -143,8 +143,6 @@ MathJax.Hub.Config({
 
         renderer.shadowMap.enabled = true;
         renderer.shadowMap.renderReverseSided = false;
-
-        container.appendChild( renderer.domElement );
 
         // controls
         controls = new THREE.OrbitControls( camera, renderer.domElement );
