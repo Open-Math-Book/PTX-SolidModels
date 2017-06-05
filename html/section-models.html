@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2017-06-04T21:14:07-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Solid Models</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="extra.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\doubler}[1]{2#1}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="minimal.html"><span class="title">A Minimal Article</span></a></h1>
+<p class="byline">Robert A. Beezer</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-computation.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="minimal.html" title="Up" alt="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-computation.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="minimal.html" title="Up" alt="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<h2 class="link"><a href="section-textual.html" data-scroll="section-textual"><span class="codenumber">1</span><span class="title">Just Some Text</span></a></h2>
+<h2 class="link"><a href="section-interesting.html" data-scroll="section-interesting"><span class="codenumber">2</span><span class="title">A Bit More Interesting</span></a></h2>
+<h2 class="link"><a href="section-computation.html" data-scroll="section-computation"><span class="codenumber">3</span><span class="title">Computation</span></a></h2>
+<h2 class="link active"><a href="section-models.html" data-scroll="section-models"><span class="codenumber">4</span><span class="title">Solid Models</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-models"><header title="Section 4 Solid Models"><h1 class="heading hide-type" alt="Section 4 Solid Models">
+<span class="type">Section</span><span class="codenumber">4</span><span class="title">Solid Models</span><a href="section-models.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-7">This is a dummy section. The html has been edited to illustrate what the inclusion of views of solid models (in the .stl file format commonly used with 3-d printers) might look like.</p>
+<p id="p-8">The views of these models are dependent on the (incredible!) <tt class="code-inline tex2jax_ignore">three.js</tt> javascript library.</p>
+<p id="p-9">The models themselves were created in (also pretty amazing!) <tt class="code-inline tex2jax_ignore">OpenSCAD</tt> program.</p>
+<p id="p-10">A possible form for the XML tags:</p>
+<pre class="code-block tex2jax_ignore">&lt;model&gt;
+	&lt;source&gt; example.stl &lt;/source&gt;
+	&lt;downloadable&gt; example_b.stl &lt;/downloadable&gt;
+	&lt;viewpoint&gt; [100, 50, -75] &lt;/viewpoint&gt;
+	&lt;description&gt; 
+		Words that describe the object.
+	&lt;/description&gt;
+&lt;/model&gt;
+</pre>
+<p id="p-11">Here's a spaceship:</p>
+
+<div id="info" width=80%>
+      <a href="https://mathbook.pugetsound.edu/" target="_blank">PreTeXt</a> solid modelling via <a href="http://threejs.org" target="_blank">three.js</a> 
+    </div>
+    <button id="spin" type="button" align="right">toggle spinning</button>
+
+    <script src="../js/three.js"></script>
+
+    <script src="../js/OrbitControls.js"></script>
+
+    <script src="../js/STLLoader.js"></script>
+
+    <script src="../js/Detector.js"></script>
+
+    <script src="../js/stats.min.js"></script>
+
+    <script>
+
+      if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+
+      var container, stats, camera, cameraTarget, scene, renderer, group, spinning, btn;
+
+      init();
+      animate();
+
+      function init() {
+
+        container = document.createElement( 'div' );
+        document.body.appendChild( container );
+
+        camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, .1, 1000 );
+        camera.position.set( -30, 50, 100 );
+
+        cameraTarget = new THREE.Vector3( 0, 10, 0 );
+
+        camera.lookAt( cameraTarget );
+
+        scene = new THREE.Scene();
+        scene.fog = new THREE.Fog( 0x72645b, 1, 500 );
+
+        renderer = new THREE.WebGLRenderer( { antialias: true } );
+        renderer.setPixelRatio( window.devicePixelRatio );
+        renderer.setSize( window.innerWidth-200, window.innerHeight-200 );
+        document.body.appendChild( renderer.domElement );
+
+
+        renderer.setClearColor( scene.fog.color );
+        renderer.gammaInput = true;
+        renderer.gammaOutput = true;
+
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.renderReverseSided = false;
+
+        container.appendChild( renderer.domElement );
+
+        // controls
+        controls = new THREE.OrbitControls( camera, renderer.domElement );
+        controls.minDistance = 20;
+        controls.maxDistance = 200;
+        controls.maxPolarAngle = Math.PI / 2;
+
+        // helper
+        scene.add( new THREE.AxisHelper( 60 ) );
+
+        // holder for the model       
+        group = new THREE.Group();
+        
+
+        // Ground
+        var plane = new THREE.Mesh(
+          new THREE.PlaneBufferGeometry( 100, 100 ),
+          new THREE.MeshPhongMaterial( { color: 0x999999, specular: 0x101010 } )
+        );
+        plane.rotation.x = -Math.PI/2;
+        plane.position.y = -.1;
+        scene.add( plane );
+
+        plane.receiveShadow = true;
+        scene.add( new THREE.GridHelper( 100, 100 ) );
+
+
+        // .stl model from an ASCII file
+
+        var loader = new THREE.STLLoader();
+        loader.load( 'https://open-math-book.github.io/PTX-SolidModels/models/heart_of_gold.stl', function ( geometry ) {
+
+          var material = new THREE.MeshPhongMaterial( { color: 0x3333ff, specular: 0x111111, shininess: 200 } );
+          var mesh = new THREE.Mesh( geometry, material );
+
+          mesh.position.set( 0, 7, 0 );
+          mesh.rotation.set( - Math.PI / 2, 0, 0 );
+          mesh.scale.set( 1, 1, 1 );
+
+          mesh.castShadow = true;
+          mesh.receiveShadow = true;
+
+          group.add( mesh );
+
+        } );
+
+        scene.add( group );
+
+        spinning=true;
+
+        // Lights
+
+        scene.add( new THREE.HemisphereLight( 0x443333, 0x111122 ) );
+
+        addShadowedLight( 100, 100, 100, 0xffffff, 1.5 );
+        
+
+        // stats
+
+        stats = new Stats();
+        container.appendChild( stats.dom );
+
+        window.addEventListener( 'resize', onWindowResize, false );
+
+        var spinBtn = document.getElementById( 'spin' );
+        spinBtn.addEventListener( "click", function() {
+          if (spinning) { spinning = false;} else {spinning = true;}
+        } );
+
+      }
+
+      function addShadowedLight( x, y, z, color, intensity ) {
+
+        var directionalLight = new THREE.DirectionalLight( color, intensity );
+        directionalLight.position.set( x, y, z );
+        scene.add( directionalLight );
+
+        directionalLight.castShadow = true;
+
+        var d = 100;
+        directionalLight.shadow.camera.left = -d;
+        directionalLight.shadow.camera.right = d;
+        directionalLight.shadow.camera.top = d;
+        directionalLight.shadow.camera.bottom = -d;
+
+        directionalLight.shadow.camera.near = 1;
+        directionalLight.shadow.camera.far = 1000;
+
+        directionalLight.shadow.camera.lookAt( cameraTarget );
+
+        directionalLight.shadow.mapSize.width = 2048;
+        directionalLight.shadow.mapSize.height = 2048;
+
+        directionalLight.shadow.bias = -0.005;
+
+      }
+
+      function onWindowResize() {
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize( window.innerWidth-200, window.innerHeight-200);
+
+      }
+
+      function animate() {
+
+        requestAnimationFrame( animate );
+
+        if (spinning) {
+          group.rotation.y += 0.005;
+        }
+
+        render();
+        //stats.update();
+
+      }
+
+      function render() {
+
+        //camera.lookAt( cameraTarget );
+
+        renderer.render( scene, camera );
+
+      }
+
+    </script>
+
+
+</section></div></main>
+</div>
+</body>
+</html>
