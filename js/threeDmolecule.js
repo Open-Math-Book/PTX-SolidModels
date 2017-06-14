@@ -98,7 +98,6 @@
       };
 
       self.animate = function() {
-
         requestAnimationFrame(function () {
                 self.animate();
             });
@@ -108,10 +107,9 @@
           self.root.rotation.x += 0.003;
           self.root.rotation.y += 0.002;
         }
-
         self.renderer.render(self.scene, self.camera);
-
       };
+
       function self.loadMolecule( url ) {
 	      while ( self.root.children.length > 0 ) {
 			var object = self.root.children[ 0 ];
