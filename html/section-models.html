@@ -58,11 +58,12 @@ MathJax.Hub.Config({
 <link href="extra.css" rel="stylesheet" type="text/css">
 
 <script src="../js/three.js"></script>
+<script src="../js/Detector.js"></script>
 <script src="../js/OrbitControls.js"></script>
 <script src="../js/STLLoader.js"></script>
-<script src="../js/Detector.js"></script>
-<script src="../js/stats.min.js"></script>
 <script src="../js/threeDmodel.js"></script>
+<script src="../js/PDBLoader.js"></script>
+<script src="../js/threeDmolecule.js"></script>
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\doubler}[1]{2#1}
@@ -147,6 +148,14 @@ MathJax.Hub.Config({
     </div>
     <script>
     var theModel = new modelViewer("../models/CipherRing-PrintLayout.stl", "model-3");
+    theModel.init();
+    theModel.animate();
+    </script>
+
+    <div id="molecule-1"  width="600" height="450" style="border:1px solid #d3d3d3;">
+    </div>
+    <script>
+    var theModel = new modelViewer("../molecules/caffeine.pdb", "molecule-1");
     theModel.init();
     theModel.animate();
     </script>
