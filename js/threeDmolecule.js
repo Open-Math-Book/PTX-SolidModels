@@ -16,7 +16,7 @@
 
         if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
-        self.camera.position.set( -30, 50, 100 );
+        self.camera.position.set( -120, 200, 400 );
 
         self.camera.lookAt( self.cameraTarget );
               
@@ -34,7 +34,7 @@
 
         // controls
         self.controls.minDistance = 10;
-        self.controls.maxDistance = 200;
+        self.controls.maxDistance = 1000;
         self.controls.maxPolarAngle = .9*Math.PI;
 
         // .pdb model from a file
