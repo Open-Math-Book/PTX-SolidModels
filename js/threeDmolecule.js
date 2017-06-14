@@ -5,27 +5,26 @@
         self.spinning = true;
         self.container = document.getElementById( parent );
         self.camera = new THREE.PerspectiveCamera( 35, 4/3, .1, 1000 );
-        self.cameraTarget = new THREE.Vector3( 0, 10, 0 );
+        self.cameraTarget = new THREE.Vector3( 0, 0, 0 );
         self.scene = new THREE.Scene();
         self.renderer = new THREE.WebGLRenderer( { antialias: true } );
         self.controls = new THREE.OrbitControls( self.camera, self.renderer.domElement );
-        self.modelGroup = new THREE.Group();
+        self.root = new THREE.Group();
         self.spinBtn = document.createElement("BUTTON");
+        self.loader = new THREE.PDBLoader();
         self.init = function() {
 
         if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
-        self.camera.position.set( -60, 100, 200 );
+        self.camera.position.set( -30, 50, 100 );
 
         self.camera.lookAt( self.cameraTarget );
-
-        self.scene.fog = new THREE.Fog( 0x72645b, 1, 1000 );
-
+              
         self.renderer.setPixelRatio( window.devicePixelRatio );
         self.renderer.setSize( 400, 300);
         //self.renderer.domELement.width = 400;
         //self.renderer.domElement.height = 300;
-        self.renderer.setClearColor( self.scene.fog.color );
+        //self.renderer.setClearColor( self.scene.fog.color );
         self.renderer.gammaInput = true;
         self.renderer.gammaOutput = true;
         self.renderer.shadowMap.enabled = true;
@@ -34,47 +33,16 @@
         self.container.appendChild( self.renderer.domElement );
 
         // controls
-        self.controls.minDistance = 50;
-        self.controls.maxDistance = 300;
+        self.controls.minDistance = 10;
+        self.controls.maxDistance = 200;
         self.controls.maxPolarAngle = .9*Math.PI;
 
-        /* For molecule viewing we don't need axes and/or a ground plane.
-        // helper
-        // self.scene.add( new THREE.AxisHelper( 120 ) );
-
-        // Ground
-        var plane = new THREE.Mesh(
-          new THREE.PlaneBufferGeometry( 200, 200 ),
-          new THREE.MeshPhongMaterial( { color: 0x999999, specular: 0x101010 } )
-        );
-        plane.rotation.x = -Math.PI/2;
-        plane.position.y = -.1;
-        self.scene.add( plane );
-
-        plane.receiveShadow = true;
-        self.scene.add( new THREE.GridHelper( 200, 200 ) );
-        */
-
         // .pdb model from a file
+              
+        self.loadMolecule( "models/molecules/caffeine.pdb" );
 
-        var loader = new THREE.PDBLoader();
-        loader.load( self.model_url, function ( geometry ) {
-
-          var material = new THREE.MeshPhongMaterial( { color: 0x3333ff, specular: 0x111111, shininess: 200 } );
-          var mesh = new THREE.Mesh( geometry, material );
-
-          mesh.position.set( 0, 7, 0 );
-          mesh.rotation.set( - Math.PI / 2, 0, 0 );
-          mesh.scale.set( 1, 1, 1 );
-
-          mesh.castShadow = true;
-          mesh.receiveShadow = true;
-
-          self.modelGroup.add( mesh );
-
-        } );
-
-        self.scene.add( self.modelGroup );
+        
+        self.scene.add( self.root );
 
         // Lights
         self.scene.add( new THREE.HemisphereLight( 0x443333, 0x111122 ) );
@@ -134,12 +102,80 @@
         requestAnimationFrame(function () {
                 self.animate();
             });
-
+        self.controls.update();
+            
         if (self.spinning) {
-          self.modelGroup.rotation.y += 0.003;
+          self.root.rotation.x += 0.003;
+          self.root.rotation.y += 0.002;
         }
 
         self.renderer.render(self.scene, self.camera);
 
       };
+      function self.loadMolecule( url ) {
+	      while ( self.root.children.length > 0 ) {
+			var object = self.root.children[ 0 ];
+			object.parent.remove( object );
+		}
+		self.loader.load( url, function ( geometry, geometryBonds, json ) {
+					var boxGeometry = new THREE.BoxBufferGeometry( 1, 1, 1 );
+					var sphereGeometry = new THREE.IcosahedronBufferGeometry( 1, 2 );
+					var offset = geometry.center();
+					geometryBonds.translate( offset.x, offset.y, offset.z );
+					var positions = geometry.getAttribute( 'position' );
+					var colors = geometry.getAttribute( 'color' );
+					var position = new THREE.Vector3();
+					var color = new THREE.Color();
+					for ( var i = 0; i < positions.count; i ++ ) {
+						position.x = positions.getX( i );
+						position.y = positions.getY( i );
+						position.z = positions.getZ( i );
+						color.r = colors.getX( i );
+						color.g = colors.getY( i );
+						color.b = colors.getZ( i );
+						var element = geometry.elements[ i ];
+						var material = new THREE.MeshPhongMaterial( { color: color } );
+						var object = new THREE.Mesh( sphereGeometry, material );
+						object.position.copy( position );
+						object.position.multiplyScalar( 75 );
+						object.scale.multiplyScalar( 25 );
+						self.root.add( object );
+						var atom = json.atoms[ i ];
+						var text = document.createElement( 'div' );
+						text.className = 'label';
+						text.style.color = 'rgb(' + atom[ 3 ][ 0 ] + ',' + atom[ 3 ][ 1 ] + ',' + atom[ 3 ][ 2 ] + ')';
+						text.textContent = atom[ 4 ];
+						var label = new THREE.CSS2DObject( text );
+						label.position.copy( object.position );
+						self.root.add( label );
+					}
+					positions = geometryBonds.getAttribute( 'position' );
+					var start = new THREE.Vector3();
+					var end = new THREE.Vector3();
+					for ( var i = 0; i < positions.count; i += 2 ) {
+						start.x = positions.getX( i );
+						start.y = positions.getY( i );
+						start.z = positions.getZ( i );
+						end.x = positions.getX( i + 1 );
+						end.y = positions.getY( i + 1 );
+						end.z = positions.getZ( i + 1 );
+						start.multiplyScalar( 75 );
+						end.multiplyScalar( 75 );
+						var object = new THREE.Mesh( boxGeometry, new THREE.MeshPhongMaterial( 0xffffff ) );
+						object.position.copy( start );
+						object.position.lerp( end, 0.5 );
+						object.scale.set( 5, 5, start.distanceTo( end ) );
+						object.lookAt( end );
+						self.root.add( object );
+					}
+					render();
+				}, function ( xhr ) {
+					if ( xhr.lengthComputable ) {
+						var percentComplete = xhr.loaded / xhr.total * 100;
+						console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
+					}
+				}, function ( xhr ) {
+				} );
+			}
+
 }
