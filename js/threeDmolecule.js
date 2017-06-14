@@ -39,7 +39,7 @@
 
         // .pdb model from a file
               
-        self.loadMolecule( "models/molecules/caffeine.pdb" );
+        self.loadMolecule( model );
 
         
         self.scene.add( self.root );
