@@ -109,7 +109,8 @@
         }
         self.renderer.render(self.scene, self.camera);
       };
-	function self.loadMolecule( url ) {
+      
+	self.loadMolecule function( url ) {
 	      while ( self.root.children.length > 0 ) {
 			var object = self.root.children[ 0 ];
 			object.parent.remove( object );
