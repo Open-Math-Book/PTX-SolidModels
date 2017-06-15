@@ -62,9 +62,9 @@ MathJax.Hub.Config({
 <script src="../js/OrbitControls.js"></script>
 <script src="../js/STLLoader.js"></script>
 <script src="../js/threeDmodel.js"></script>
-<script src="../js/PDBLoader.js"></script>
-<script src="../js/threeDmolecule.js"></script>
+
 </head>
+
 <body class="mathbook-article has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\doubler}[1]{2#1}
 \newcommand{\lt}{&lt;}
@@ -91,8 +91,10 @@ MathJax.Hub.Config({
 <h2 class="link"><a href="section-textual.html" data-scroll="section-textual"><span class="codenumber">1</span><span class="title">Just Some Text</span></a></h2>
 <h2 class="link"><a href="section-interesting.html" data-scroll="section-interesting"><span class="codenumber">2</span><span class="title">A Bit More Interesting</span></a></h2>
 <h2 class="link"><a href="section-computation.html" data-scroll="section-computation"><span class="codenumber">3</span><span class="title">Computation</span></a></h2>
-<h2 class="link active"><a href="section-models.html" data-scroll="section-models"><span class="codenumber">4</span><span class="title">Solid Models</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-models"><header title="Section 4 Solid Models"><h1 class="heading hide-type" alt="Section 4 Solid Models">
+<h2 class="link active"><a href="section-models.html" data-scroll="section-models"><span class="codenumber">4</span><span class="title">Solid Models</span></a></h2>
+<h2 class="link"><a href="section-chemistry.html" data-scroll="section-chemistry"><span class="codenumber">5</span><span class="title">Molecular models</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-models"><header title="Section 4 Solid Models"><h1 class="heading hide-type" alt="Section 4 Solid Models">
 <span class="type">Section</span><span class="codenumber">4</span>
 	<span class="title">Solid Models</span>
 	<a href="section-models.html" class="permalink">¶ permalink</a>
@@ -152,16 +154,9 @@ MathJax.Hub.Config({
     theModel.animate();
     </script>
 
-	<p id="p-15">Another potential use for three.js:  there is a loader for .pdb files which are apparently
-		what Chemists use to make ball and stick molecule models.</p>
+	<p id="p-15">Another potential use for three.js is shown in the next section: ball and stick models of molecules.
 	
-    <div id="molecule-1"  width="600" height="450" style="border:1px solid #d3d3d3;">
-    </div>
-    <script>
-    var theMol = new moleculeViewer("https://open-math-book.github.io/PTX-SolidModels/molecules/caffeine.pdb", "molecule-1");
-    theMol.init();
-    theMol.animate();
-    </script>
+    
 
 </section>
 </div></main>
