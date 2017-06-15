@@ -4,7 +4,7 @@
         self.parent_id = parent;
         self.spinning = true;
         self.container = document.getElementById( parent );
-        self.camera = new THREE.PerspectiveCamera( 35, 4/3, .1, 1000 );
+        self.camera = new THREE.PerspectiveCamera( 35, 4/3, .1, 3000 );
         self.cameraTarget = new THREE.Vector3( 0, 0, 0 );
         self.scene = new THREE.Scene();
         self.renderer = new THREE.WebGLRenderer( { antialias: true } );
@@ -19,12 +19,13 @@
         self.camera.position.set( -120, 200, 400 );
 
         self.camera.lookAt( self.cameraTarget );
-              
+        self.scene.fog = new THREE.Fog( 0x72645b, 1, 1000 );
+
         self.renderer.setPixelRatio( window.devicePixelRatio );
         self.renderer.setSize( 400, 300);
         //self.renderer.domELement.width = 400;
         //self.renderer.domElement.height = 300;
-        //self.renderer.setClearColor( self.scene.fog.color );
+        self.renderer.setClearColor( self.scene.fog.color );
         self.renderer.gammaInput = true;
         self.renderer.gammaOutput = true;
         self.renderer.shadowMap.enabled = true;
@@ -34,7 +35,7 @@
 
         // controls
         self.controls.minDistance = 10;
-        self.controls.maxDistance = 1000;
+        self.controls.maxDistance = 2000;
         self.controls.maxPolarAngle = .9*Math.PI;
 
         // .pdb model from a file
@@ -49,19 +50,20 @@
 
         var directionalLight = new THREE.DirectionalLight( 0xffffff, 1.5 );
 
-        directionalLight.position.set( 150, 150, 150);
+        directionalLight.position.set( 350, 350, 350);
         self.scene.add( directionalLight );
 
-        directionalLight.castShadow = true;
+        /* no need for shadows w/ molecular models
+	directionalLight.castShadow = true;
 
-        var d = 150;
+        var d = 350;
         directionalLight.shadow.camera.left = -d;
         directionalLight.shadow.camera.right = d;
         directionalLight.shadow.camera.top = d;
         directionalLight.shadow.camera.bottom = -d;
 
         directionalLight.shadow.camera.near = 1;
-        directionalLight.shadow.camera.far = 500;
+        directionalLight.shadow.camera.far = 3000;
 
         directionalLight.shadow.camera.lookAt( self.cameraTarget );
 
@@ -69,7 +71,8 @@
         directionalLight.shadow.mapSize.height = 1024;
 
         directionalLight.shadow.bias = -0.005;
-
+	*/
+		
         window.addEventListener( 'resize', self.onWindowResize, false );
 
         var t = document.createTextNode("Toggle Spinning");       
