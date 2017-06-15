@@ -19,7 +19,7 @@
         self.camera.position.set( -120, 200, 400 );
 
         self.camera.lookAt( self.cameraTarget );
-        self.scene.fog = new THREE.Fog( 0x72645b, 1, 1000 );
+        self.scene.fog = new THREE.Fog( 0x72645b, 1, 4000 );
 
         self.renderer.setPixelRatio( window.devicePixelRatio );
         self.renderer.setSize( 400, 300);
