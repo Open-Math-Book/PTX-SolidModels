@@ -143,9 +143,9 @@
 						text.className = 'label';
 						text.style.color = 'rgb(' + atom[ 3 ][ 0 ] + ',' + atom[ 3 ][ 1 ] + ',' + atom[ 3 ][ 2 ] + ')';
 						text.textContent = atom[ 4 ];
-						var label = new THREE.CSS2DObject( text );
-						label.position.copy( object.position );
-						self.root.add( label );
+						//var label = new THREE.CSS2DObject( text );
+						//label.position.copy( object.position );
+						//self.root.add( label );
 					}
 					positions = geometryBonds.getAttribute( 'position' );
 					var start = new THREE.Vector3();
