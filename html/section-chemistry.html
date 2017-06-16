@@ -98,13 +98,14 @@ MathJax.Hub.Config({
 <p id="p-12">The views of these models are also dependent on <tt class="code-inline tex2jax_ignore">three.js</tt>.</p>
 <p id="p-13">A possible form for the XML tags:</p>
 <pre class="code-block tex2jax_ignore">&lt;molecule&gt;
-	&lt;source&gt; example.stl &lt;/source&gt;
+	&lt;source&gt; molecule.pdb &lt;/source&gt;
 	&lt;viewpoint&gt; [100, 50, -75] &lt;/viewpoint&gt;
 	&lt;description&gt; 
 		Words that describe the molecule.
 	&lt;/description&gt;
-&lt;/model&gt;
-
+&lt;/molecule&gt;
+</pre>
+	
 <div id="molecule-1"  width="600" height="450" style="border:1px solid #d3d3d3;">
     </div>
     <script>
@@ -113,7 +114,21 @@ MathJax.Hub.Config({
     theModel.animate();
     </script>
 
-    
+<p></p>
+
+<p> That was caffeine. The following model represents ethanol. </p> 
+  
+  <div id="molecule-2"  width="600" height="450" style="border:1px solid #d3d3d3;">
+    </div>
+    <script>
+    var theModel = new moleculeViewer("../molecules/ethanol.pdb", "molecule-2");
+    theModel.init();
+    theModel.animate();
+    </script>
+
+<p></p>
+
+
 </pre></section></div></main>
 </div>
 </body>
