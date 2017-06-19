@@ -118,7 +118,7 @@
       self.onWindowResize = function () {
         self.camera.aspect = 4/3;
         
-        var w = self.container.clientWidth - 50;
+        var w = self.container.clientWidth;
         var h = .75*w;
         self.renderer.setSize( w, h);
             
