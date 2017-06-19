@@ -117,10 +117,12 @@
 
       self.onWindowResize = function () {
         self.camera.aspect = 4/3;
-        self.camera.updateProjectionMatrix();
+        
         var w = self.container.clientWidth - 50;
         var h = .75*w;
         self.renderer.setSize( w, h);
+            
+        self.camera.updateProjectionMatrix();
       };
 
       self.animate = function() {
