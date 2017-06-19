@@ -63,6 +63,14 @@ MathJax.Hub.Config({
 <script src="../js/PDBLoader.js"></script>
 <script src="../js/threeDmolecule.js"></script>
 
+		<!-- stylesheet stuff for for solid model viewer - should go elsewhere eventually... -->
+<style>
+div.chem {
+    margin: 20px 20px 20px 20px;
+    padding: 2px;
+} 
+</style>
+	
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\doubler}[1]{2#1}
@@ -106,7 +114,7 @@ MathJax.Hub.Config({
 &lt;/molecule&gt;
 </pre>
 	
-<div id="molecule-1"  width="600" height="450" style="border:1px solid #d3d3d3;">
+<div class="chem" id="molecule-1" style="border:1px solid #d3d3d3;">
     </div>
     <script>
     var theModel = new moleculeViewer("../molecules/caffeine.pdb", "molecule-1");
@@ -118,7 +126,7 @@ MathJax.Hub.Config({
 
 <p> That was caffeine. The following model represents ethanol. </p> 
   
-  <div id="molecule-2"  width="600" height="450" style="border:1px solid #d3d3d3;">
+  <div class="chem" id="molecule-2" style="border:1px solid #d3d3d3;">
     </div>
     <script>
     var theModel = new moleculeViewer("../molecules/ethanol.pdb", "molecule-2");
