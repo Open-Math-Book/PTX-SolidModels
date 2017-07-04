@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-06-14T22:50:01-04:00    *-->
+<!--*    on 2017-06-29T22:53:31-04:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -42,35 +42,29 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full">
-</script>
-<link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="https://aimath.org/knowl.js"></script>
-<script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script>
-<script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script>
-<script src="https://aimath.org/mathbook/js/Mathbook.js"></script>
-
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
 <link href="extra.css" rel="stylesheet" type="text/css">
 
+<!--header insertions for the molecular modelling stuff -->
 <script src="https://tensegritydesign.com/js/3/three.js"></script>
 <script src="https://tensegritydesign.com/js/3/Detector.js"></script>
 <script src="https://tensegritydesign.com/js/3/controls/OrbitControls.js"></script>
 <script src="https://tensegritydesign.com/js/3/loaders/PDBLoader.js"></script>
 <script src="https://tensegritydesign.com/js/molecule.js"></script>
 
-		<!-- stylesheet stuff for for solid model viewer - should go elsewhere eventually... -->
+  <!-- stylesheet stuff - should go elsewhere eventually... -->
 <style>
 div.chem {
     margin: 20px 20px 20px 20px;
     padding: 2px;
 } 
 </style>
-	
+<!--end of the inserted (header) junk for molecules hack -->
+
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\doubler}[1]{2#1}
@@ -86,11 +80,11 @@ div.chem {
 </div></div>
 <nav id="primary-navbar" class="navbar" style=""><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-models.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="minimal.html" title="Up" alt="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-models.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="minimal.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-vrml.html" title="Next" alt="Next">Next</a></span></div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-models.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="minimal.html" title="Up" alt="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-models.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="minimal.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="section-vrml.html" title="Next" alt="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
@@ -99,21 +93,22 @@ div.chem {
 <h2 class="link"><a href="section-interesting.html" data-scroll="section-interesting"><span class="codenumber">2</span><span class="title">A Bit More Interesting</span></a></h2>
 <h2 class="link"><a href="section-computation.html" data-scroll="section-computation"><span class="codenumber">3</span><span class="title">Computation</span></a></h2>
 <h2 class="link"><a href="section-models.html" data-scroll="section-models"><span class="codenumber">4</span><span class="title">Solid Models</span></a></h2>
-<h2 class="link active"><a href="section-chemistry.html" data-scroll="section-chemistry"><span class="codenumber">5</span><span class="title">Molecular models</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+<h2 class="link active"><a href="section-chemistry.html" data-scroll="section-chemistry"><span class="codenumber">5</span><span class="title">Molecular models</span></a></h2>
+<h2 class="link"><a href="section-vrml.html" data-scroll="section-vrml"><span class="codenumber">6</span><span class="title">VRML models</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-chemistry"><header title="Section 5 Molecular models"><h1 class="heading hide-type" alt="Section 5 Molecular models">
 <span class="type">Section</span><span class="codenumber">5</span><span class="title">Molecular models</span><a href="section-chemistry.html" class="permalink">¶ permalink</a>
 </h1></header><p id="p-11">This is another dummy section. The html has been edited to illustrate what the inclusion of views of molecular models might look like.</p>
 <p id="p-12">The views of these models are also dependent on <tt class="code-inline tex2jax_ignore">three.js</tt>.</p>
 <p id="p-13">A possible form for the XML tags:</p>
 <pre class="code-block tex2jax_ignore">&lt;molecule&gt;
-	&lt;source&gt; molecule.pdb &lt;/source&gt;
+	&lt;source&gt; example.stl &lt;/source&gt;
 	&lt;viewpoint&gt; [100, 50, -75] &lt;/viewpoint&gt;
 	&lt;description&gt; 
 		Words that describe the molecule.
 	&lt;/description&gt;
-&lt;/molecule&gt;
+&lt;/model&gt;
 </pre>
-	
+
 <div class="chem" id="molecule-1" style="border:1px solid #d3d3d3;">
     </div>
     <script>
@@ -136,8 +131,7 @@ div.chem {
 
 <p></p>
 
-
-</pre></section></div></main>
+</section></div></main>
 </div>
 </body>
 </html>

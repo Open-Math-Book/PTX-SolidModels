@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-06-04T21:14:07-04:00    *-->
+<!--*    on 2017-06-29T22:53:31-04:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -12,9 +12,7 @@
 <title>Solid Models</title>
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script>
-<script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script>
-<script type="text/x-mathjax-config">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/javascript" src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
@@ -44,34 +42,30 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script>
-<link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="https://aimath.org/knowl.js"></script>
-<script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script>
-<script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script>
-<script src="https://aimath.org/mathbook/js/Mathbook.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
 <link href="extra.css" rel="stylesheet" type="text/css">
 
+<!--header insertions for the 3d modelling stuff -->
 <script src="https://tensegritydesign.com/js/3/three.js"></script>
 <script src="https://tensegritydesign.com/js/3/Detector.js"></script>
 <script src="https://tensegritydesign.com/js/3/controls/OrbitControls.js"></script>
 <script src="https://tensegritydesign.com/js/3/loaders/STLLoader.js"></script>
 <script src="https://tensegritydesign.com/js/model.js"></script>
 
-	<!-- stylesheet stuff for for solid model viewer - should go elsewhere eventually... -->
+  <!-- stylesheet stuff - should go elsewhere eventually... -->
 <style>
 div.solid {
     margin: 20px 20px 20px 20px;
     padding: 2px;
 } 
 </style>
-</head>
+<!--end of the inserted junk for 3d modelling hack -->
 
+</head>
 <body class="mathbook-article has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\newcommand{\doubler}[1]{2#1}
 \newcommand{\lt}{&lt;}
@@ -99,25 +93,13 @@ div.solid {
 <h2 class="link"><a href="section-interesting.html" data-scroll="section-interesting"><span class="codenumber">2</span><span class="title">A Bit More Interesting</span></a></h2>
 <h2 class="link"><a href="section-computation.html" data-scroll="section-computation"><span class="codenumber">3</span><span class="title">Computation</span></a></h2>
 <h2 class="link active"><a href="section-models.html" data-scroll="section-models"><span class="codenumber">4</span><span class="title">Solid Models</span></a></h2>
-<h2 class="link"><a href="section-chemistry.html" data-scroll="section-chemistry"><span class="codenumber">5</span><span class="title">Molecular models</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside>
-<main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-models"><header title="Section 4 Solid Models"><h1 class="heading hide-type" alt="Section 4 Solid Models">
-<span class="type">Section</span><span class="codenumber">4</span>
-	<span class="title">Solid Models</span>
-	<a href="section-models.html" class="permalink">¶ permalink</a>
-</h1></header>
-	
-<p>
-      <a href="https://mathbook.pugetsound.edu/" target="_blank">PreTeXt</a> solid modelling via 
-	<a href="http://threejs.org" target="_blank">three.js</a> 
-</p>
-	
-	<p id="p-7">This is a dummy section. The html has been edited to illustrate what the inclusion of views of solid models (in the .stl file format commonly used with 3-d printers) might look like.</p>
-<p id="p-8">The views of these models are dependent on the (incredible!) <tt class="code-inline tex2jax_ignore">three.js</tt> 
-	javascript library which is licensed under the MIT license. </p>  
-<p id="p-9">The models themselves were created in (also pretty amazing!) <tt class="code-inline tex2jax_ignore">OpenSCAD</tt> 
-	program (licensed under GPL v2).</p>
-	
+<h2 class="link"><a href="section-chemistry.html" data-scroll="section-chemistry"><span class="codenumber">5</span><span class="title">Molecular models</span></a></h2>
+<h2 class="link"><a href="section-vrml.html" data-scroll="section-vrml"><span class="codenumber">6</span><span class="title">VRML models</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-models"><header title="Section 4 Solid Models"><h1 class="heading hide-type" alt="Section 4 Solid Models">
+<span class="type">Section</span><span class="codenumber">4</span><span class="title">Solid Models</span><a href="section-models.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-7">This is a dummy section. The html has been edited to illustrate what the inclusion of views of solid models (in the .stl file format commonly used with 3-d printers) might look like.</p>
+<p id="p-8">The views of these models are dependent on the (incredible!) <tt class="code-inline tex2jax_ignore">three.js</tt> javascript library.</p>
+<p id="p-9">The models themselves were created in (also pretty amazing!) <tt class="code-inline tex2jax_ignore">OpenSCAD</tt> program.</p>
 <p id="p-10">A possible form for the XML tags:</p>
 <pre class="code-block tex2jax_ignore">&lt;model&gt;
 	&lt;source&gt; example.stl &lt;/source&gt;
@@ -139,8 +121,8 @@ div.solid {
     theModel.init();
     theModel.animate();
     </script>
-	<p></p>
-	
+  <p></p>
+  
     <p id="p-12">The following example(s) illustrate the occasional need for two variants of a model, one showing the final appearance and another that gives a layout for 3d printing.  (This is the reason I suggest &lt;source&gt; and &lt;downloadable&gt; tags above.)</p>
 
     <p id="p-13">A device for encoding/decoding a shift cipher.</p>
@@ -151,9 +133,9 @@ div.solid {
     theModel.init();
     theModel.animate();
     </script>
-	
+  
     <p></p>
-	
+  
     <p id="p-14">The same cipher ring layed out as it would be for printing on an FDM machine.  One generally wouldn't 
     want to display a model like this in the text - this is here just to illustrate the need for a &lt;downloadable&gt; tag.</p>
     <div class="solid" id="model-3" style="border:1px solid #d3d3d3;">
@@ -165,13 +147,11 @@ div.solid {
     </script>
 
     <p></p>
-	
+  
     <p id="p-15">Another potential use for three.js is shown in the next section: ball and stick models of molecules.
-	
+  
     
-
-</section>
-</div></main>
+</section></div></main>
 </div>
 </body>
 </html>
