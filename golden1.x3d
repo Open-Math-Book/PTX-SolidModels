@@ -21,7 +21,7 @@
     </Appearance>
     <Appearance>
       <Material diffuseColor='0 1 0'></Material>
-      <Transform rotation='0 0 1 90'>
+      <Transform rotation='0 0 1 1.57'>
          <Shape USE='golden'> </Shape>
       </Transform>
     </Appearance>
