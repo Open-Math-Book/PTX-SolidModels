@@ -15,7 +15,8 @@
   <Material id='rred' diffuseColor='1 0 0'></Material>
   <Material id='ggreen' diffuseColor='0 1 0'></Material>
   <Material id='bblue' diffuseColor='0 0 1'></Material>
-        
+  <Material id='ggrey' diffuseColor='.2 .2 .2'></Material>
+       
       <Shape>
 	<Appearance>
 	   <Material USE='rred'/>
@@ -44,6 +45,104 @@
 	<IndexedFaceSet USE='golden'/>
       </Shape>
 </Transform>
-</Transform>	
+</Transform>
+    <Transform translation='64.73216 40 0'>
+	<Shape>
+	<Appearance>
+	   <Material USE='ggrey'/>
+        </Appearance>
+		<Sphere radius='2'></Sphere>
+      </Shape>
+    </Transform>
+    <Transform translation='40 0 64.73216'>
+	<Shape>
+	<Appearance>
+	   <Material USE='ggrey'/>
+        </Appearance>
+		<Sphere radius='2'></Sphere>
+      </Shape>
+    </Transform>
+    <Transform translation='40 0 -64.73216'>
+	<Shape>
+	<Appearance>
+	   <Material USE='ggrey'/>
+        </Appearance>
+		<Sphere radius='2'></Sphere>
+      </Shape>
+    </Transform>
+    <Transform translation='64.73216 -40 0'>
+	<Shape>
+	<Appearance>
+	   <Material USE='ggrey'/>
+        </Appearance>
+		<Sphere radius='2'></Sphere>
+      </Shape>
+    </Transform>
+	
+    <Transform translation='-64.73216 40 0'>
+	<Shape>
+	<Appearance>
+	   <Material USE='ggrey'/>
+        </Appearance>
+		<Sphere radius='2'></Sphere>
+      </Shape>
+    </Transform>
+    <Transform translation='-40 0 64.73216'>
+	<Shape>
+	<Appearance>
+	   <Material USE='ggrey'/>
+        </Appearance>
+		<Sphere radius='2'></Sphere>
+      </Shape>
+    </Transform>
+    <Transform translation='-40 0 -64.73216'>
+	<Shape>
+	<Appearance>
+	   <Material USE='ggrey'/>
+        </Appearance>
+		<Sphere radius='2'></Sphere>
+      </Shape>
+    </Transform>
+    <Transform translation='-64.73216 -40 0'>
+	<Shape>
+	<Appearance>
+	   <Material USE='ggrey'/>
+        </Appearance>
+		<Sphere radius='2'></Sphere>
+      </Shape>
+    </Transform>
+	
+    <Transform translation='0 64.73216 40'>
+	<Shape>
+	<Appearance>
+	   <Material USE='ggrey'/>
+        </Appearance>
+		<Sphere radius='2'></Sphere>
+      </Shape>
+    </Transform>
+    <Transform translation='0 64.73216 -40'>
+	<Shape>
+	<Appearance>
+	   <Material USE='ggrey'/>
+        </Appearance>
+		<Sphere radius='2'></Sphere>
+      </Shape>
+    </Transform>
+    <Transform translation='0 -64.73216 40'>
+	<Shape>
+	<Appearance>
+	   <Material USE='ggrey'/>
+        </Appearance>
+		<Sphere radius='2'></Sphere>
+      </Shape>
+    </Transform>
+    <Transform translation='0 -64.73216 -40'>
+	<Shape>
+	<Appearance>
+	   <Material USE='ggrey'/>
+        </Appearance>
+		<Sphere radius='2'></Sphere>
+      </Shape>
+    </Transform>
  </Scene>
 </X3D>
