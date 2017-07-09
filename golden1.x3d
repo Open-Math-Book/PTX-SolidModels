@@ -12,7 +12,7 @@
 	     orientation="0.02614 -0.82897 -0.55868 1.23019" 
 	     description="defaultX3DViewpointNode">
   </Viewpoint>
-  <Fog visibilityRange='300' />
+  <Fog visibilityRange='400' />
   <Material id='rred' diffuseColor='1 0 0'></Material>
   <Material id='ggreen' diffuseColor='0 1 0'></Material>
   <Material id='bblue' diffuseColor='0 0 1'></Material>
@@ -52,7 +52,7 @@
 	<Appearance>
 	   <Material USE='ggrey'/>
         </Appearance>
-		<Sphere radius='3'></Sphere>
+		<Sphere radius='4'></Sphere>
       </Shape>
     </Transform>
     <Transform translation='40 0 64.73216'>
@@ -60,7 +60,7 @@
 	<Appearance>
 	   <Material USE='ggrey'/>
         </Appearance>
-		<Sphere radius='3'></Sphere>
+		<Sphere radius='4'></Sphere>
       </Shape>
     </Transform>
     <Transform translation='40 0 -64.73216'>
@@ -68,7 +68,7 @@
 	<Appearance>
 	   <Material USE='ggrey'/>
         </Appearance>
-		<Sphere radius='3'></Sphere>
+		<Sphere radius='4'></Sphere>
       </Shape>
     </Transform>
     <Transform translation='64.73216 -40 0'>
@@ -76,7 +76,7 @@
 	<Appearance>
 	   <Material USE='ggrey'/>
         </Appearance>
-		<Sphere radius='3'></Sphere>
+		<Sphere radius='4'></Sphere>
       </Shape>
     </Transform>
 	
@@ -85,7 +85,7 @@
 	<Appearance>
 	   <Material USE='ggrey'/>
         </Appearance>
-		<Sphere radius='3'></Sphere>
+		<Sphere radius='4'></Sphere>
       </Shape>
     </Transform>
     <Transform translation='-40 0 64.73216'>
@@ -93,7 +93,7 @@
 	<Appearance>
 	   <Material USE='ggrey'/>
         </Appearance>
-		<Sphere radius='3'></Sphere>
+		<Sphere radius='4'></Sphere>
       </Shape>
     </Transform>
     <Transform translation='-40 0 -64.73216'>
@@ -101,7 +101,7 @@
 	<Appearance>
 	   <Material USE='ggrey'/>
         </Appearance>
-		<Sphere radius='3'></Sphere>
+		<Sphere radius='4'></Sphere>
       </Shape>
     </Transform>
     <Transform translation='-64.73216 -40 0'>
@@ -109,7 +109,7 @@
 	<Appearance>
 	   <Material USE='ggrey'/>
         </Appearance>
-		<Sphere radius='3'></Sphere>
+		<Sphere radius='4'></Sphere>
       </Shape>
     </Transform>
 	
@@ -118,7 +118,7 @@
 	<Appearance>
 	   <Material USE='ggrey'/>
         </Appearance>
-		<Sphere radius='3'></Sphere>
+		<Sphere radius='4'></Sphere>
       </Shape>
     </Transform>
     <Transform translation='0 64.73216 -40'>
@@ -126,7 +126,7 @@
 	<Appearance>
 	   <Material USE='ggrey'/>
         </Appearance>
-		<Sphere radius='3'></Sphere>
+		<Sphere radius='4'></Sphere>
       </Shape>
     </Transform>
     <Transform translation='0 -64.73216 40'>
@@ -134,7 +134,7 @@
 	<Appearance>
 	   <Material USE='ggrey'/>
         </Appearance>
-		<Sphere radius='3'></Sphere>
+		<Sphere radius='4'></Sphere>
       </Shape>
     </Transform>
     <Transform translation='0 -64.73216 -40'>
@@ -142,7 +142,7 @@
 	<Appearance>
 	   <Material USE='ggrey'/>
         </Appearance>
-		<Sphere radius='3'></Sphere>
+		<Sphere radius='4'></Sphere>
       </Shape>
     </Transform>
 
