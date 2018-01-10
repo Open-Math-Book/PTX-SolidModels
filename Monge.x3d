@@ -10,7 +10,7 @@
  <Scene>
  	<Viewpoint position="15.96996 -139.81570 167.04770" orientation="0.73076 0.30742 -0.60949 0.89467" 
    description="defaultX3DViewpointNode"></Viewpoint>
-  <Fog visibilityRange='400' />
+  <Fog visibilityRange='1500' />
   <Material id='rred' diffuseColor='1 0 0'></Material>
   <Material id='ggreen' diffuseColor='0 1 0'></Material>
   <Material id='bblue' diffuseColor='0 0 1'></Material>
