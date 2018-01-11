@@ -22,25 +22,17 @@
 	 */
 	function spheresOnOff(nodeId)
 	{
-	    var sw1 = document.getElementById("sphereSwitcher");
+	    var sw1 = document.getElementById("Monge__sphereSwitcher");
 
 	    sw1.setAttribute("whichChoice", nodeId);
-	    
-	    if(nodeId == -1)
-	    	document.getElementById("visNode").innerHTML = "No node visible!";
-	    else
-	    	document.getElementById("visNode").innerHTML = "Showing node # "+nodeId;
+	
 	}
 	function conesOnOff(nodeId)
 	{
-	    var sw2 = document.getElementById("coneSwitcher");
+	    var sw2 = document.getElementById("Monge__coneSwitcher");
 
 	    sw2.setAttribute("whichChoice", nodeId);
 	    
-	    if(nodeId == -1)
-	    	document.getElementById("visNode").innerHTML = "No node visible!";
-	    else
-	    	document.getElementById("visNode").innerHTML = "Showing node # "+nodeId;
 	}
 	</script>
         </head> 
@@ -49,7 +41,7 @@
             
             <x3d id='3dViewer'> 
                 <scene> 
-			 <inline url="https://open-math-book.github.io/PTX-SolidModels/Monge.x3d"> </inline> 
+			 <inline nameSpaceName="Monge" url="https://open-math-book.github.io/PTX-SolidModels/Monge.x3d"> </inline> 
                 </scene> 
             </x3d>
 		
