@@ -75,6 +75,27 @@ div.vrml {
     padding: 2px;
 } 
 </style>
+<script>
+	/**
+	 * Using a switching node to turn some elements on and off
+	 * 
+	 * @param nodeId number: New node id to set (starting from 0, or -1 to hide all of them)
+	 */
+	function spheresOnOff(nodeId)
+	{
+	    var sw1 = document.getElementById("Monge__sphereSwitcher");
+
+	    sw1.setAttribute("whichChoice", nodeId);
+	
+	}
+	function conesOnOff(nodeId)
+	{
+	    var sw2 = document.getElementById("Monge__coneSwitcher");
+
+	    sw2.setAttribute("whichChoice", nodeId);
+	    
+	}
+</script>
 <!--end of the insertions for VRML -->
 
 </head>
@@ -129,13 +150,22 @@ dodecahedron with the alternating group <m>A_5</m>
 </p>
 
 <div class="vrml" id="vrml-1" style="border:1px solid #d3d3d3;">
-    </div>
     <x3d id='3dViewer'> 
        <scene> 
-           <inline url="https://open-math-book.github.io/PTX-SolidModels/Monge.x3d"> </inline> 
+           <inline nameSpaceName="Monge" url="https://open-math-book.github.io/PTX-SolidModels/Monge.x3d"> </inline> 
        </scene> 
     </x3d>
-
+</div>
+<div style="margin-left: 550px">
+    <b>spheres</b><br>
+    off <input type="range" id="slider1" min="-1" max="0" step="1" value="-1" onchange="spheresOnOff(this.value)"/> on
+	<br>
+</div>
+<div style="margin-left: 550px">
+    <b>cones</b><br>
+    off <input type="range" id="slider2" min="-1" max="0" step="1" value="-1" onchange="conesOnOff(this.value)"/> on
+	<br>
+</div>
 </section></div></main>
 </div>
 </body>
