@@ -8,8 +8,8 @@
   <meta content="Meshlab X3D Exported, http://meshlab.sourceforge.net" name="generator"/>
  </head>
  <Scene>
- 	<Viewpoint position="15.96996 -139.81570 167.04770" orientation="0.73076 0.30742 -0.60949 0.89467" 
-   description="defaultX3DViewpointNode"></Viewpoint>
+  <Viewpoint position="30.14138 21.68238 343.07767" orientation="0.08442 -0.12107 -0.98905 0.64319" 
+	zNear="86.31012" zFar="713.52279" description="defaultX3DViewpointNode"></Viewpoint>
   <Fog visibilityRange='2000' />
   <Material id='rred' diffuseColor='1 0 0' transparency='.3'></Material>
   <Material id='ggreen' diffuseColor='0 1 0'></Material>
