@@ -84,9 +84,10 @@
 <Transform rotation='0 1 0 1.0472'>
 <Transform translation='0 0 20'>
 <Shape>
-<Appearance><Material USE='ccyan'/></Appearance>
-<Cylinder radius='1'height='40'>
+<Appearance><Material DEF='ccyan' diffuseColor='0 1 1'/></Appearance>
+<Cylinder radius='1' height='40'/>
 </Shape>
+</Transform>
 </Transform>
 </Transform>
 </Transform>
@@ -97,8 +98,9 @@
 <Transform translation='0 0 20'>
 <Shape>
 <Appearance><Material USE='ccyan'/></Appearance>
-<Cylinder radius='1'height='40'>
+<Cylinder radius='1' height='40'/>
 </Shape>
+</Transform>
 </Transform>
 </Transform>
 </Transform>
@@ -109,8 +111,9 @@
 <Transform translation='0 0 20'>
 <Shape>
 <Appearance><Material USE='ccyan'/></Appearance>
-<Cylinder radius='1'height='40'>
+<Cylinder radius='1' height='40'/>
 </Shape>
+</Transform>
 </Transform>
 </Transform>
 </Transform>
@@ -121,8 +124,9 @@
 <Transform translation='0 0 20'>
 <Shape>
 <Appearance><Material USE='ccyan'/></Appearance>
-<Cylinder radius='1'height='40'>
+<Cylinder radius='1' height='40'/>
 </Shape>
+</Transform>
 </Transform>
 </Transform>
 </Transform>
@@ -133,8 +137,9 @@
 <Transform translation='0 0 20'>
 <Shape>
 <Appearance><Material USE='ccyan'/></Appearance>
-<Cylinder radius='1'height='40'>
+<Cylinder radius='1' height='40'/>
 </Shape>
+</Transform>
 </Transform>
 </Transform>
 </Transform>
@@ -145,8 +150,9 @@
 <Transform translation='0 0 20'>
 <Shape>
 <Appearance><Material USE='ccyan'/></Appearance>
-<Cylinder radius='1'height='40'>
+<Cylinder radius='1' height='40'/>
 </Shape>
+</Transform>
 </Transform>
 </Transform>
 </Transform>
