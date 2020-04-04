@@ -159,11 +159,12 @@
 
 
         <Transform translation='0 0 20'>
+        <Transform rotation='0 1 0 1.5708'
           <Shape>
             <Appearance><Material DEF='rred' diffuseColor='1 0 0'/></Appearance>
             <Cylinder radius='1' height='40'/>
           </Shape>
         </Transform>
-      
+        </Transform>
  </Scene>
 </X3D>
