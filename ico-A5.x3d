@@ -79,10 +79,10 @@
     <Normal vector="0.934172 0 0.356822 0.934172 0 -0.356822 0.57735 0.57735 -0.57735 0.356822 0.934172 0 0.57735 0.57735 0.57735 0.57735 -0.57735 0.57735 0.356822 -0.934172 0 0.57735 -0.57735 -0.57735 0 -0.356822 -0.934172 0 0.356822 -0.934172 -0.57735 0.57735 -0.57735 -0.356822 0.934172 0 -0.57735 0.57735 0.57735 0 0.356822 0.934172 0 -0.356822 0.934172 -0.356822 -0.934172 0 -0.57735 -0.57735 -0.57735 -0.934172 0 -0.356822 -0.934172 0 0.356822 -0.57735 -0.57735 0.57735"/>
    </IndexedFaceSet>
   </Shape>
-  <Transform translation='0 0 20'>
-    <Transform rotation='0 1 0 1.0472'>
-      <Transform rotation='0 0 1 2.77673'>
-        <Transform translation='32.3607 20 0'>
+  <Transform translation='32.3607 20 0'>
+    <Transform rotation='0 0 1 2.77673'>
+      <Transform rotation='0 1 0 1.0472'>
+        <Transform translation='0 0 20'>
           <Shape>
             <Appearance><Material DEF='ccyan' diffuseColor='0 1 1'/></Appearance>
             <Cylinder radius='1' height='40'/>
@@ -156,5 +156,14 @@
 </Transform>
 </Transform>
 </Transform>
+
+
+        <Transform translation='0 0 20'>
+          <Shape>
+            <Appearance><Material DEF='rred' diffuseColor='1 0 0'/></Appearance>
+            <Cylinder radius='1' height='40'/>
+          </Shape>
+        </Transform>
+      
  </Scene>
 </X3D>
