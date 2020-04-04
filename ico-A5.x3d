@@ -79,26 +79,76 @@
     <Normal vector="0.934172 0 0.356822 0.934172 0 -0.356822 0.57735 0.57735 -0.57735 0.356822 0.934172 0 0.57735 0.57735 0.57735 0.57735 -0.57735 0.57735 0.356822 -0.934172 0 0.57735 -0.57735 -0.57735 0 -0.356822 -0.934172 0 0.356822 -0.934172 -0.57735 0.57735 -0.57735 -0.356822 0.934172 0 -0.57735 0.57735 0.57735 0 0.356822 0.934172 0 -0.356822 0.934172 -0.356822 -0.934172 0 -0.57735 -0.57735 -0.57735 -0.934172 0 -0.356822 -0.934172 0 0.356822 -0.57735 -0.57735 0.57735"/>
    </IndexedFaceSet>
   </Shape>
-
   <Transform translation='32.3607 20 0'>
-    <Transform rotation='0 0 1 -2.12437'>
-      <Transform rotation='0 1 0 0.628318'>
-        <Shape>
-          <Appearance><Material  DEF='rred' diffuseColor='1 0 0'/></Appearance>
-          <Cylinder radius='1' height='40'/>
-        </Shape>
-      </Transform>
-    </Transform>
-  </Transform>
-  <Transform translation='20 0 -32.3607'>
-    <Transform rotation='0 0 1 2.12437'>
-      <Transform rotation='0 1 0 1.25664'>
-        <Shape>
-          <Appearance><Material USE='rred'/></Appearance>
-          <Cylinder radius='1' height='40'/>
-        </Shape>
-      </Transform>
-    </Transform>
-  </Transform>
+<Transform rotation='0 0 1 2.77673'>
+<Transform rotation='0 1 0 1.0472'>
+<Transform translation='0 0 20'>
+<Shape>
+<Appearance><Material USE='ccyan'/></Appearance>
+<Cylinder radius='1'height='40'>
+</Shape>
+</Transform>
+</Transform>
+</Transform>
+
+<Transform translation='32.3607 -20 0'>
+<Transform rotation='0 0 1 2.12437'>
+<Transform rotation='0 1 0 2.51327'>
+<Transform translation='0 0 20'>
+<Shape>
+<Appearance><Material USE='ccyan'/></Appearance>
+<Cylinder radius='1'height='40'>
+</Shape>
+</Transform>
+</Transform>
+</Transform>
+
+<Transform translation='0 32.3607 -20'>
+<Transform rotation='0 0 1 -2.12437'>
+<Transform rotation='0 1 0 1.88495'>
+<Transform translation='0 0 20'>
+<Shape>
+<Appearance><Material USE='ccyan'/></Appearance>
+<Cylinder radius='1'height='40'>
+</Shape>
+</Transform>
+</Transform>
+</Transform>
+
+<Transform translation='20 0 32.3607'>
+<Transform rotation='0 0 1 -2.12437'>
+<Transform rotation='0 1 0 1.88495'>
+<Transform translation='0 0 20'>
+<Shape>
+<Appearance><Material USE='ccyan'/></Appearance>
+<Cylinder radius='1'height='40'>
+</Shape>
+</Transform>
+</Transform>
+</Transform>
+
+<Transform translation='-32.3607 20 0'>
+<Transform rotation='0 0 1 -1.01722'>
+<Transform rotation='0 1 0 0.628318'>
+<Transform translation='0 0 20'>
+<Shape>
+<Appearance><Material USE='ccyan'/></Appearance>
+<Cylinder radius='1'height='40'>
+</Shape>
+</Transform>
+</Transform>
+</Transform>
+
+<Transform translation='0 -32.3607 -20'>
+<Transform rotation='0 0 1 2.77673'>
+<Transform rotation='0 1 0 1.0472'>
+<Transform translation='0 0 20'>
+<Shape>
+<Appearance><Material USE='ccyan'/></Appearance>
+<Cylinder radius='1'height='40'>
+</Shape>
+</Transform>
+</Transform>
+</Transform>
  </Scene>
 </X3D>
