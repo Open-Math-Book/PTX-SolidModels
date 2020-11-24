@@ -8,7 +8,7 @@
   <meta name="generator" content="Meshlab X3D Exported, http://www.meshlab.net"/>
  </head>
  <Scene>
-  <Viewpoint position="-3.67122 60.08907 341.07528" orientation="0.08442 -0.12107 -0.98905 0.64319" 
+  <Viewpoint position="-37 -170 119" orientation="0.99 -0.13 -0.11 1.23" 
 	zNear="86.31012" zFar="713.52279" description="defaultX3DViewpointNode"></Viewpoint>
   <Material id='yyellow' diffuseColor='1 1 0'></Material>
   <Shape>
