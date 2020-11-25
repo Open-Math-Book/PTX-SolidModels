@@ -95,15 +95,9 @@ A.rref()
    <p id="p-7">The following is another chunk of Sage code.</p>
 <div class="sagecell-sage" id="sage-1"><script type="text/x-sage">R = RealField(15)
 RealNumber = R
-@interact(layout=[['t2', 't1', 'a','b','t2','t2'],['t2','t2', 'c','d','t2','t2']])
-def f(a=input_box(1.0, width=20, label=false),
-      b=input_box(0.0, width=20, label=false),
-      c=input_box(0.0, width=20, label=false),
-      d=input_box(1.0, width=20, label=false),
-      t1=text_control("A = \n", label=false),
-      t2=text_control(' ', label=false)
-      ):
-    A=matrix([[a,b],[c,d]])
+@interact
+def f(A=matrix([[1.0,0.0],[0.0,1.0]]):
+    #A=matrix([[a,b],[c,d]])
     print("\n\n")
     pts=[(0,0),(0,3),(2,0),(2,3)]
     l1=line(pts, thickness=3)
