@@ -91,7 +91,31 @@ MathJax.Hub.Config({
 </h1></header><p id="p-6">The following is a chunk of Sage code.  Your output format will dictate what you see next.  In print, you will see expected output.  In HTML you will have an executable, and editable, Sage Cell to work with.  In a SageMathCloud worksheet, you will be able to execute and edit the code with all the other features of SageMathCloud.  Note that if you include the expected output in your source, then you can test the example to verify that the behavior of Sage has not changed.</p>
 <div class="sagecell-sage" id="sage-1"><script type="text/x-sage">A = matrix(4,5, srange(20))
 A.rref()
-</script></div></section></div></main>
+</script></div> 
+   <p id="p-7">The following is another chunk of Sage code.</p>
+<div class="sagecell-sage" id="sage-1"><script type="text/x-sage">R = RealField(15)
+RealNumber = R
+@interact(layout=[['t2', 't1', 'a','b','t2','t2'],['t2','t2', 'c','d','t2','t2']])
+def f(a=input_box(1.0, width=20, label=false),
+      b=input_box(0.0, width=20, label=false),
+      c=input_box(0.0, width=20, label=false),
+      d=input_box(1.0, width=20, label=false),
+      t1=text_control("A = \n", label=false),
+      t2=text_control(' ', label=false)
+      ):
+    A=matrix([[a,b],[c,d]])
+    print("\n\n")
+    pts=[(0,0),(0,3),(2,0),(2,3)]
+    l1=line(pts, thickness=3)
+    l2=line([A*vector(p) for p in pts], thickness=3, color="red")
+    p1=plot(l1)
+    p2=plot(l2)
+    ga=graphics_array([p1,p2])
+    ga.show(aspect_ratio=1, figsize=8, gridlines='major', xmin=-1, xmax=4, ymin=-1, ymax=4)
+</script></div> 
+    
+</section></div>
+</main>
 </div>
 </body>
 </html>
