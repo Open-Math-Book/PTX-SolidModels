@@ -98,7 +98,7 @@ div.chem {
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-chemistry"><header title="Section 5 Molecular models"><h1 class="heading hide-type" alt="Section 5 Molecular models">
 <span class="type">Section</span><span class="codenumber">5</span><span class="title">Molecular models</span><a href="section-chemistry.html" class="permalink">¶ permalink</a>
 </h1></header><p id="p-11">This is another dummy section. The html has been edited to illustrate what the inclusion of views of molecular models might look like.</p>
-<p id="p-12">The views of these models are also dependent on <tt class="code-inline tex2jax_ignore">three.js</tt>.</p>
+<p id="p-12">The views of these models are also dependent on <tt class="code-inline tex2jax_ignore">X3DOM</tt>.</p>
 <p id="p-13">A possible form for the XML tags:</p>
 <pre class="code-block tex2jax_ignore">&lt;molecule&gt;
 	&lt;source&gt; example.stl &lt;/source&gt;
@@ -111,23 +111,27 @@ div.chem {
 
 <div class="chem" id="molecule-1" style="border:1px solid #d3d3d3;">
     </div>
-    <script>
-    var theModel = new moleculeViewer("https://open-math-book.github.io/PTX-SolidModels/molecules/caffeine.pdb", "molecule-1");
-    theModel.init();
-    theModel.animate();
-    </script>
+    <x3d id='3dViewer'> 
+        <scene> 
+            <inline nameSpaceName="aspirin" url="https://open-math-book.github.io/PTX-SolidModels/molecules/aspirin.x3d"> 
+            </inline> 
+        </scene> 
+    </x3d>
 
 <p></p>
 
-<p> That was caffeine. The following model represents ethanol. </p> 
+<p> That was aspirin. The following model represents ethanol. </p> 
   
   <div class="chem" id="molecule-2" style="border:1px solid #d3d3d3;">
     </div>
-    <script>
-    var theModel = new moleculeViewer("https://open-math-book.github.io/PTX-SolidModels/molecules/ethanol.pdb", "molecule-2");
-    theModel.init();
-    theModel.animate();
-    </script>
+    <x3d id='3dViewer'> 
+        <scene> 
+            <inline nameSpaceName="ico" url="https://open-math-book.github.io/PTX-SolidModels/molecules/ethanol.x3d"> 
+            </inline> 
+        </scene> 
+    </x3d>
+
+    
 
 <p></p>
 
