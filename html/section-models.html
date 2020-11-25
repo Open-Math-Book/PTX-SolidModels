@@ -101,8 +101,10 @@ MathJax.Hub.Config({
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-models"><header title="Section 4 Solid Models"><h1 class="heading hide-type" alt="Section 4 Solid Models">
 <span class="type">Section</span><span class="codenumber">4</span><span class="title">Solid Models</span><a href="section-models.html" class="permalink">¶ permalink</a>
 </h1></header><p id="p-7">This is a dummy section. The html has been edited to illustrate what the inclusion of views of solid models (in the .stl file format commonly used with 3-d printers) might look like.</p>
-<p id="p-8">The views of these models are dependent on the (incredible!) <tt class="code-inline tex2jax_ignore">three.js</tt> javascript library.</p>
-<p id="p-9">The models themselves were created in (also pretty amazing!) <tt class="code-inline tex2jax_ignore">OpenSCAD</tt> program.</p>
+<p id="p-8">The views of these models use the  <tt class="code-inline tex2jax_ignore">X3DOM</tt> viewer.</p>
+
+<p id="p-9">The models themselves were created in <tt class="code-inline tex2jax_ignore">OpenSCAD</tt>.</p>
+
 <p id="p-10">A possible form for the XML tags:</p>
 <pre class="code-block tex2jax_ignore">&lt;model&gt;
 	&lt;source&gt; example.stl &lt;/source&gt;
@@ -113,7 +115,7 @@ MathJax.Hub.Config({
 	&lt;/description&gt;
 &lt;/model&gt;
 </pre>
-<p id="p-11">Here's a visual proof of Monge's theorem:</p>
+<p id="p-11">Here's a virtual model of an icosahedron, with an edge coloring designed to illustrate that its symmetry group is A<sub>5</sub>:</p>
 
 
     <div class="solid" id="model-1" style="border:1px solid #d3d3d3;">
@@ -121,7 +123,7 @@ MathJax.Hub.Config({
 
     <x3d id='3dViewer'> 
         <scene> 
-            <inline nameSpaceName="Monge" url="https://open-math-book.github.io/PTX-SolidModels/models/Monge.x3d"> 
+            <inline nameSpaceName="ico" url="https://open-math-book.github.io/PTX-SolidModels/models/ico-A5-v2.x3d"> 
             </inline> 
         </scene> 
     </x3d>
@@ -137,7 +139,7 @@ MathJax.Hub.Config({
     
     <x3d id='3dViewer'> 
         <scene> 
-            <inline nameSpaceName="3d-integration" url="https://open-math-book.github.io/PTX-SolidModels/models/3d-integration.x3d"> 
+            <inline nameSpaceName="3d-integration-assembled" url="https://open-math-book.github.io/PTX-SolidModels/models/3d-integration-assembled.x3d"> 
             </inline> 
         </scene> 
     </x3d>
@@ -145,19 +147,21 @@ MathJax.Hub.Config({
   
     <p></p>
   
-    <p id="p-14">The same cipher ring layed out as it would be for printing on an FDM machine.  One generally wouldn't 
+    <p id="p-14">This model would be difficult to print, so this version is provided (with the model separated into halves) for printing on an FDM machine.  One generally wouldn't 
     want to display a model like this in the text - this is here just to illustrate the need for a &lt;downloadable&gt; tag.</p>
-    <div class="solid" id="model-3" style="border:1px solid #d3d3d3;">
-    </div>
-    <script>
-    var theModel = new modelViewer("https://open-math-book.github.io/PTX-SolidModels/models/CipherRing-PrintLayout.stl", "model-3");
-    theModel.init();
-    theModel.animate();
-    </script>
+    
 
     <p></p>
   
-    <p id="p-15">Another potential use for three.js is shown in the next section: ball and stick models of molecules.
+  <x3d id='3dViewer'> 
+        <scene> 
+            <inline nameSpaceName="3d-integration" url="https://open-math-book.github.io/PTX-SolidModels/models/3d-integration.x3d"> 
+            </inline> 
+        </scene> 
+    </x3d>
+
+
+    <p id="p-15">Another potential use for X3D is shown in the next section: ball and stick models of molecules.
   
     
 </section></div></main>
