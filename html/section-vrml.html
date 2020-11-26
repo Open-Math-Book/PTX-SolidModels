@@ -53,12 +53,6 @@ MathJax.Hub.Config({
 <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script> 
 <link rel='stylesheet' type='text/css' href='https://open-math-book.github.io/PTX-SolidModels/x3dom.css'></link> 
 
-<script src="https://tensegritydesign.com/js/3/three.js"></script>
-<script src="https://tensegritydesign.com/js/3/Detector.js"></script>
-<script src="https://tensegritydesign.com/js/3/controls/OrbitControls.js"></script>
-<script src="https://tensegritydesign.com/js/3/loaders/VRMLLoader.js"></script>
-<script src="https://tensegritydesign.com/js/vrml.js"></script>
-
   <!-- stylesheet stuff - should go elsewhere eventually... -->
 <style>
             body {
@@ -75,27 +69,7 @@ div.vrml {
     padding: 2px;
 } 
 </style>
-<script>
-	/**
-	 * Using a switching node to turn some elements on and off
-	 * 
-	 * @param nodeId number: New node id to set (starting from 0, or -1 to hide all of them)
-	 */
-	function spheresOnOff(nodeId)
-	{
-	    var sw1 = document.getElementById("Monge__sphereSwitcher");
 
-	    sw1.setAttribute("whichChoice", nodeId);
-	
-	}
-	function conesOnOff(nodeId)
-	{
-	    var sw2 = document.getElementById("Monge__coneSwitcher");
-
-	    sw2.setAttribute("whichChoice", nodeId);
-	    
-	}
-</script>
 <!--end of the insertions for VRML -->
 
 </head>
@@ -142,6 +116,17 @@ div.vrml {
 &lt;/model&gt;
 </pre>
 
+<p> A VRML model for visualizing a 3-dimensional array of numbers.  This array is the split weight enumerator of the Golay code based on a partition of the coordinates derived from the supports of 3 disjoint minimum weight vectors.</p>
+
+<div class="vrml" id="vrml-1" style="border:0px solid #ffffff;">
+    <x3d id='3dViewer'> 
+       <scene> 
+           <inline nameSpaceName="FiveTetra" url="https://open-math-book.github.io/PTX-SolidModels/vrml/GolaySplit.x3d"> </inline> 
+       </scene> 
+    </x3d>
+</div>
+
+
 <p>The following model shows that five mutually intersecting tetrahedra can be inscribed in
 a dodecahedron.  Any symmetries of the dodecahdron can be thought of as permutations of these 
 five objects.  A careful analysis shows that only the even permutations of the tetrahedra can
@@ -149,23 +134,7 @@ be enacted in this manner.  This establishes an isomorphism of the group of symm
 dodecahedron with the alternating group <m>A_5</m>
 </p>
 
-<div class="vrml" id="vrml-1" style="border:0px solid #ffffff;">
-    <x3d id='3dViewer'> 
-       <scene> 
-           <inline nameSpaceName="Monge" url="https://open-math-book.github.io/PTX-SolidModels/Monge.x3d"> </inline> 
-       </scene> 
-    </x3d>
-</div>
-<div style="margin-left: 400px">
-    <b>spheres</b><br>
-    off<nbsp/><input type="range" id="slider1" min="-1" max="0" step="1" value="-1" onchange="spheresOnOff(this.value)"/><nbsp/>on
-	<br>
-</div>
-<div style="margin-left: 400px">
-    <b>cones</b><br>
-    off<nbsp/><input type="range" id="slider2" min="-1" max="0" step="1" value="-1" onchange="conesOnOff(this.value)"/><nbsp/>on
-	<br>
-</div>
+
 </section></div></main>
 </div>
 </body>

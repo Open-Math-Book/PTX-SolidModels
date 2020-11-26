@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' profile='Full' version='3.0' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <Scene DEF='scene'>
+    <WorldInfo info='"Copyright (c) 2004 by Joseph E. Fields" "split weight distribution relative to a partition of the" "coordinates based on the support of 3 disjoint min. weight vectors"' title='The Split Weight Distribution of the Golay Code'/>
+    <Group>
+      <Background skyColor='1 1 1'/>
+      <NavigationInfo/>
+      <Viewpoint DEF='VIEWPOINT' description='one' orientation='0 1 0 -0.1' position='0 3 25'/>
+      <Viewpoint description='two' orientation='0 1 0 1.571' position='25 3 0'/>
+      <TimeSensor DEF='TIMER' cycleInterval='20' loop='true' stopTime='-1'/>
+      <OrientationInterpolator DEF='ORI' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0 0 1 0 1.57079 0 1 0 3.14159 0 1 0 4.71239 0 1 0 6.28318'/>
+      <Transform translation='4 0 4'>
+        <Transform DEF='WHOLE'>
+          <Transform translation='-4 0 -4'>
+            <Shape>
+              <PointSet>
+                <Coordinate DEF='allpoints' point='0 0 0 0 0 2 0 0 4 0 0 6 0 0 8 0 2 0 0 2 2 0 2 4 0 2 6 0 2 8 0 4 0 0 4 2 0 4 4 0 4 6 0 4 8 0 6 0 0 6 2 0 6 4 0 6 6 0 6 8 0 8 0 0 8 2 0 8 4 0 8 6 0 8 8 2 0 0 2 0 2 2 0 4 2 0 6 2 0 8 2 2 0 2 2 2 2 2 4 2 2 6 2 2 8 2 4 0 2 4 2 2 4 4 2 4 6 2 4 8 2 6 0 2 6 2 2 6 4 2 6 6 2 6 8 2 8 0 2 8 2 2 8 4 2 8 6 2 8 8 4 0 0 4 0 2 4 0 4 4 0 6 4 0 8 4 2 0 4 2 2 4 2 4 4 2 6 4 2 8 4 4 0 4 4 2 4 4 4 4 4 6 4 4 8 4 6 0 4 6 2 4 6 4 4 6 6 4 6 8 4 8 0 4 8 2 4 8 4 4 8 6 4 8 8 6 0 0 6 0 2 6 0 4 6 0 6 6 0 8 6 2 0 6 2 2 6 2 4 6 2 6 6 2 8 6 4 0 6 4 2 6 4 4 6 4 6 6 4 8 6 6 0 6 6 2 6 6 4 6 6 6 6 6 8 6 8 0 6 8 2 6 8 4 6 8 6 6 8 8 8 0 0 8 0 2 8 0 4 8 0 6 8 0 8 8 2 0 8 2 2 8 2 4 8 2 6 8 2 8 8 4 0 8 4 2 8 4 4 8 4 6 8 4 8 8 6 0 8 6 2 8 6 4 8 6 6 8 6 8 8 8 0 8 8 2 8 8 4 8 8 6 8 8 8'/>
+              </PointSet>
+            </Shape>
+            <Shape>
+              <Appearance>
+                <Material diffuseColor='0 0 0'/>
+              </Appearance>
+              <IndexedLineSet coordIndex='0 4 24 20 0 -1 100 104 124 120 100 -1 0 100 -1 4 104 -1 24 124 -1 20 120 -1'>
+                <Coordinate USE='allpoints'/>
+              </IndexedLineSet>
+            </Shape>
+            <Transform translation='4 4 4'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance DEF='A1'>
+                      <Material diffuseColor='0 0 0.7'/>
+                    </Appearance>
+                    <Text string='"1232"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance DEF='A2'>
+                      <Material diffuseColor='0.5 0.5 0.5'/>
+                    </Appearance>
+                    <Text string='"4:4:4"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"1"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"0:0:0"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='0 0 8'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"1"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"0:0:8"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='0 8 0'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"1"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"0:8:0"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='0 8 8'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"1"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"0:8:8"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='8 0 0'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"1"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"8:0:0"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='8 0 8'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"1"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"8:0:8"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='8 8 0'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"1"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"8:8:0"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='8 8 8'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"1"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"8:8:8"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='0 4 4'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"28"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"0:4:4"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='4 0 4'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"28"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"4:0:4"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='4 4 0'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"28"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"4:4:0"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='8 4 4'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"28"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"8:4:4"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='4 8 4'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"28"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"4:8:4"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='4 4 8'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"28"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"4:4:8"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='2 2 4'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"224"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"2:2:4"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='2 6 4'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"224"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"2:6:4"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='6 2 4'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"224"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"6:2:4"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='6 6 4'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"224"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"6:6:4"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='2 4 2'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"224"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"2:4:2"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='4 2 2'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"224"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"4:2:2"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='4 6 2'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"224"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"4:6:2"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='6 4 2'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"224"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"6:4:2"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='2 4 6'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"224"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"2:4:6"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='4 2 6'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"224"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"4:2:6"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='4 6 6'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"224"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"4:6:6"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+            <Transform translation='6 4 6'>
+              <Shape>
+                <Appearance>
+                  <Material diffuseColor='1 0 0'/>
+                </Appearance>
+                <Sphere radius='0.1'/>
+              </Shape>
+              <Billboard>
+                <Transform translation='0.1 -0.3 0'>
+                  <Shape>
+                    <Appearance USE='A1'/>
+                    <Text string='"224"'>
+                      <FontStyle style='BOLD' size='0.5'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+                <Transform translation='0.2 0.1 0'>
+                  <Shape>
+                    <Appearance USE='A2'/>
+                    <Text string='"6:4:6"'>
+                      <FontStyle style='BOLD' size='0.3'/>
+                    </Text>
+                  </Shape>
+                </Transform>
+              </Billboard>
+            </Transform>
+          </Transform>
+        </Transform>
+      </Transform>
+    </Group>
+    <ROUTE fromNode='ORI' fromField='value_changed' toNode='WHOLE' toField='set_rotation'/>
+    <ROUTE fromNode='TIMER' fromField='fraction_changed' toNode='ORI' toField='set_fraction'/>
+  </Scene>
+</X3D>
+
