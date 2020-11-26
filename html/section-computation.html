@@ -98,12 +98,13 @@ RealNumber = R
 @interact
 def f(A=matrix([[1.0,0.0],[0.0,1.0]])):
     #A=matrix([[a,b],[c,d]])
-    print("\n\n")
+    print("\n Adjust the matrix entries to make the red plot match the gray dashed one.\n")
     pts=[(0,0),(0,3),(2,0),(2,3)]
     l1=line(pts, thickness=3)
     l2=line([A*vector(p) for p in pts], thickness=3, color="red")
+    l3=line([(0,0),(1,4),(2,0),(3,4)], thickness=1, linestyle="--", color="grey")
     p1=plot(l1)
-    p2=plot(l2)
+    p2=plot(l2+l3)
     ga=graphics_array([p1,p2])
     ga.show(aspect_ratio=1, figsize=8, gridlines='major', xmin=-1, xmax=4, ymin=-1, ymax=4)
 </script></div> 
