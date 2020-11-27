@@ -2,11 +2,11 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
 <X3D xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' profile='Full' version='3.0' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
   <Scene DEF='scene'>
-    <WorldInfo info='"Copyright (c) 2004 by Joseph E. Fields" "split weight distribution relative to a partition of the" "coordinates based on the support of 3 disjoint min. weight vectors"' title='Five Tetrahedra'/>
+    <WorldInfo info='Copyright (c) 2004 by Joseph E. Fields' title='Five Tetrahedra'/>
     <Group>
-      <Background groundAngle='1.309 1.571' groundColor='0.1 0.1 0.1 0.3 0.3 0.3 0.6 0.6 0.6' skyAngle='1.309 1.571' skyColor='0 0.2 0.7 0 0.5 1 1 1 1'/>
+      <Background skyColor='1 1 1'/>
       <NavigationInfo type="EXAMINE", headlight="true"/>
-      <Viewpoint DEF='VIEWPOINT' description='one' orientation='0 -1 -1 0' position='0 3 3'/>
+      <Viewpoint DEF='VIEWPOINT' description='one' orientation='0 1 1 -.1' position='0 3 3'/>
       <DirectionalLight intensity='0.95' direction='-0.5 -1 0'/>
       <DirectionalLight intensity='0.65' direction='-1 0.5 0'/>
       <DirectionalLight intensity='0.75' direction='0.5 1 0'/>
