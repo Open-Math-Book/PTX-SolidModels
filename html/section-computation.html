@@ -98,9 +98,8 @@ RealNumber = R
 @interact
 def f(A=matrix([[1.0,0.0],[0.0,1.0]])):
     #A=matrix([[a,b],[c,d]])
-    print("\n 
-    Adjust the matrix entries to make the\n 
-    red plot match the gray dashed one.\n")
+    print("\n Adjust the matrix entries to make the\n")
+    print("red plot match the gray dashed one.\n")
     pts=[(0,0),(0,3),(2,0),(2,3)]
     l1=line(pts, thickness=3)
     l2=line([A*vector(p) for p in pts], thickness=3, color="red")
