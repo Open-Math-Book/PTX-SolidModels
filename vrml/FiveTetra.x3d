@@ -4,12 +4,6 @@
   <Scene DEF='scene'>
     <WorldInfo info='Copyright (c) 2020 by Joseph E. Fields' title='Five Tetrahedra'/>
     <Group>
-      <Background skyColor='1 1 1'/>
-      <NavigationInfo/>
-      <Viewpoint DEF='VIEWPOINT' description='one' orientation='0 1 1 -.1' position='0 3 3'/>
-      <DirectionalLight intensity='0.95' direction='-0.5 -1 0'/>
-      <DirectionalLight intensity='0.65' direction='-1 0.5 0'/>
-      <DirectionalLight intensity='0.75' direction='0.5 1 0'/>
       <Shape>
         <PointSet>
           <Coordinate DEF='pts' point='0 0 1.07047 0.713644 0 0.797878 -0.356822 0.618034 0.797878 -0.356822 -0.618034 0.797878 0.797878 0.618034 0.356822 0.797878 -0.618034 0.356822 -0.934172 0.381966 0.356822 0.136294 1 0.356822 0.136294 -1 0.356822 -0.934172 -0.381966 0.356822 0.934172 0.381966 -0.356822 0.934172 -0.381966 -0.356822 -0.797878 0.618034 -0.356822 -0.136294 1 -0.356822 -0.136294 -1 -0.356822 -0.797878 -0.618034 -0.356822 0.356822 0.618034 -0.797878 0.356822 -0.618034 -0.797878 -0.713644 0 -0.797878 0 0 -1.07047'/>
